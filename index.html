@@ -73,7 +73,7 @@ img{max-width:100%;}
 .section-head h2{font-size:clamp(32px,4vw,50px);line-height:1.1;margin:18px 0;}
 .section-head p{color:var(--muted);font-size:18px;}
 /* TWO ENGINES */
-.engines{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.engines{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
 .engine{position:relative;border:1px solid var(--line);border-radius:22px;padding:40px;box-shadow:var(--shadow);background:#fff;overflow:hidden;}
 .engine:before{content:"";position:absolute;top:0;left:0;height:6px;width:100%;background:var(--gold);}
 .engine .tag{font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold-dark);}
@@ -81,7 +81,11 @@ img{max-width:100%;}
 .engine p{color:var(--muted);font-size:17px;line-height:1.7;margin-bottom:18px;}
 .engine ul{list-style:none;display:grid;gap:10px;}
 .engine li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--text);font-weight:500;}
-.engine li span{color:var(--gold);font-weight:800;}
+.engine li span{color:var(--gold);font-weight:800;flex:none;}
+.engine li div{font-weight:500;color:var(--text);}
+.engine li div strong{color:var(--navy-dark);font-weight:800;}
+.engine-tagline{margin:2px 0 18px;padding:13px 16px;background:rgba(244,166,33,.12);border-left:3px solid var(--gold);border-radius:8px;font-weight:800;color:var(--navy);font-size:16px;letter-spacing:-.2px;}
+.engine-lead{margin-bottom:14px;font-weight:700;color:var(--navy-dark);font-size:15px;}
 /* CARDS */
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow);transition:.2s ease;}
@@ -207,21 +211,25 @@ Procure Media is a performance marketing company that drives customers two ways 
 <div class="engine">
 <div class="tag">Engine 01</div>
 <h3>Lead Generation</h3>
-<p>Consumers and businesses fill out forms on our owned-and-operated sites in specific verticals. We deliver qualified, high-intent leads to the companies that buy them.</p>
+<p>Most lead and list brokers sell the same lead several times — so agents end up working a mix of real-time and aged records that three other people already called. <strong style="color:#0B3558;">Procure works the opposite way.</strong> We build a site around your exact buy — your fields, your qualifiers, your geography — and the leads it generates go to you, and only you.</p>
+<div class="engine-tagline">Your fields. Your qualifiers. Your leads.</div>
+<p class="engine-lead">They cost more than broker lists — and here's why they're worth it:</p>
 <ul>
-<li><span>✓</span> Vertical, exact-match sites built to win intent</li>
-<li><span>✓</span> Qualified leads with the fields buyers actually need</li>
-<li><span>✓</span> Starting in insurance, expanding into home services</li>
+<li><span>✓</span><div><strong>Exclusive, never resold.</strong> Generated from our own traffic and delivered to a single buyer — you.</div></li>
+<li><span>✓</span><div><strong>Higher contact rates.</strong> Real people completing real forms with real intent, not recycled records.</div></li>
+<li><span>✓</span><div><strong>Higher close rates.</strong> Sourced from genuine search traffic, at the moment of need.</div></li>
 </ul>
 </div>
 <div class="engine">
 <div class="tag">Engine 02</div>
 <h3>Customer Acquisition</h3>
-<p>We acquire paying customers directly for sports, adventure, and entertainment activities — driving real transactions, not just inquiries, for experience providers.</p>
+<p>We acquire paying customers directly for sports, adventure, and entertainment activities through our owned-and-operated experiences brand — driving real transactions, not just inquiries.</p>
+<div class="engine-tagline">Real customers. Real transactions.</div>
+<p class="engine-lead">Performance marketing taken all the way to the sale:</p>
 <ul>
-<li><span>✓</span> Direct-to-customer acquisition for experiences</li>
-<li><span>✓</span> Full-funnel control from traffic to transaction</li>
-<li><span>✓</span> Powered by our O&amp;O experiences brand</li>
+<li><span>✓</span><div><strong>Transactions, not inquiries.</strong> We drive paying customers, not just form fills to chase.</div></li>
+<li><span>✓</span><div><strong>Full-funnel control.</strong> From search traffic to completed transaction on our own site.</div></li>
+<li><span>✓</span><div><strong>Owned-and-operated.</strong> Powered by ultimateplaypass.com — a brand we build and run.</div></li>
 </ul>
 </div>
 </div>
