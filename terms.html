@@ -15,7 +15,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+  
+<!-- Google tag (gtag.js) — GA4 + Google Ads (standard across all pages) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L6LTMCGR41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L6LTMCGR41');
+  gtag('config', 'AW-17934471659');
+</script>
+<!-- Procure click-source capture: stores gclid/UTM on landing, attaches to the form -->
+<script>
+(function(){
+  try{
+    var qs = new URLSearchParams(window.location.search);
+    var keys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+    var store = {};
+    try{ var c=(document.cookie.match(/(?:^|; )pm_attr=([^;]*)/)||[])[1]; if(c) store=JSON.parse(decodeURIComponent(c))||{}; }catch(e){ store={}; }
+    var got=false;
+    keys.forEach(function(k){ var v=qs.get(k); if(v){ store[k]=v; got=true; } });
+    if(got || !store.landing){
+      if(!store.landing) store.landing=window.location.pathname;
+      if(!store.referrer) store.referrer=document.referrer||'';
+      document.cookie='pm_attr='+encodeURIComponent(JSON.stringify(store))+'; path=/; max-age=7776000; SameSite=Lax';
+    }
+    function fill(){
+      var f=document.querySelector('form'); if(!f) return;
+      Object.keys(store).forEach(function(k){
+        if(store[k] && !f.querySelector('[name="'+k+'"]')){
+          var i=document.createElement('input'); i.type='hidden'; i.name=k; i.value=store[k]; f.appendChild(i);
+        }
+      });
+    }
+    if(document.readyState!=='loading') fill(); else document.addEventListener('DOMContentLoaded', fill);
+  }catch(e){}
+})();
+</script>
+<style>
     body{font-family:'Inter',Arial,sans-serif;background:#F7F9FC;margin:0;color:#142132;line-height:1.7;}
     .container{max-width:900px;margin:50px auto;background:#fff;padding:48px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,0.08);}
     h1{color:#0B3558;margin-top:0;}
@@ -46,6 +83,14 @@
 
     <h2>Communications Consent</h2>
     <p>By submitting your information, you consent to receive communications by phone, text message, and email relevant to your inquiry, including through automated technology where permitted by law.</p>
+
+    <h2>SMS / Text Messaging Program</h2>
+    <p><strong>Program description.</strong> When you submit a request on a Procure Media website (including HOA Contracts, Contractor Equipment Insurance, Bug Bouncers, and our other lead-generation sites) and provide your mobile number with consent, Procure Media may send recurring SMS/text messages to confirm your request, coordinate a callback, and connect you with a licensed specialist or provider.</p>
+    <p><strong>Message frequency.</strong> Message frequency varies based on your activity and request.</p>
+    <p><strong>Message and data rates.</strong> Message and data rates may apply.</p>
+    <p><strong>Opt-out.</strong> You can cancel the SMS service at any time by replying <strong>STOP</strong> to any message. After you reply STOP, we will send a confirmation message and no further messages will be sent unless you opt in again.</p>
+    <p><strong>Help.</strong> For help, reply <strong>HELP</strong> to any message, or contact us at <a href="mailto:dan@procuremedia.com">dan@procuremedia.com</a>.</p>
+    <p>Carriers are not liable for delayed or undelivered messages. For details on how we handle your information, see our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
 
     <h2>Intellectual Property</h2>
     <p>All website content, branding, graphics, text, and materials are the property of Procure Media unless otherwise stated and may not be copied or reproduced without permission.</p>
