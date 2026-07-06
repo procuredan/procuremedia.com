@@ -307,6 +307,13 @@ footer a{color:#A7BED1;display:block;margin-bottom:12px;}
 .hstep b{color:#fff;font-weight:700;font-size:15px;}
 .navphone{color:var(--navy);font-weight:800;font-size:15px;white-space:nowrap;}
 .navphone:hover{color:var(--gold-dark);}
+/* SMS opt-in / consent (bugbouncers TFN rule) */
+.pm-consent{display:flex;gap:9px;align-items:flex-start;margin:14px 0 0;text-align:left;cursor:pointer;}
+.pm-consent>input{margin-top:3px;width:16px;height:16px;flex:0 0 auto;accent-color:var(--gold-dark);cursor:pointer;}
+.pm-consent>span{font-size:12px;line-height:1.5;color:#5E6B78;}
+.pm-consent-submit{margin:12px 0 0;font-size:11.5px;line-height:1.5;color:#7B8794;text-align:left;}
+.pm-consent-terms{margin:8px 0 0;font-size:10.5px;line-height:1.5;color:#9AA6B2;text-align:left;}
+.pm-consent-terms a,.pm-consent a{color:var(--gold-dark);}
 </style>
 </head>
 <body>
@@ -405,8 +412,11 @@ Procure Media
 <div class="full"><label class="field-label" for="company">Company <span style="color:var(--muted);font-weight:500">(optional)</span></label><input id="company" type="text" name="company"></div>
 <div class="full"><label class="field-label" for="message">Anything that helps us route you <span style="color:var(--muted);font-weight:500">(optional)</span></label><textarea id="message" name="message" placeholder="Vertical, geography, volume, # of agents/locations…"></textarea></div>
 <div class="full">
+<label class="pm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>Yes, text me about my request. By checking this box, I agree to receive SMS text messages about my inquiry, account setup, appointment scheduling, and related follow-ups from Procure Media, LLC at the phone number I provided, including messages sent using automated technology. Msg &amp; data rates may apply. Message frequency varies.</span></label>
+<input type="hidden" name="consent_version" value="pm-sms-v1-2026-07-06">
 <button class="btn btn-primary submit-btn" id="f_submit" type="submit">Send →</button>
-<span class="fineprint">By submitting, you agree to be contacted by Procure Media at the number provided by phone call, text (SMS), and email — including via automated technology. Consent is not a condition of purchase. Msg &amp; data rates may apply; message frequency varies. Reply STOP to opt out, HELP for help. See our <a href="/privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a> &amp; <a href="/terms.html" style="color:inherit;text-decoration:underline">Terms</a>.</span>
+<p class="pm-consent-submit">By submitting, you agree to be contacted about your request by Procure Media, LLC by phone call and email, including via automated technology. Consent is not a condition of purchase.</p>
+<p class="pm-consent-terms">SMS terms: If you check the box above, message frequency varies and Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not a condition of purchase. See our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</p>
 <div class="trust-strip"><span class="tbadge">🔒 SSL Secured</span><span class="tbadge">✓ TCPA-Compliant Consent</span><span class="tbadge">✓ Free &amp; No Obligation</span></div>
 </div>
 </div>
@@ -680,8 +690,11 @@ Procure Media
 <div class="full"><label class="field-label" for="c_email">Email</label><input id="c_email" type="email" name="email" required></div>
 <div class="full"><label class="field-label" for="c_message">Message</label><textarea id="c_message" name="message" placeholder="Vertical, geography, volume, or anything else that helps us route you."></textarea></div>
 <div class="full">
+<label class="pm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>Yes, text me about my request. By checking this box, I agree to receive SMS text messages about my inquiry, account setup, appointment scheduling, and related follow-ups from Procure Media, LLC at the phone number I provided, including messages sent using automated technology. Msg &amp; data rates may apply. Message frequency varies.</span></label>
+<input type="hidden" name="consent_version" value="pm-sms-v1-2026-07-06">
 <button class="btn btn-primary submit-btn" type="submit">Send →</button>
-<span class="fineprint">By submitting, you agree to be contacted by Procure Media by phone call, text (SMS), and email, including via automated technology. Msg &amp; data rates may apply; reply STOP to opt out. Consent is not a condition of purchase.</span>
+<p class="pm-consent-submit">By submitting, you agree to be contacted about your request by Procure Media, LLC by phone call and email, including via automated technology. Consent is not a condition of purchase.</p>
+<p class="pm-consent-terms">SMS terms: If you check the box above, message frequency varies and Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not a condition of purchase. See our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</p>
 <div class="trust-strip"><span class="tbadge">🔒 SSL Secured</span><span class="tbadge">✓ TCPA-Compliant Consent</span><span class="tbadge">✓ Free &amp; No Obligation</span></div>
 </div>
 </div>
