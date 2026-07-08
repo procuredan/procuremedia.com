@@ -12,6 +12,9 @@
  *
  * Self-contained: no dependencies, no external calls except the lead POST. Namespaced
  * styles (.pmcw-*). Safe to include once per page.
+ *
+ * Intro options mirror the homepage "Which best describes you?" funnel (small business /
+ * large sales org / buy leads) so the chat and the form ask the same first question.
  * -------------------------------------------------------------
  */
 (function () {
@@ -55,6 +58,8 @@
     '.pmcw-chips{display:flex;flex-direction:column;gap:9px;}',
     '.pmcw-chip{text-align:left;background:#fff;border:1.5px solid '+C.line+';border-radius:12px;padding:13px 15px;font:700 14.5px Inter,sans-serif;color:'+C.navy+';cursor:pointer;transition:.15s;}',
     '.pmcw-chip:hover{border-color:'+C.gold+';background:'+C.light+';transform:translateY(-1px);}',
+    '.pmcw-chip b{display:block;font-weight:800;}',
+    '.pmcw-chip span{display:block;margin-top:3px;font-weight:500;font-size:12px;color:'+C.muted+';}',
     '.pmcw-field{margin-bottom:11px;}',
     '.pmcw-field label{display:block;font:700 12.5px Inter,sans-serif;color:'+C.navy+';margin-bottom:5px;}',
     '.pmcw-field .pmcw-opt{color:'+C.muted+';font-weight:500;}',
@@ -118,12 +123,13 @@
     panel.querySelector('.pmcw-x').addEventListener('click', close);
   }
 
+  // Intro question + options mirror the homepage "Which best describes you?" funnel.
   function screenIntro() {
-    return '<div class="pmcw-msg">Hi — what can we help you with?</div>'
+    return '<div class="pmcw-msg">Which best describes you?</div>'
       + '<div class="pmcw-chips">'
-      + '<button class="pmcw-chip" data-seg="get-customers">Get more customers for my business</button>'
-      + '<button class="pmcw-chip" data-seg="buy-leads">Buy leads / calls</button>'
-      + '<button class="pmcw-chip" data-seg="other">Something else</button>'
+      + '<button class="pmcw-chip" data-seg="get-customers"><b>I run a small business and need more customers</b><span>I\'m an independent business and need to stop missing calls and leads.</span></button>'
+      + '<button class="pmcw-chip" data-seg="enterprise"><b>I run a large sales organization</b><span>I need an all-inclusive platform for my whole sales team.</span></button>'
+      + '<button class="pmcw-chip" data-seg="buy-leads"><b>I just want to buy leads</b><span>Exclusive, never-resold leads from sites we own.</span></button>'
       + '</div>';
   }
 
