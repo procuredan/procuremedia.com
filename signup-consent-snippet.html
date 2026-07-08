@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  PROCURE MEDIA — SIGNUP CONSENT BLOCK (clickwrap)  — DRAFT, pre-attorney-review
+  ----------------------------------------------------------------------------
+  Drop the markup inside <form class="consent-demo"> ... </form> into the
+  signup form on signup.procuremedia.com (just above the submit button).
+
+  ENFORCEABILITY NOTES (why it is built this way):
+   - Affirmative act: the checkbox is UNCHECKED by default and `required`.
+     Do NOT pre-check it. The user must actively check it to submit.
+   - Conspicuous links to the exact three documents they are agreeing to.
+   - Record of acceptance: hidden fields carry the VERSION of each document.
+     On submit, the server MUST persist, per account:
+        agreement_version, aup_version, privacy_version,
+        consent_captured_at (ISO-8601, set client-side, below),
+        + server-side: client IP and User-Agent + server timestamp.
+     Reuse the existing `consent_version` storage pattern already used by the
+     lead engine. This stored row is what proves acceptance in a dispute.
+   - When you publish a NEW version of any doc, bump the *_VERSION constants
+     below so new signups record the new version; existing users are handled
+     by the "changes" clause (continued use = acceptance) + notice.
+  ============================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--ink:#1f2937;--brand:#1F3864;--muted:#6b7280;--line:#d1d5db;--warn:#b00020;--warnbg:#fdecea;}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f6f7f9;margin:0;padding:32px 16px;}
+  .card{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;}
+  .draft{background:var(--warnbg);border:1px solid var(--warn);border-left:4px solid var(--warn);border-radius:4px;padding:8px 12px;font-size:12.5px;color:var(--warn);margin-bottom:18px;}
+  h2{color:var(--brand);font-size:1.05rem;margin:.2em 0 1em;}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.55;}
+  .consent input[type=checkbox]{width:18px;height:18px;margin-top:2px;flex:0 0 auto;}
+  .consent a{color:var(--brand);font-weight:600;text-decoration:underline;}
+  .btn{margin-top:18px;width:100%;background:var(--brand);color:#fff;border:0;border-radius:8px;padding:12px 16px;font-size:15px;font-weight:600;cursor:pointer;}
+  .btn:disabled{opacity:.5;cursor:not-allowed;}
+  .hint{font-size:12px;color:var(--muted);margin-top:10px;}
+</style>
+
+<div class="card">
+  <h2>Create your Procure Media account</h2>
+
+  <!-- ===== DROP-IN BLOCK START ===== -->
+  <form class="consent-demo" method="post" action="/signup" onsubmit="return procureConsentSubmit(this)">
+    <label class="consent">
+      <input type="checkbox" id="procure_consent" name="accepted_terms" value="yes" required>
+      <span>I agree to the Procure Media
+        <a href="/service-agreement" target="_blank" rel="noopener">Service Agreement</a>,
+        <a href="/acceptable-use" target="_blank" rel="noopener">Acceptable Use Policy</a>, and
+        <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>,
+        and I am authorized to bind my business to them.</span>
+    </label>
+
+    <!-- Recorded with the signup so acceptance is provable -->
+    <input type="hidden" name="agreement_version" value="1.0">
+    <input type="hidden" name="aup_version"       value="1.0">
+    <input type="hidden" name="privacy_version"   value="1.0">
+    <input type="hidden" name="consent_captured_at" id="procure_consent_ts" value="">
+
+    <button type="submit" class="btn">Create account</button>
+    <div class="hint">By creating an account you acknowledge you have read and agree to the documents above.</div>
+  </form>
+  <!-- ===== DROP-IN BLOCK END ===== -->
+</div>
+
+<script>
+  // Stamp the moment the signup form is presented (proof-of-acceptance time).
+  (function () {
+    var ts = document.getElementById('procure_consent_ts');
+    if (ts) ts.value = new Date().toISOString();
+  })();
+
+  // Guard: block submit unless the box is checked. (Server MUST re-check too.)
+  function procureConsentSubmit(form) {
+    var box = document.getElementById('procure_consent');
+    if (!box || !box.checked) {
+      alert('Please agree to the Service Agreement, Acceptable Use Policy, and Privacy Policy to continue.');
+      return false;
+    }
+    // refresh timestamp to the actual submit moment
+    var ts = document.getElementById('procure_consent_ts');
+    if (ts) ts.value = new Date().toISOString();
+    return true; // let the form POST to /signup; server records versions + IP + UA
+  }
+</script>
