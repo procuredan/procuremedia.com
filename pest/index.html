@@ -9,9 +9,18 @@
   OPERATOR ACQUISITION LANDER v3 — get.procuremedia.com/pest  (LIGHT, colorful, product-forward — monday/Eve style)
   Real stats w/ sources: Invoca (27% unanswered, <3% voicemail), HomeAdvisor (47% after-hours, 78% first responder),
   MIT/InsideSales (21x @ 5 min), Angi (67% call a competitor). Sources footnoted. No fake logos/testimonials.
-  ── WIRE BEFORE GO-LIVE ──  [1] gtag GA4 + AW-17934471659 labels  [2] FORM_ENDPOINT = sales pipeline
+  ── WIRED 2026-07-14 ──  [1] DONE gtag: GA4 G-L6LTMCGR41 + Ads AW-17934471659 (call=L-BqCNaiqNAcEOuj6edC, form=yB7eCNmiqNAcEOuj6edC)  [2] TODO FORM_ENDPOINT = sales-pipeline URL (still empty; funnels to call until set)
   [3] Deploy is Dan's (GitHub → CF Pages → get.procuremedia.com)  [4] Drop a real customer quote where marked.
 -->
+<!-- Google tag (gtag.js) — GA4 (analytics) + Google Ads (conversions). Wired 2026-07-14. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L6LTMCGR41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L6LTMCGR41');   /* GA4 — procuremedia.com property (stream 15028782659) */
+  gtag('config', 'AW-17934471659'); /* Google Ads — Procure Media, LLC conversions */
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -520,7 +529,7 @@ function fireConversion(label){try{if(window.gtag){gtag('event','conversion',{se
   if(map[ag]){document.getElementById('hero-h1').innerHTML=map[ag].h;document.getElementById('hero-sub').textContent=map[ag].s;}
   var set=function(id,v){var el=document.getElementById(id);if(el)el.value=v||''};
   set('f_gclid',p.get('gclid'));set('f_utm_source',p.get('utm_source'));set('f_utm_campaign',p.get('utm_campaign'));set('f_ag',ag);})();
-document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener('click',function(){fireConversion('CALL_CLICK_LABEL');});});
+document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener('click',function(){fireConversion('L-BqCNaiqNAcEOuj6edC');});});
 (function(){var form=document.getElementById('demoForm'),steps=form.querySelectorAll('.fstep2'),bar=document.getElementById('progbar'),i=0;
   function show(n){steps[i].classList.remove('active');i=n;steps[i].classList.add('active');bar.style.width=((i+1)/steps.length*100)+'%';}
   form.querySelectorAll('.fstep2[data-step="1"] input,.fstep2[data-step="2"] input,.fstep2[data-step="3"] input').forEach(function(inp){
@@ -528,7 +537,7 @@ document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener(
   form.addEventListener('submit',function(e){e.preventDefault();
     /* [2] set FORM_ENDPOINT to the Procure sales-pipeline URL to capture leads. Until then, submit funnels to a call so no lead is lost. */
     var FORM_ENDPOINT='';
-    var data=Object.fromEntries(new FormData(form).entries());fireConversion('DEMO_FORM_LABEL');
+    var data=Object.fromEntries(new FormData(form).entries());fireConversion('yB7eCNmiqNAcEOuj6edC');
     if(FORM_ENDPOINT){
       fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
       form.innerHTML='<div class="fq" style="text-align:center">You\'re in — we\'ll call you shortly. 👋</div><p class="fsmall">Want it faster? <a href="tel:+18557545015" style="color:var(--primaryd);font-weight:800;text-decoration:none">Call (855) 754-5015</a> and we\'ll set you up live.</p>';
