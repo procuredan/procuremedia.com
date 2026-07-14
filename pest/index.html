@@ -1,1 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procure Media — The AI that answers & books every pest control call</title>
+<meta name="description" content="For pest control owners: your website, your traffic, your leads — and an AI that answers, qualifies, and books every call 24/7. All included, one low price. Call and hear it live.">
+<!--
+  OPERATOR ACQUISITION LANDER v3 — get.procuremedia.com/pest  (LIGHT, colorful, product-forward — monday/Eve style)
+  Real stats w/ sources: Invoca (27% unanswered, <3% voicemail), HomeAdvisor (47% after-hours, 78% first responder),
+  MIT/InsideSales (21x @ 5 min), Angi (67% call a competitor). Sources footnoted. No fake logos/testimonials.
+  ── WIRE BEFORE GO-LIVE ──  [1] gtag GA4 + AW-17934471659 labels  [2] FORM_ENDPOINT = sales pipeline
+  [3] Deploy is Dan's (GitHub → CF Pages → get.procuremedia.com)  [4] Drop a real customer quote where marked.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --bg2:#f5f8fd; --ink:#0d1526; --mut:#57647b; --dim:#8a97ab;
+    --line:#e7edf5; --line2:#d9e2ee;
+    --blue:#2f6bff; --indigo:#5b57f5; --green:#12b05f; --green2:#25d07a; --purple:#8b5cf6; --amber:#f6a723; --teal:#0fb6c3; --pink:# f0568f;
+    --pink:#f0568f;
+    --primary:linear-gradient(100deg,#12b05f,#25d07a); --primaryd:#0e9a52;
+    --shadow:0 18px 50px rgba(20,40,80,.10); --shadow2:0 8px 26px rgba(20,40,80,.08);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:"Plus Jakarta Sans",Inter,sans-serif;line-height:1.1;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
+  h1{font-size:clamp(38px,6.4vw,68px)}
+  h2{font-size:clamp(28px,4.2vw,44px)}
+  h3{font-size:21px;font-weight:700}
+  p{font-size:clamp(16px,1.7vw,18px);color:var(--mut)}
+  .g-green{color:var(--green)} .g-blue{color:var(--blue)}
+  .ey{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--primaryd);background:#e9faf0;border:1px solid #c3efd5;padding:7px 14px;border-radius:999px}
+  .kicker{font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;text-decoration:none;border-radius:12px;padding:15px 24px;font-size:16px;cursor:pointer;border:1px solid transparent;transition:transform .12s,box-shadow .2s}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 26px rgba(18,176,95,.32)}
+  .btn-primary:hover{box-shadow:0 14px 34px rgba(18,176,95,.42)}
+  .btn-call{flex-direction:column;gap:3px;line-height:1.2}
+  .btn-call .lbl{font-size:17px;font-weight:800;white-space:nowrap}
+  .btn-call .sub{font-size:13px;font-weight:600;opacity:.9}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line2)}
+  .btn-ghost:hover{background:var(--bg2)}
+  .btn-lg{padding:18px 30px;font-size:18px;border-radius:14px}
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .navrow{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-family:"Plus Jakarta Sans";font-weight:800;font-size:19px;display:flex;align-items:center;gap:9px}
+  .logo .mark{width:26px;height:26px;border-radius:8px;background:var(--primary);box-shadow:0 4px 12px rgba(18,176,95,.4)}
+  .navlinks{display:flex;gap:16px;align-items:center}
+  .navlinks a{color:var(--mut);text-decoration:none;font-size:14px;font-weight:600}
+  .navlinks a:hover{color:var(--ink)}
+  .navcall{display:inline-flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--line2);color:var(--ink);text-decoration:none;font-weight:700;padding:9px 16px;border-radius:10px;font-size:15px}
+  .navtag{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .navarrow{color:var(--green);font-weight:800;font-size:17px;margin:0 -4px}
+  @media(max-width:900px){.navtag,.navarrow{display:none}}
+  /* hero */
+  .hero{position:relative;background:radial-gradient(1100px 460px at 78% -8%,#eef4ff 0,transparent 60%),radial-gradient(760px 380px at 6% 8%,#e9faf0 0,transparent 55%),var(--bg);padding:64px 0 48px;overflow:hidden}
+  .herogrid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+  .hero h1{margin:20px 0 18px;line-height:1.16;letter-spacing:-.015em}
+  .hero .sub{font-size:clamp(17px,2vw,20px);max-width:540px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px 18px;margin-top:24px;font-size:14px;color:var(--mut);font-weight:600}
+  .chips span{display:inline-flex;align-items:center;gap:7px}
+  .chips span::before{content:"✓";color:var(--green);font-weight:800}
+  .roi{margin-top:22px;max-width:540px;background:#fff;border:1.5px solid #bfead0;border-radius:16px;box-shadow:0 16px 38px rgba(18,176,95,.16);overflow:hidden}
+  .roi-badge{background:var(--primary);color:#fff;font-weight:800;font-size:12px;letter-spacing:.02em;padding:9px 16px;display:flex;align-items:center;gap:7px}
+  .roi-main{display:flex;align-items:center;gap:18px;padding:16px 18px}
+  .roi-price{display:flex;flex-direction:column;align-items:flex-start;line-height:1;flex:none}
+  .roi-was{font-size:14px;color:var(--dim);text-decoration:line-through;font-weight:700;margin-bottom:4px}
+  .roi-now{font-family:"Plus Jakarta Sans";font-weight:800;font-size:42px;color:var(--primaryd);letter-spacing:-.02em}
+  .roi-now i{font-size:15px;font-weight:700;color:var(--mut);font-style:normal;margin-left:1px}
+  .roi-div{width:1px;align-self:stretch;background:var(--line)}
+  .roi-copy b{font-family:"Plus Jakarta Sans";color:var(--ink);font-size:15px;display:block;margin-bottom:3px}
+  .roi-copy small{font-size:13.5px;color:var(--mut);line-height:1.45;display:block}
+  @media(max-width:520px){.roi-main{flex-direction:column;align-items:flex-start;gap:13px}.roi-div{display:none}}
+  /* product board mockup */
+  .mock{position:relative;justify-self:center;width:100%;max-width:440px}
+  .win{background:#fff;border:1px solid var(--line2);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+  .winbar{display:flex;align-items:center;gap:7px;padding:12px 15px;border-bottom:1px solid var(--line);background:var(--bg2)}
+  .winbar i{width:11px;height:11px;border-radius:50%;background:#e2574c}.winbar i:nth-child(2){background:#f4b731}.winbar i:nth-child(3){background:#2fbe63}
+  .wintitle{margin-left:8px;font-weight:700;font-size:13px;color:var(--mut)}
+  .winlive{margin-left:auto;font-size:11px;font-weight:800;color:var(--green);display:inline-flex;align-items:center;gap:6px}
+  .winlive .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,176,95,.5)}70%{box-shadow:0 0 0 9px rgba(18,176,95,0)}100%{box-shadow:0 0 0 0 rgba(18,176,95,0)}}
+  .winstat{display:flex;gap:0;border-bottom:1px solid var(--line)}
+  .winstat div{flex:1;padding:12px 14px;border-right:1px solid var(--line)}
+  .winstat div:last-child{border:none}
+  .winstat b{font-family:"Plus Jakarta Sans";font-size:20px;display:block}
+  .winstat small{color:var(--dim);font-size:11px}
+  .item{display:flex;align-items:center;gap:11px;padding:12px 15px;border-bottom:1px solid var(--line)}
+  .item:last-child{border:none}
+  .iav{width:30px;height:30px;border-radius:8px;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px}
+  .item b{font-size:13.5px;font-weight:700;display:block}
+  .item small{font-size:11.5px;color:var(--dim)}
+  .pill{margin-left:auto;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .pill.booked{background:#e6f8ef;color:var(--primaryd)}
+  .pill.qual{background:#eaf0ff;color:var(--blue)}
+  .pill.new{background:#fff4e2;color:#c67d0a}
+  .floatchip{position:absolute;z-index:3;background:#fff;border:1px solid var(--line2);border-radius:12px;padding:10px 13px;box-shadow:var(--shadow2);font-size:12px;font-weight:700}
+  .fc-1{top:-16px;right:-14px;display:flex;align-items:center;gap:8px;color:var(--green)}
+  .fc-2{bottom:26px;left:-22px;color:var(--ink)}
+  .fc-2 b{font-family:"Plus Jakarta Sans";font-size:16px;color:var(--green)}
+  @media(max-width:520px){.floatchip{display:none}}
+  /* before/after call cards (hero right) */
+  .ba{display:flex;flex-direction:column;gap:14px;width:100%;max-width:430px;justify-self:center}
+  .ba-card{background:#fff;border:1px solid var(--line2);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  .ba-good{border-color:#bfead0;box-shadow:0 22px 50px rgba(18,176,95,.18)}
+  .ba-tag{font-weight:800;font-size:12px;padding:9px 14px;display:flex;align-items:center;gap:7px}
+  .ba-tag.bad{background:#fdecec;color:#c0392b}
+  .ba-tag.good{background:#e6f8ef;color:var(--primaryd)}
+  .ba-call{display:flex;align-items:center;gap:11px;padding:12px 15px;border-bottom:1px solid var(--line)}
+  .ph-ic{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex:none}
+  .ph-ic.bad{background:#fdecec}.ph-ic.good{background:#e6f8ef}
+  .ba-call b{font-size:13.5px}.ba-call small{color:var(--dim);font-size:12px;display:block}
+  .ba-x{margin-left:auto;color:#c0392b;font-weight:800;font-size:12px;background:#fdecec;padding:3px 9px;border-radius:999px}
+  .ba-note{padding:12px 15px;font-size:13px;color:var(--mut)}
+  .convo{padding:13px 15px 14px}
+  .convo .bub{font-size:12.5px;margin:7px 0;padding:8px 11px;max-width:88%}
+  /* stat bar */
+  .statband{background:var(--ink);color:#fff}
+  .statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 22px}
+  .statband .s b{font-family:"Plus Jakarta Sans";font-size:clamp(30px,4vw,44px);display:block;line-height:1;background:var(--primary);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .statband .s small{color:#aeb9cc;font-size:13px;display:block;margin-top:8px}
+  .statband .s sup{color:var(--green2);font-size:11px}
+  /* sections */
+  section{position:relative;padding:74px 0}
+  .alt{background:var(--bg2)}
+  .center{text-align:center;max-width:720px;margin:0 auto 8px}
+  .center h2{margin:12px 0 14px}
+  /* feature grid (colorful monday-style icons) */
+  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow2);transition:transform .18s,box-shadow .18s}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .ico{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;color:#fff}
+  .card h3{margin-bottom:5px}.card p{font-size:15px}
+  .c-blue{background:var(--blue)}.c-green{background:var(--green)}.c-purple{background:var(--purple)}.c-amber{background:var(--amber)}.c-teal{background:var(--teal)}.c-pink{background:var(--pink)}
+  /* split product sections */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .split.rev .txt{order:2}
+  /* transcript mockup */
+  .chat{background:#fff;border:1px solid var(--line2);border-radius:18px;box-shadow:var(--shadow);padding:18px}
+  .chat .head{display:flex;align-items:center;gap:11px;padding:4px 4px 14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+  .chat .head .av{width:38px;height:38px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .chat .head b{font-size:14px}.chat .head small{color:var(--dim);font-size:12px;display:block}
+  .bub{max-width:80%;padding:10px 13px;border-radius:14px;font-size:13.5px;margin:9px 0;line-height:1.4}
+  .b-them{background:#eef2f8;color:#33415a;border-bottom-left-radius:4px}
+  .b-ai{background:var(--primary);color:#fff;font-weight:500;margin-left:auto;border-bottom-right-radius:4px}
+  .b-booked{margin-top:12px;background:#e6f8ef;border:1px solid #bfead0;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px}
+  .b-booked .ok{width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+  .b-booked b{font-size:13px;display:block}.b-booked small{color:var(--mut);font-size:12px}
+  /* calendar mockup */
+  .cal{background:#fff;border:1px solid var(--line2);border-radius:18px;box-shadow:var(--shadow);padding:18px}
+  .cal .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .cal .top b{font-family:"Plus Jakarta Sans"}
+  .calgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+  .calgrid .d{font-size:11px;color:var(--dim);text-align:center;font-weight:700;padding-bottom:4px}
+  .slot{height:34px;border-radius:8px;background:var(--bg2);border:1px dashed var(--line2)}
+  .slot.b{border:none;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1}
+  .slot.g{background:var(--green)}.slot.bl{background:var(--blue)}.slot.p{background:var(--purple)}.slot.a{background:var(--amber)}.slot.t{background:var(--teal)}
+  .list{margin-top:20px}
+  .lrow{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px;margin-bottom:9px;background:#fff}
+  .lrow .ok{width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+  .lrow b{font-size:14px}.lrow small{display:block;color:var(--mut);font-size:12.5px}
+  .lrow .time{margin-left:auto;color:var(--green);font-weight:800;font-size:12px}
+  /* own it */
+  .ownit{background:linear-gradient(120deg,#0d1526,#14233f);color:#fff;border-radius:24px;padding:52px;text-align:center;position:relative;overflow:hidden}
+  .ownit .kicker{color:var(--green2)}
+  .ownit h2{color:#fff;margin-bottom:14px}.ownit p{max-width:680px;margin:0 auto;color:#c4d0e2;font-size:18px}
+  /* pricing */
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .price{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 24px;box-shadow:var(--shadow2);position:relative}
+  .price.hi{border:2px solid var(--green);box-shadow:0 20px 50px rgba(18,176,95,.16);transform:scale(1.02)}
+  .ptag{position:absolute;top:-13px;left:24px;background:var(--primary);color:#fff;font-weight:800;font-size:12px;padding:5px 12px;border-radius:999px}
+  .price .amt{font-family:"Plus Jakarta Sans";font-size:46px;font-weight:800}
+  .price .amt span{font-size:16px;color:var(--mut);font-weight:600}
+  .price .who{color:var(--mut);font-size:14px;margin:4px 0 16px}
+  .price ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .price li{font-size:14px;color:#33415a;display:flex;gap:9px}.price li::before{content:"✓";color:var(--green);font-weight:800}
+  .pricenote{text-align:center;color:var(--dim);margin-top:16px;font-size:14px}
+  /* founders offer card */
+  .offer{position:relative;max-width:720px;margin:40px auto 0;background:#fff;border:2px solid var(--green);border-radius:22px;box-shadow:0 26px 60px rgba(18,176,95,.18)}
+  .offer-in{padding:30px 34px}
+  .offer-badge{display:inline-flex;align-items:center;gap:7px;background:#e6f8ef;color:var(--primaryd);font-weight:800;font-size:12.5px;padding:7px 14px;border-radius:999px;margin-bottom:16px}
+  .offer-reg{font-size:16px;color:var(--dim);font-weight:600;display:block}
+  .offer-now{font-family:"Plus Jakarta Sans";font-weight:800;font-size:64px;line-height:1;color:var(--primaryd);letter-spacing:-.03em;margin-top:2px}
+  .offer-now span{font-size:22px;color:var(--mut);font-weight:700}
+  .offer-life{display:block;margin-top:8px;font-size:14px;color:var(--ink);font-weight:700}
+  .offer-feats{border-top:1px solid var(--line);padding-top:20px;margin:20px 0 22px}
+  .offer-feats ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 22px}
+  .offer-feats li{font-size:14.5px;color:var(--ink);font-weight:600;display:flex;gap:9px;align-items:flex-start;line-height:1.35}
+  .offer-feats li::before{content:"✓";color:#fff;background:var(--green);width:19px;height:19px;border-radius:50%;font-size:11px;display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:1px;font-weight:800}
+  .offer-btn{width:100%}
+  .burst{position:absolute;top:-30px;right:-22px;width:132px;height:132px;transform:rotate(11deg);z-index:6;filter:drop-shadow(0 8px 16px rgba(214,140,0,.35))}
+  .burst svg{position:absolute;inset:0;width:100%;height:100%}
+  .burst-t{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-11deg);text-align:center;line-height:1}
+  .burst-t small{font-weight:800;font-size:9px;letter-spacing:.05em;color:#7a4d00}
+  .burst-t b{font-family:"Plus Jakarta Sans";font-weight:800;font-size:34px;color:#3a2500;margin:2px 0}
+  .burst-t span{font-weight:800;font-size:9.5px;color:#7a4d00}
+  @media(max-width:640px){.offer-in{padding:24px 20px}.offer-now{font-size:52px}.offer-feats ul{grid-template-columns:1fr}.burst{width:104px;height:104px;top:-20px;right:-6px}.burst-t b{font-size:26px}}
+  /* faq */
+  .faq{max-width:760px;margin:34px auto 0}
+  details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff;box-shadow:var(--shadow2);overflow:hidden}
+  summary{list-style:none;cursor:pointer;padding:18px 20px;font-family:"Plus Jakarta Sans";font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--green);font-size:22px;font-weight:800}
+  details[open] summary::after{content:"–"}
+  details p{padding:0 20px 18px;font-size:15px}
+  /* final cta */
+  .finalcta{background:radial-gradient(700px 300px at 50% 0,#e9faf0,transparent 70%),var(--bg2);border:1px solid var(--line);border-radius:24px;padding:56px 40px;text-align:center}
+  .seat{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--primaryd);background:#e9faf0;border:1px solid #c3efd5;padding:6px 14px;border-radius:999px;margin-bottom:10px}
+  /* form */
+  .formcard{max-width:540px;margin:26px auto 0;background:#fff;border:1px solid var(--line2);border-radius:20px;padding:28px;box-shadow:var(--shadow);text-align:left}
+  .prog{height:6px;background:#eef2f8;border-radius:999px;margin-bottom:20px;overflow:hidden}
+  .prog i{display:block;height:100%;width:25%;background:var(--primary);transition:width .3s}
+  .fq{font-family:"Plus Jakarta Sans";font-weight:800;font-size:18px;margin-bottom:14px}
+  .opts{display:grid;gap:10px}
+  .opt{border:1px solid var(--line2);border-radius:12px;padding:14px 16px;font-weight:600;cursor:pointer;background:#fff;transition:.15s}
+  .opt:hover{border-color:var(--green);background:#f2fcf6}
+  .field{width:100%;background:#fff;border:1px solid var(--line2);border-radius:12px;padding:14px 16px;font-size:16px;color:var(--ink);margin-bottom:10px;font-family:Inter}
+  .field:focus{outline:none;border-color:var(--green)}
+  .fstep2{display:none}.fstep2.active{display:block}
+  .fbtn{width:100%;border:none;border-radius:12px;padding:15px;font-weight:800;font-size:16px;background:var(--primary);color:#fff;cursor:pointer}
+  .fsmall{font-size:12px;color:var(--dim);text-align:center;margin-top:10px}
+  footer{border-top:1px solid var(--line);padding:38px 0;margin-top:8px;background:var(--bg2)}
+  .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  .sources{margin-top:16px;font-size:11px;color:var(--dim);max-width:900px;line-height:1.6}
+  @media(max-width:900px){
+    .herogrid{grid-template-columns:1fr;gap:34px}.mock{order:-1;max-width:400px}
+    .statband .wrap{grid-template-columns:1fr 1fr;gap:24px}
+    .fgrid,.prices{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:30px}.split.rev .txt{order:0}
+    .ownit,.finalcta{padding:36px 22px}
+  }
+  .fade{opacity:0;transform:translateY(16px);animation:fade .7s ease forwards}@keyframes fade{to{opacity:1;transform:none}}
+  /* sticky call-now bar */
+  .callbar-fixed{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;background:var(--primary);color:#fff;text-decoration:none;padding:13px 22px;box-shadow:0 -10px 30px rgba(18,176,95,.30);transform:translateY(120%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  .callbar-fixed.show{transform:translateY(0)}
+  .cbf-msg{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
+  .cbf-msg b{font-weight:800}
+  .cbf-cta{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.55);border-radius:11px;padding:9px 17px;font-weight:800;font-size:15px;white-space:nowrap}
+  @media(max-width:640px){.callbar-fixed{padding:12px 14px;gap:8px}.cbf-msg{font-size:13.5px;text-align:center}.cbf-tail,.cbf-cta{display:none}}
+</style>
+</head>
+<body>
 
+<nav>
+  <div class="wrap navrow">
+    <div class="logo"><span class="mark"></span>Procure Media</div>
+    <div class="navlinks">
+      <span class="navtag">Try the system and never miss another call</span><span class="navarrow">→</span>
+      <a class="navcall" href="tel:+18557545015" data-call>📞 855.754.5015</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="herogrid">
+      <div class="fade">
+        <span class="ey">● For pest control owners</span>
+        <h1 id="hero-h1">How many pest control jobs are you losing to <span class="g-green">missed calls?</span></h1>
+        <p class="sub" id="hero-sub"><b>67% of customers call a competitor after just one unanswered call.</b> Procure's AI answers every pest control call — day, night, weekends — qualifies the job, and books it on your calendar.</p>
+        <div class="roi">
+          <div class="roi-badge">🔒 Founders price · first 100 owners · locked in for life</div>
+          <div class="roi-main">
+            <div class="roi-price"><span class="roi-was">$75/wk</span><span class="roi-now">$25<i>/week</i></span></div>
+            <div class="roi-div"></div>
+            <div class="roi-copy"><b>One booked service call pays for it.</b><small>Every recurring customer after that is pure profit — for the full AI suite.</small></div>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg btn-call" href="tel:+18557545015" data-call><span class="lbl">📞 Call now &amp; hear it live</span><span class="sub">(855) 754-5015</span></a>
+          <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+        </div>
+        <div class="chips"><span>No setup fees</span><span>No contract</span><span>Cancel anytime</span><span>You own your site &amp; leads</span></div>
+      </div>
+
+      <!-- product board mockup -->
+      <div class="mock fade" style="animation-delay:.12s">
+        <div class="ba">
+          <div class="ba-card ba-bad">
+            <div class="ba-tag bad">✕ Without Procure</div>
+            <div class="ba-call">
+              <div class="ph-ic bad">📞</div>
+              <div><b>Incoming call · 6:45 PM</b><small>Rings… no answer</small></div>
+              <span class="ba-x">Missed</span>
+            </div>
+            <p class="ba-note">The caller hangs up and dials the next pest company.</p>
+          </div>
+          <div class="ba-card ba-good">
+            <div class="ba-tag good">✓ With Procure</div>
+            <div class="ba-call">
+              <div class="ph-ic good">🎧</div>
+              <div><b>Incoming call · 6:45 PM</b><small>Answered by AI in 2 rings</small></div>
+              <span class="winlive" style="margin-left:auto"><span class="pulse"></span>LIVE</span>
+            </div>
+            <div class="convo">
+              <div class="bub b-ai">Hi, you've reached Riley, the automated assistant for Bug Bouncers — are you calling about a home or a business?</div>
+              <div class="bub b-them">A home.</div>
+              <div class="bub b-ai">Got it — what pests are you trying to get handled?</div>
+              <div class="bub b-them">Roaches.</div>
+              <div class="bub b-ai">Yuck — but we can definitely help. Looking for service as soon as possible?</div>
+              <div class="bub b-them">Yes, sooner the better.</div>
+              <div class="bub b-ai">Last thing — your name and what city you're calling from?</div>
+              <div class="bub b-them">I'm Lisa, in Gilbert.</div>
+              <div class="bub b-ai">Thanks Lisa — a roach problem at your home in Gilbert. I can have a tech out tomorrow at 11 AM or 3 PM. Which works?</div>
+              <div class="bub b-them">Tomorrow at 11 works great.</div>
+              <div class="bub b-ai">Perfect — you're booked. What's the best address? 👍</div>
+              <div class="b-booked"><div class="ok">✓</div><div><b>Booked — Tomorrow, 11:00 AM</b><small>Roach treatment · Gilbert · on your calendar</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STAT BAND -->
+<div class="statband">
+  <div class="wrap">
+    <div class="s"><b>67%</b><small>call a competitor after ONE unanswered call</small></div>
+    <div class="s"><b>47%</b><small>of service calls come in after hours</small></div>
+    <div class="s"><b>78%</b><small>hire whoever answers first</small></div>
+    <div class="s"><b>21×</b><small>likelier to book if you answer in 5 min</small></div>
+  </div>
+</div>
+
+<!-- BUFFET / FEATURES -->
+<section id="how">
+  <div class="wrap">
+    <div class="center"><div class="kicker">Everything included</div><h2>One system. Use what you want.</h2>
+      <p>We build it, run it, and answer it. You show up and close. It's a buffet — it's all in there, and you take what you need.</p></div>
+    <div class="fgrid">
+      <div class="card"><div class="ico c-blue">🌐</div><h3>Your website</h3><p>A fast, conversion-built site on a brand you own — not rented.</p></div>
+      <div class="card"><div class="ico c-green">📈</div><h3>Managed traffic</h3><p>We run your Google &amp; Facebook ads. You never touch an ad account.</p></div>
+      <div class="card"><div class="ico c-purple">🤖</div><h3>24/7 AI receptionist</h3><p>Answers, qualifies, and books every call — day, night, weekends.</p></div>
+      <div class="card"><div class="ico c-amber">🗂️</div><h3>CRM</h3><p>Every lead and job in one place. Yours to keep and export anytime.</p></div>
+      <div class="card"><div class="ico c-teal">⚡</div><h3>Instant follow-up</h3><p>Auto call, text &amp; email the second a lead comes in — you're first, not third.</p></div>
+      <div class="card"><div class="ico c-pink">📅</div><h3>Appointment booking</h3><p>Jobs land on your calendar with reminders so they actually show.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT 1: AI answers (transcript) -->
+<section class="alt">
+  <div class="wrap">
+    <div class="split">
+      <div class="txt">
+        <div class="kicker">47% of calls come in after hours</div>
+        <h2>Your customers call when you're off the clock.</h2>
+        <p>Nearly half of service calls come in at night or on weekends — and fewer than 3% of people who reach voicemail leave a message. <b>Procure answers those calls and turns them into booked appointments for you.</b> A real-sounding AI picks up in 2 rings, screens the job, and puts it on your calendar — while you're asleep.</p>
+        <div style="margin-top:24px"><a class="btn btn-primary" href="tel:+18557545015" data-call>📞 Hear it answer — (855) 754-5015</a></div>
+      </div>
+      <div class="cal">
+        <div class="top"><b>Answered around the clock</b><span style="font-size:12px;color:var(--green);font-weight:800">0 missed</span></div>
+        <div class="list">
+          <div class="lrow"><div class="ok">✓</div><div><b>Fri · 9:42 PM</b><small>Roach call — booked Sat 9:00 AM</small></div><span class="time">answered</span></div>
+          <div class="lrow"><div class="ok">✓</div><div><b>Mon · 6:15 AM</b><small>Termite call — booked same day</small></div><span class="time">answered</span></div>
+          <div class="lrow"><div class="ok">✓</div><div><b>Sun · 2:10 PM</b><small>Ant call — booked Mon 11:00 AM</small></div><span class="time">answered</span></div>
+          <div class="lrow" style="border-color:#bfead0;background:#e6f8ef"><div class="ok">✓</div><div><b>Every call, every hour</b><small>Nights, weekends, holidays — it never sleeps</small></div><span class="time">24/7</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT 2: calendar fills -->
+<section>
+  <div class="wrap">
+    <div class="split rev">
+      <div class="txt">
+        <div class="kicker">67% call a competitor after one missed call</div>
+        <h2>Every missed call is a job you gave away.</h2>
+        <p>78% of customers hire whoever answers first, and 67% call a competitor after a single unanswered call. <b>How many did you miss today?</b> Procure picks up every one — in seconds, on every channel — so the lead you paid for becomes a booked job on your calendar instead of your competitor's.</p>
+        <div style="margin-top:24px"><a class="btn btn-ghost" href="#pricing">See pricing →</a></div>
+      </div>
+      <div class="cal">
+        <div class="top"><b>This week</b><span style="font-size:12px;color:var(--green);font-weight:800">14 booked · 0 missed</span></div>
+        <div class="calgrid">
+          <div class="d">Mon</div><div class="d">Tue</div><div class="d">Wed</div><div class="d">Thu</div><div class="d">Fri</div>
+          <div class="slot b g">Termite 9a</div><div class="slot b bl">Ant 8a</div><div class="slot"></div><div class="slot b p">Rodent 10a</div><div class="slot b a">Wasp 9a</div>
+          <div class="slot"></div><div class="slot b g">Roach 11a</div><div class="slot b t">Insp 1p</div><div class="slot"></div><div class="slot b bl">Ant 2p</div>
+          <div class="slot b p">Rodent 3p</div><div class="slot"></div><div class="slot b g">Termite 2p</div><div class="slot b a">Wasp 4p</div><div class="slot"></div>
+        </div>
+        <div class="list">
+          <div class="lrow"><div class="ok">✓</div><div><b>New lead → booked</b><small>Answered, qualified &amp; scheduled by AI</small></div><span class="time">1:40s</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWN IT -->
+<section class="alt">
+  <div class="wrap">
+    <div class="ownit">
+      <div class="kicker">No contracts. No hostages.</div>
+      <h2>Own it — don't rent it.</h2>
+      <p>Your domain, your website, your customer data — always yours. Not shared leads resold to three other companies. Leave anytime and take it all with you, in writing. Every other agency locks you in. We'd rather earn it every month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="center"><div class="kicker">Founders pricing</div><h2>One low price. Locked for life.</h2>
+      <p>Regularly $299/mo. Founders lock in $99/mo for life — first 100 owners only, no contract, cancel anytime.</p></div>
+    <div class="offer">
+      <div class="burst" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><polygon points="50.0,0.0 57.4,12.7 69.1,3.8 71.1,18.4 85.4,14.6 81.6,28.9 96.2,30.9 87.3,42.6 100.0,50.0 87.3,57.4 96.2,69.1 81.6,71.1 85.4,85.4 71.1,81.6 69.1,96.2 57.4,87.3 50.0,100.0 42.6,87.3 30.9,96.2 28.9,81.6 14.6,85.4 18.4,71.1 3.8,69.1 12.7,57.4 0.0,50.0 12.7,42.6 3.8,30.9 18.4,28.9 14.6,14.6 28.9,18.4 30.9,3.8 42.6,12.7" fill="#f7a81b"/></svg>
+        <div class="burst-t"><small>LIMITED TIME</small><b>$99</b><span>/mo · for life</span></div>
+      </div>
+      <div class="offer-in">
+        <span class="offer-badge">🔒 Founders price · first 100 owners · locked for life</span>
+        <div class="offer-price">
+          <span class="offer-reg">Regularly <s>$299/mo</s></span>
+          <div class="offer-now">$99<span>/mo</span></div>
+          <span class="offer-life">Your rate never goes up — locked for life.</span>
+        </div>
+        <div class="offer-feats">
+          <ul>
+            <li>Your own conversion website</li>
+            <li>Managed Google &amp; Facebook ads</li>
+            <li>24/7 AI receptionist — answers, qualifies &amp; books</li>
+            <li>CRM with every lead &amp; job</li>
+            <li>Instant call, text &amp; email follow-up</li>
+            <li>Automatic appointment booking</li>
+            <li>No setup fees · no contract · cancel anytime</li>
+            <li>You own your site, leads &amp; data</li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-lg btn-call offer-btn" href="tel:+18557545015" data-call><span class="lbl">📞 Sign up now</span><span class="sub">(855) 754-5015 · $99/mo for life</span></a>
+      </div>
+    </div>
+    <p class="pricenote">Ad spend billed separately at cost + 30%. Media is what fills your calendar — the platform is what books it.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="center"><div class="kicker">Questions</div><h2>The short answers.</h2></div>
+    <div class="faq">
+      <details><summary>Do I need to be techy?</summary><p>No. We build the website, run the ads, and set up the AI. You get a 15-minute onboarding call and you're live — then you just take the booked jobs.</p></details>
+      <details><summary>Am I locked into a contract?</summary><p>Never. No setup fees, no contract, cancel anytime. Your domain, site, and customer data are yours to keep and take with you.</p></details>
+      <details><summary>What if I already run ads or have a website?</summary><p>Great — we can take them over or build fresh. Either way it all runs through one system with the AI answering and booking on top.</p></details>
+      <details><summary>How does the AI actually sound?</summary><p>Like a real receptionist. The fastest way to judge it is to call <b>(855) 754-5015</b> right now and hear it answer live — that's exactly what your customers will hear.</p></details>
+      <details><summary>How fast can I be live?</summary><p>Most owners are up within a few days of onboarding, and the founding-member rate is locked in the day you start.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + FORM -->
+<section>
+  <div class="wrap">
+    <div class="finalcta">
+      <div class="seat">● Founding Member pricing — first 100 seats</div>
+      <h2>Never miss another job.</h2>
+      <p>Call now and hear the AI answer live — or leave your info and we'll call you. Either way, lock the $99 founding rate before it's gone.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary btn-lg" href="tel:+18557545015" data-call>📞 Call (855) 754-5015</a>
+        <a class="btn btn-ghost btn-lg" href="#demoForm">Have us call you →</a>
+      </div>
+      <form class="formcard" id="demoForm" novalidate>
+        <div class="prog"><i id="progbar"></i></div>
+        <div class="fstep2 active" data-step="1"><div class="fq">What's costing you jobs?</div><div class="opts">
+          <label class="opt"><input type="radio" name="pain" value="missed-calls" hidden> Missed calls</label>
+          <label class="opt"><input type="radio" name="pain" value="not-enough-customers" hidden> Not enough customers</label>
+          <label class="opt"><input type="radio" name="pain" value="both" hidden> Both</label></div></div>
+        <div class="fstep2" data-step="2"><div class="fq">How many trucks / techs?</div><div class="opts">
+          <label class="opt"><input type="radio" name="size" value="just-me" hidden> Just me</label>
+          <label class="opt"><input type="radio" name="size" value="2-5" hidden> 2–5</label>
+          <label class="opt"><input type="radio" name="size" value="6-plus" hidden> 6+</label></div></div>
+        <div class="fstep2" data-step="3"><div class="fq">Where are you located?</div><div class="opts">
+          <label class="opt"><input type="radio" name="metro" value="phoenix" hidden> Phoenix</label>
+          <label class="opt"><input type="radio" name="metro" value="houston" hidden> Houston</label>
+          <label class="opt"><input type="radio" name="metro" value="other" hidden> Somewhere else</label></div></div>
+        <div class="fstep2" data-step="4"><div class="fq">Where should we send your demo?</div>
+          <input class="field" type="text" name="name" placeholder="Your name" autocomplete="name">
+          <input class="field" type="tel" name="phone" placeholder="Mobile number" autocomplete="tel">
+          <input class="field" type="email" name="email" placeholder="Email" autocomplete="email">
+          <button class="fbtn" type="submit">Get my demo →</button>
+          <p class="fsmall">By submitting you agree we may contact you by phone, text &amp; email. No spam.</p></div>
+        <input type="hidden" name="lead_source" value="acq-pest-operator">
+        <input type="hidden" name="gclid" id="f_gclid"><input type="hidden" name="utm_source" id="f_utm_source">
+        <input type="hidden" name="utm_campaign" id="f_utm_campaign"><input type="hidden" name="ad_group" id="f_ag">
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footrow"><div class="logo"><span class="mark"></span>Procure Media</div>
+      <a class="btn btn-ghost" href="tel:+18557545015" data-call>📞 (855) 754-5015</a></div>
+    <p class="sources">Procure Media — your website, your traffic, and an AI that answers every call and books the job. One low price, no contracts; you own your site &amp; data.</p>
+  </div>
+</footer>
+
+<!-- sticky call-now bar -->
+<a class="callbar-fixed" id="callbar" href="tel:+18557545015" data-call>
+  <span class="cbf-msg">📞 <b>Call now to lock in $25/week</b><span class="cbf-tail"> — founders price, locked for life</span></span>
+  <span class="cbf-cta">(855) 754-5015</span>
+</a>
+
+<script>
+function fireConversion(label){try{if(window.gtag){gtag('event','conversion',{send_to:'AW-17934471659/'+label});}}catch(e){}}
+(function(){var p=new URLSearchParams(location.search),ag=(p.get('ag')||'').toLowerCase();
+  var map={answering:{h:'How many pest control jobs are you losing to <span class="g-green">missed calls?</span>',s:'67% of customers call a competitor after just one unanswered call. Procure\'s AI answers every pest control call, qualifies the job, and books it.'},
+    marketing:{h:'Turn missed calls into <span class="g-green">booked jobs.</span>',s:'67% of customers call a competitor after one unanswered call. Procure answers every call, qualifies it, and books it on your calendar. Website, traffic &amp; leads included.'},
+    software:{h:'Your website, ads &amp; AI — <span class="g-green">all in one.</span>',s:'One system replaces your web guy, ad agency, and receptionist — and it answers every call and books the job. You own it all. One low price.'}};
+  if(map[ag]){document.getElementById('hero-h1').innerHTML=map[ag].h;document.getElementById('hero-sub').textContent=map[ag].s;}
+  var set=function(id,v){var el=document.getElementById(id);if(el)el.value=v||''};
+  set('f_gclid',p.get('gclid'));set('f_utm_source',p.get('utm_source'));set('f_utm_campaign',p.get('utm_campaign'));set('f_ag',ag);})();
+document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener('click',function(){fireConversion('CALL_CLICK_LABEL');});});
+(function(){var form=document.getElementById('demoForm'),steps=form.querySelectorAll('.fstep2'),bar=document.getElementById('progbar'),i=0;
+  function show(n){steps[i].classList.remove('active');i=n;steps[i].classList.add('active');bar.style.width=((i+1)/steps.length*100)+'%';}
+  form.querySelectorAll('.fstep2[data-step="1"] input,.fstep2[data-step="2"] input,.fstep2[data-step="3"] input').forEach(function(inp){
+    inp.addEventListener('change',function(){if(i<steps.length-1)setTimeout(function(){show(i+1);},140);});});
+  form.addEventListener('submit',function(e){e.preventDefault();
+    /* [2] set FORM_ENDPOINT to the Procure sales-pipeline URL to capture leads. Until then, submit funnels to a call so no lead is lost. */
+    var FORM_ENDPOINT='';
+    var data=Object.fromEntries(new FormData(form).entries());fireConversion('DEMO_FORM_LABEL');
+    if(FORM_ENDPOINT){
+      fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      form.innerHTML='<div class="fq" style="text-align:center">You\'re in — we\'ll call you shortly. 👋</div><p class="fsmall">Want it faster? <a href="tel:+18557545015" style="color:var(--primaryd);font-weight:800;text-decoration:none">Call (855) 754-5015</a> and we\'ll set you up live.</p>';
+    } else {
+      form.innerHTML='<div class="fq" style="text-align:center">You\'re almost set! 🎉</div><p class="fsmall" style="margin-bottom:12px">Tap to call and we\'ll get you live in 15 minutes:</p><a class="btn btn-primary btn-lg" style="display:flex;justify-content:center;width:100%" href="tel:+18557545015" data-call>📞 Call (855) 754-5015</a>';
+    }});})();
+/* sticky call-now bar: appear after the hero, hide near the footer so it never covers the form */
+(function(){var bar=document.getElementById('callbar');if(!bar)return;
+  function upd(){var y=window.scrollY||window.pageYOffset;
+    var nearBottom=(window.innerHeight+y)>(document.body.offsetHeight-320);
+    if(y>560&&!nearBottom)bar.classList.add('show');else bar.classList.remove('show');}
+  window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
+</script>
+</body>
+</html>
