@@ -240,7 +240,7 @@
   .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
   .sources{margin-top:16px;font-size:11px;color:var(--dim);max-width:900px;line-height:1.6}
   @media(max-width:900px){
-    .herogrid{grid-template-columns:1fr;gap:34px}.mock{order:-1;max-width:400px}
+    .herogrid{grid-template-columns:1fr;gap:30px}.hero-textcol{display:contents}.hero-copy{order:1}.mock{order:2;max-width:400px;justify-self:stretch}.hero-offer{order:3}
     .statband .wrap{grid-template-columns:1fr 1fr;gap:24px}
     .fgrid,.prices{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:30px}.split.rev .txt{order:0}
@@ -272,23 +272,27 @@
 <header class="hero">
   <div class="wrap">
     <div class="herogrid">
-      <div class="fade">
-        <span class="ey">● For pest control owners</span>
-        <h1 id="hero-h1">How many pest control jobs are you losing to <span class="g-green">missed calls?</span></h1>
-        <p class="sub" id="hero-sub"><b>67% of customers call a competitor after just one unanswered call.</b> Procure's AI answers every pest control call — day, night, weekends — qualifies the job, and books it on your calendar.</p>
-        <div class="roi">
-          <div class="roi-badge">🔒 Founders price · first 100 owners · locked in for life</div>
-          <div class="roi-main">
-            <div class="roi-price"><span class="roi-was">$75/wk</span><span class="roi-now">$25<i>/week</i></span></div>
-            <div class="roi-div"></div>
-            <div class="roi-copy"><b>One booked service call pays for it.</b><small>Every recurring customer after that is pure profit — for the full AI suite.</small></div>
+      <div class="hero-textcol">
+        <div class="hero-copy fade">
+          <span class="ey">● For pest control owners</span>
+          <h1 id="hero-h1">How many pest control jobs are you losing to <span class="g-green">missed calls?</span></h1>
+          <p class="sub" id="hero-sub"><b>67% of customers call a competitor after just one unanswered call.</b> Procure's AI answers every pest control call — day, night, weekends — qualifies the job, and books it on your calendar.</p>
+        </div>
+        <div class="hero-offer fade">
+          <div class="roi">
+            <div class="roi-badge">🔒 Founders price · first 100 owners · locked in for life</div>
+            <div class="roi-main">
+              <div class="roi-price"><span class="roi-was">$75/wk</span><span class="roi-now">$25<i>/week</i></span></div>
+              <div class="roi-div"></div>
+              <div class="roi-copy"><b>One booked service call pays for it.</b><small>Every recurring customer after that is pure profit — for the full AI suite.</small></div>
+            </div>
           </div>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg btn-call" href="tel:+18557545015" data-call><span class="lbl">📞 Call now &amp; hear it live</span><span class="sub">(855) 754-5015</span></a>
+            <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+          </div>
+          <div class="chips"><span>No setup fees</span><span>No contract</span><span>Cancel anytime</span><span>You own your site &amp; leads</span></div>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-primary btn-lg btn-call" href="tel:+18557545015" data-call><span class="lbl">📞 Call now &amp; hear it live</span><span class="sub">(855) 754-5015</span></a>
-          <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
-        </div>
-        <div class="chips"><span>No setup fees</span><span>No contract</span><span>Cancel anytime</span><span>You own your site &amp; leads</span></div>
       </div>
 
       <!-- product board mockup -->
