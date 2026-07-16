@@ -15,10 +15,22 @@
   if (window.__pmChatWidget) return;            // guard against double-include
   window.__pmChatWidget = true;
 
+  // Site-aware: the widget self-configures by hostname (or window.PMCW_CONFIG). The SAME file works
+  // on every Procure site — it sends its `site` to /chat, which drives the persona + lead routing.
+  var HOSTS = {
+    'hoacontracts.com': { site: 'hoacontracts.com', brand: 'HOA Contracts', phoneDisplay: '(208) 361-4295', phoneTel: '+12083614295' }
+  };
+  function pmcwSite() {
+    try { var h = (location.hostname || '').replace(/^www\./, ''); for (var k in HOSTS) { if (h.indexOf(k) !== -1) return HOSTS[k]; } } catch (e) {}
+    return { site: 'procuremedia.com', brand: 'Procure Media', phoneDisplay: '(855) 754-5015', phoneTel: '+18557545015' };
+  }
+  var SITECFG = Object.assign(pmcwSite(), (window.PMCW_CONFIG || {}));
   var CONFIG = {
     CHAT_ENDPOINT: 'https://procure-lead-engine.dan-fda.workers.dev/chat',
-    PHONE_DISPLAY: '(855) 754-5015',
-    PHONE_TEL: '+18557545015'
+    SITE: SITECFG.site,
+    BRAND: SITECFG.brand,
+    PHONE_DISPLAY: SITECFG.phoneDisplay,
+    PHONE_TEL: SITECFG.phoneTel
   };
 
   var C = { navy:'#0B3558', navyDark:'#07253D', gold:'#F4A621', goldDark:'#D88D13',
@@ -95,7 +107,7 @@
     var href = u.indexOf('http') === 0 ? u : 'https://' + u; return '<a href="'+href+'" target="_blank" rel="noopener">'+u+'</a>'; }); }
 
   function render(screen, isChat) {
-    panel.innerHTML = '<div class="pmcw-head"><div><h3>Chat with Procure Media</h3><p>We reply fast — usually within minutes.</p></div>'
+    panel.innerHTML = '<div class="pmcw-head"><div><h3>Chat with ' + esc(CONFIG.BRAND) + '</h3><p>We reply fast — usually within minutes.</p></div>'
       + '<button class="pmcw-x" aria-label="Close chat">&times;</button></div>'
       + '<div class="pmcw-body' + (isChat ? ' pmcw-chatbody' : '') + '">' + screen + '</div>';
     panel.querySelector('.pmcw-x').addEventListener('click', close);
@@ -167,7 +179,7 @@
     setBusy(true); typing(true);
     fetch(CONFIG.CHAT_ENDPOINT, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ segment: state.segment, messages: state.messages })
+      body: JSON.stringify({ site: CONFIG.SITE, segment: state.segment, messages: state.messages })
     }).then(function (r) { return r.json(); }).then(function (d) {
       typing(false);
       var reply = (d && d.reply) ? d.reply : ("Sorry — I hit a snag. Call us at " + CONFIG.PHONE_DISPLAY + ".");
@@ -186,6 +198,6 @@
   function open() { panel.classList.add('pmcw-open'); btn.style.display = 'none'; }
   function close() { panel.classList.remove('pmcw-open'); btn.style.display = ''; }
 
-  btn.addEventListener('click', function () { goIntro(); open(); });
+  btn.addEventListener('click', function () { open(); if (CONFIG.SITE === 'procuremedia.com') goIntro(); else goChat('intake'); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && panel.classList.contains('pmcw-open')) close(); });
 })();

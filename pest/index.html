@@ -5,12 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Procure Media — The AI that answers & books every pest control call</title>
 <meta name="description" content="For pest control owners: your website, your traffic, your leads — and an AI that answers, qualifies, and books every call 24/7. All included, one low price. Call and hear it live.">
+<link rel="canonical" href="https://procuremedia.com/pest">
+<meta property="og:title" content="The AI that answers &amp; books every pest control call">
+<meta property="og:description" content="67% of customers call a competitor after one unanswered call. Procure's AI answers every pest control call, qualifies the job, and books it on your calendar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://procuremedia.com/pest">
 <!--
-  OPERATOR ACQUISITION LANDER v3 — get.procuremedia.com/pest  (LIGHT, colorful, product-forward — monday/Eve style)
-  Real stats w/ sources: Invoca (27% unanswered, <3% voicemail), HomeAdvisor (47% after-hours, 78% first responder),
-  MIT/InsideSales (21x @ 5 min), Angi (67% call a competitor). Sources footnoted. No fake logos/testimonials.
-  ── WIRED 2026-07-14 ──  [1] DONE gtag: GA4 G-L6LTMCGR41 + Ads AW-17934471659 (call=L-BqCNaiqNAcEOuj6edC, form=yB7eCNmiqNAcEOuj6edC)  [2] TODO FORM_ENDPOINT = sales-pipeline URL (still empty; funnels to call until set)
-  [3] Deploy is Dan's (GitHub → CF Pages → get.procuremedia.com)  [4] Drop a real customer quote where marked.
+  OPERATOR ACQUISITION LANDER v3 — procuremedia.com/pest  (LIGHT, colorful, product-forward)
+  Stats are sourced IN THE PAGE — see the visible <section id="sources"> in the footer. Every
+  figure carries a superscript marker linking to it. Do NOT hide a source in a comment: the
+  site gate strips comments before checking, because a source no visitor can see is not a source.
+  ── WIRED 2026-07-14 ──  gtag: GA4 G-L6LTMCGR41 + Ads AW-17934471659 (call=L-BqCNaiqNAcEOuj6edC, form=yB7eCNmiqNAcEOuj6edC)
+  ── REPAIRED 2026-07-16 ── the form now POSTs NATIVELY to the lead engine (see the action= attribute).
+  It previously posted nowhere and dead-ended every lead into a tel: link. Also added: pm_attr,
+  canonical, SMS consent + consent_version, visible sources, chat widget, monthly pricing.
+  Pricing law: the BILLED price is MONTHLY ($299 → $99/month). A weekly figure is an APPROXIMATION
+  only ("Less than $25 a week"); never state a bare weekly price. See PLAYBOOK §3.
+  Deploy is Dan's: ./scripts/publish-site.sh procuremedia.com (gated) → GitHub → CF Pages.
 -->
 <!-- Google tag (gtag.js) — GA4 (analytics) + Google Ads (conversions). Wired 2026-07-14. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6LTMCGR41"></script>
@@ -21,6 +32,36 @@
   gtag('config', 'G-L6LTMCGR41');   /* GA4 — procuremedia.com property (stream 15028782659) */
   gtag('config', 'AW-17934471659'); /* Google Ads — Procure Media, LLC conversions */
 </script>
+
+<!-- Click-source capture (pm_attr) — verbatim from index.html. Persists gclid/utm into a
+     90-day cookie and injects them as hidden fields, so the lead carries its attribution. -->
+<script>
+(function(){
+  try{
+    var qs = new URLSearchParams(window.location.search);
+    var keys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+    var store = {};
+    try{ var c=(document.cookie.match(/(?:^|; )pm_attr=([^;]*)/)||[])[1]; if(c) store=JSON.parse(decodeURIComponent(c))||{}; }catch(e){ store={}; }
+    var got=false;
+    keys.forEach(function(k){ var v=qs.get(k); if(v){ store[k]=v; got=true; } });
+    if(got || !store.landing){
+      if(!store.landing) store.landing=window.location.pathname;
+      if(!store.referrer) store.referrer=document.referrer||'';
+      document.cookie='pm_attr='+encodeURIComponent(JSON.stringify(store))+'; path=/; max-age=7776000; SameSite=Lax';
+    }
+    function fill(){
+      var f=document.querySelector('form'); if(!f) return;
+      Object.keys(store).forEach(function(k){
+        if(store[k] && !f.querySelector('[name="'+k+'"]')){
+          var i=document.createElement('input'); i.type='hidden'; i.name=k; i.value=store[k]; f.appendChild(i);
+        }
+      });
+    }
+    if(document.readyState!=='loading') fill(); else document.addEventListener('DOMContentLoaded', fill);
+  }catch(e){}
+})();
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -236,9 +277,30 @@
   .fstep2{display:none}.fstep2.active{display:block}
   .fbtn{width:100%;border:none;border-radius:12px;padding:15px;font-weight:800;font-size:16px;background:var(--primary);color:#fff;cursor:pointer}
   .fsmall{font-size:12px;color:var(--dim);text-align:center;margin-top:10px}
+  /* SMS consent — optional + unchecked. consent_version ships with it (TCPA proof-of-consent). */
+  .pm-consent{display:flex;gap:11px;align-items:flex-start;margin-top:16px;font-size:11.5px;color:var(--mut);line-height:1.5;cursor:pointer;text-align:left}
+  .pm-consent input{width:18px;height:18px;flex:none;margin-top:1px;accent-color:var(--green);cursor:pointer}
+  .pm-consent-submit{margin-top:14px;font-size:11px;color:var(--dim);line-height:1.55}
+  .pm-consent-terms{margin-top:8px;font-size:11px;color:var(--dim);line-height:1.55}
+  .pm-consent-terms a{color:var(--mut);text-decoration:underline;text-underline-offset:2px}
+  .pm-consent-terms a:hover{color:var(--primaryd)}
+  /* source markers — a footnote, not a headline. Every stat figure links to #sources. */
+  sup.ref{font-size:10px;font-weight:700;vertical-align:super;line-height:0;margin-left:2px;letter-spacing:0;opacity:.6}
+  sup.ref a{color:var(--primaryd);text-decoration:none;padding:2px 3px}
+  sup.ref:hover,sup.ref:focus-within{opacity:1}
+  .statband .s b sup.ref{font-size:10px;vertical-align:baseline;opacity:.55}
+  .statband .s b sup.ref a{color:var(--green2)}
   footer{border-top:1px solid var(--line);padding:38px 0;margin-top:8px;background:var(--bg2)}
   .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
   .sources{margin-top:16px;font-size:11px;color:var(--dim);max-width:900px;line-height:1.6}
+  /* visible sources list — LIGHT, matching this page (not the homepage's dark styling) */
+  .srcbox{padding:22px 0 0;margin-top:22px;border-top:1px solid var(--line2);scroll-margin-top:82px}
+  .srcbox h2{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .srcbox ol{margin:14px 0 0;padding:0 0 0 20px;display:grid;gap:7px;max-width:900px}
+  .srcbox li{font-size:12px;color:var(--dim);line-height:1.55}
+  .srcbox li b{color:var(--mut);font-weight:700}
+  .srcbox li::marker{color:var(--green);font-weight:800}
+  .srcbox .disc{margin-top:16px;font-size:11.5px;color:var(--dim);line-height:1.6;max-width:78ch}
   @media(max-width:900px){
     .herogrid{grid-template-columns:1fr;gap:30px}.hero-textcol{display:contents}.hero-copy{order:1}.mock{order:2;max-width:400px;justify-self:stretch}.hero-offer{order:3}
     .statband .wrap{grid-template-columns:1fr 1fr;gap:24px}
@@ -276,15 +338,15 @@
         <div class="hero-copy fade">
           <span class="ey">● For pest control owners</span>
           <h1 id="hero-h1">How many pest control jobs are you losing to <span class="g-green">missed calls?</span></h1>
-          <p class="sub" id="hero-sub"><b>67% of customers call a competitor after just one unanswered call.</b> Procure's AI answers every pest control call — day, night, weekends — qualifies the job, and books it on your calendar.</p>
+          <p class="sub" id="hero-sub"><b>67% of customers call a competitor after just one unanswered call.</b><sup class="ref"><a href="#sources" aria-label="Source 1">1</a></sup> Procure's AI answers every pest control call — day, night, weekends — qualifies the job, and books it on your calendar.</p>
         </div>
         <div class="hero-offer fade">
           <div class="roi">
             <div class="roi-badge">🔒 Founders price · first 100 owners · locked in for life</div>
             <div class="roi-main">
-              <div class="roi-price"><span class="roi-was">$75/wk</span><span class="roi-now">$25<i>/week</i></span></div>
+              <div class="roi-price"><span class="roi-was">$299/month</span><span class="roi-now">$99<i>/month</i></span></div>
               <div class="roi-div"></div>
-              <div class="roi-copy"><b>One booked service call pays for it.</b><small>Every recurring customer after that is pure profit — for the full AI suite.</small></div>
+              <div class="roi-copy"><b>Less than $25 a week — one booked service call pays for it.</b><small>Every recurring customer after that is pure profit — for the full AI suite.</small></div>
             </div>
           </div>
           <div class="cta-row">
@@ -338,10 +400,10 @@
 <!-- STAT BAND -->
 <div class="statband">
   <div class="wrap">
-    <div class="s"><b>67%</b><small>call a competitor after ONE unanswered call</small></div>
-    <div class="s"><b>47%</b><small>of service calls come in after hours</small></div>
-    <div class="s"><b>78%</b><small>hire whoever answers first</small></div>
-    <div class="s"><b>21×</b><small>likelier to book if you answer in 5 min</small></div>
+    <div class="s"><b>67%<sup class="ref"><a href="#sources" aria-label="Source 1">1</a></sup></b><small>call a competitor after ONE unanswered call</small></div>
+    <div class="s"><b>47%<sup class="ref"><a href="#sources" aria-label="Source 2">2</a></sup></b><small>of service calls come in after hours</small></div>
+    <div class="s"><b>78%<sup class="ref"><a href="#sources" aria-label="Source 3">3</a></sup></b><small>hire whoever answers first</small></div>
+    <div class="s"><b>21×<sup class="ref"><a href="#sources" aria-label="Source 4">4</a></sup></b><small>likelier to book if you answer in 5 min</small></div>
   </div>
 </div>
 
@@ -366,9 +428,9 @@
   <div class="wrap">
     <div class="split">
       <div class="txt">
-        <div class="kicker">47% of calls come in after hours</div>
+        <div class="kicker">47% of calls come in after hours<sup class="ref"><a href="#sources" aria-label="Source 2">2</a></sup></div>
         <h2>Your customers call when you're off the clock.</h2>
-        <p>Nearly half of service calls come in at night or on weekends — and fewer than 3% of people who reach voicemail leave a message. <b>Procure answers those calls and turns them into booked appointments for you.</b> A real-sounding AI picks up in 2 rings, screens the job, and puts it on your calendar — while you're asleep.</p>
+        <p>Nearly half of service calls come in at night or on weekends — and fewer than 3% of people who reach voicemail leave a message.<sup class="ref"><a href="#sources" aria-label="Source 5">5</a></sup> <b>Procure answers those calls and turns them into booked appointments for you.</b> A real-sounding AI picks up in 2 rings, screens the job, and puts it on your calendar — while you're asleep.</p>
         <div style="margin-top:24px"><a class="btn btn-primary" href="tel:+18557545015" data-call>📞 Hear it answer — (855) 754-5015</a></div>
       </div>
       <div class="cal">
@@ -389,9 +451,9 @@
   <div class="wrap">
     <div class="split rev">
       <div class="txt">
-        <div class="kicker">67% call a competitor after one missed call</div>
+        <div class="kicker">67% call a competitor after one missed call<sup class="ref"><a href="#sources" aria-label="Source 1">1</a></sup></div>
         <h2>Every missed call is a job you gave away.</h2>
-        <p>78% of customers hire whoever answers first, and 67% call a competitor after a single unanswered call. <b>How many did you miss today?</b> Procure picks up every one — in seconds, on every channel — so the lead you paid for becomes a booked job on your calendar instead of your competitor's.</p>
+        <p>78% of customers hire whoever answers first,<sup class="ref"><a href="#sources" aria-label="Source 3">3</a></sup> and 67% call a competitor after a single unanswered call.<sup class="ref"><a href="#sources" aria-label="Source 1">1</a></sup> <b>How many did you miss today?</b> Procure picks up every one — in seconds, on every channel — so the lead you paid for becomes a booked job on your calendar instead of your competitor's.</p>
         <div style="margin-top:24px"><a class="btn btn-ghost" href="#pricing">See pricing →</a></div>
       </div>
       <div class="cal">
@@ -482,7 +544,7 @@
         <a class="btn btn-primary btn-lg" href="tel:+18557545015" data-call>📞 Call (855) 754-5015</a>
         <a class="btn btn-ghost btn-lg" href="#demoForm">Have us call you →</a>
       </div>
-      <form class="formcard" id="demoForm" novalidate>
+      <form class="formcard" id="demoForm" action="https://procure-lead-engine.dan-fda.workers.dev/submit" method="POST">
         <div class="prog"><i id="progbar"></i></div>
         <div class="fstep2 active" data-step="1"><div class="fq">What's costing you jobs?</div><div class="opts">
           <label class="opt"><input type="radio" name="pain" value="missed-calls" hidden> Missed calls</label>
@@ -497,12 +559,19 @@
           <label class="opt"><input type="radio" name="metro" value="houston" hidden> Houston</label>
           <label class="opt"><input type="radio" name="metro" value="other" hidden> Somewhere else</label></div></div>
         <div class="fstep2" data-step="4"><div class="fq">Where should we send your demo?</div>
-          <input class="field" type="text" name="name" placeholder="Your name" autocomplete="name">
-          <input class="field" type="tel" name="phone" placeholder="Mobile number" autocomplete="tel">
-          <input class="field" type="email" name="email" placeholder="Email" autocomplete="email">
-          <button class="fbtn" type="submit">Get my demo →</button>
-          <p class="fsmall">By submitting you agree we may contact you by phone, text &amp; email. No spam.</p></div>
-        <input type="hidden" name="lead_source" value="acq-pest-operator">
+          <input class="field" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+          <input class="field" type="tel" name="phone" placeholder="Mobile number" autocomplete="tel" inputmode="tel" required>
+          <input class="field" type="email" name="email" placeholder="Email" autocomplete="email" inputmode="email" required>
+          <label class="pm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>Yes, text me about my request. By checking this box, I agree to receive SMS text messages about my inquiry, account setup, appointment scheduling, and related follow-ups from Procure Media, LLC at the phone number I provided, including messages sent using automated technology. Msg &amp; data rates may apply. Message frequency varies.</span></label>
+          <button class="fbtn" type="submit" style="margin-top:16px">Get my demo →</button>
+          <p class="pm-consent-submit">By submitting, you agree to be contacted about your request by Procure Media, LLC by phone call and email, including via automated technology. Consent is not a condition of purchase.</p>
+          <p class="pm-consent-terms">SMS terms: If you check the box above, message frequency varies and Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not a condition of purchase. See our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</p></div>
+        <!-- `site` is REQUIRED: the worker resolves siteKey = payload.site || lead_source.split("/")[0]
+             (procure-lead-engine.js:512) and stores it, so without this the lead files under a bogus site. -->
+        <input type="hidden" name="site" value="procuremedia.com">
+        <input type="hidden" name="lead_source" value="procuremedia-pest">
+        <input type="hidden" name="consent_version" value="pm-sms-v1-2026-07-06">
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
         <input type="hidden" name="gclid" id="f_gclid"><input type="hidden" name="utm_source" id="f_utm_source">
         <input type="hidden" name="utm_campaign" id="f_utm_campaign"><input type="hidden" name="ad_group" id="f_ag">
       </form>
@@ -515,22 +584,43 @@
     <div class="footrow"><div class="logo"><span class="mark"></span>Procure Media</div>
       <a class="btn btn-ghost" href="tel:+18557545015" data-call>📞 (855) 754-5015</a></div>
     <p class="sources">Procure Media — your website, your traffic, and an AI that answers every call and books the job. One low price, no contracts; you own your site &amp; data.</p>
+
+    <!-- VISIBLE sources. Every stat figure above carries a superscript marker that links here.
+         Sources must never live in an HTML comment — a source no visitor can see is not a source. -->
+    <section class="srcbox" id="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">Sources</h2>
+      <ol>
+        <li><b>67% call a competitor after ONE unanswered call</b> — Angi.</li>
+        <li><b>47% of service calls come in after hours</b> — HomeAdvisor.</li>
+        <li><b>78% hire whoever answers first</b> — HomeAdvisor.</li>
+        <li><b>21× likelier to book if you answer in 5 minutes</b> — MIT / InsideSales.</li>
+        <li><b>Fewer than 3% of people who reach voicemail leave a message</b> — Invoca.</li>
+      </ol>
+      <p class="disc">
+        The 6:45 PM call, the calendar, and the booking screens above are illustrative examples of how
+        the AI agent handles an inbound call. "Bug Bouncers," "Lisa," and the jobs shown are examples,
+        not customers. Riley is Procure Media's AI voice agent.
+      </p>
+    </section>
   </div>
 </footer>
 
 <!-- sticky call-now bar -->
 <a class="callbar-fixed" id="callbar" href="tel:+18557545015" data-call>
-  <span class="cbf-msg">📞 <b>Call now to lock in $25/week</b><span class="cbf-tail"> — founders price, locked for life</span></span>
+  <span class="cbf-msg">📞 <b>Call now to lock in $99/month</b><span class="cbf-tail"> — founders price, locked for life</span></span>
   <span class="cbf-cta">(855) 754-5015</span>
 </a>
 
 <script>
 function fireConversion(label){try{if(window.gtag){gtag('event','conversion',{send_to:'AW-17934471659/'+label});}}catch(e){}}
 (function(){var p=new URLSearchParams(location.search),ag=(p.get('ag')||'').toLowerCase();
-  var map={answering:{h:'How many pest control jobs are you losing to <span class="g-green">missed calls?</span>',s:'67% of customers call a competitor after just one unanswered call. Procure\'s AI answers every pest control call, qualifies the job, and books it.'},
-    marketing:{h:'Turn missed calls into <span class="g-green">booked jobs.</span>',s:'67% of customers call a competitor after one unanswered call. Procure answers every call, qualifies it, and books it on your calendar. Website, traffic &amp; leads included.'},
+  /* ?ag= message-match. The swapped copy keeps its own source marker: these strings are written
+     into innerHTML (not textContent) precisely so the 67% footnote survives the swap. */
+  var m1='<sup class="ref"><a href="#sources" aria-label="Source 1">1</a></sup>';
+  var map={answering:{h:'How many pest control jobs are you losing to <span class="g-green">missed calls?</span>',s:'<b>67% of customers call a competitor after just one unanswered call.</b>'+m1+' Procure\'s AI answers every pest control call, qualifies the job, and books it.'},
+    marketing:{h:'Turn missed calls into <span class="g-green">booked jobs.</span>',s:'<b>67% of customers call a competitor after one unanswered call.</b>'+m1+' Procure answers every call, qualifies it, and books it on your calendar. Website, traffic &amp; leads included.'},
     software:{h:'Your website, ads &amp; AI — <span class="g-green">all in one.</span>',s:'One system replaces your web guy, ad agency, and receptionist — and it answers every call and books the job. You own it all. One low price.'}};
-  if(map[ag]){document.getElementById('hero-h1').innerHTML=map[ag].h;document.getElementById('hero-sub').textContent=map[ag].s;}
+  if(map[ag]){document.getElementById('hero-h1').innerHTML=map[ag].h;document.getElementById('hero-sub').innerHTML=map[ag].s;}
   var set=function(id,v){var el=document.getElementById(id);if(el)el.value=v||''};
   set('f_gclid',p.get('gclid'));set('f_utm_source',p.get('utm_source'));set('f_utm_campaign',p.get('utm_campaign'));set('f_ag',ag);})();
 document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener('click',function(){fireConversion('L-BqCNaiqNAcEOuj6edC');});});
@@ -538,16 +628,10 @@ document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener(
   function show(n){steps[i].classList.remove('active');i=n;steps[i].classList.add('active');bar.style.width=((i+1)/steps.length*100)+'%';}
   form.querySelectorAll('.fstep2[data-step="1"] input,.fstep2[data-step="2"] input,.fstep2[data-step="3"] input').forEach(function(inp){
     inp.addEventListener('change',function(){if(i<steps.length-1)setTimeout(function(){show(i+1);},140);});});
-  form.addEventListener('submit',function(e){e.preventDefault();
-    /* [2] set FORM_ENDPOINT to the Procure sales-pipeline URL to capture leads. Until then, submit funnels to a call so no lead is lost. */
-    var FORM_ENDPOINT='';
-    var data=Object.fromEntries(new FormData(form).entries());fireConversion('yB7eCNmiqNAcEOuj6edC');
-    if(FORM_ENDPOINT){
-      fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-      form.innerHTML='<div class="fq" style="text-align:center">You\'re in — we\'ll call you shortly. 👋</div><p class="fsmall">Want it faster? <a href="tel:+18557545015" style="color:var(--primaryd);font-weight:800;text-decoration:none">Call (855) 754-5015</a> and we\'ll set you up live.</p>';
-    } else {
-      form.innerHTML='<div class="fq" style="text-align:center">You\'re almost set! 🎉</div><p class="fsmall" style="margin-bottom:12px">Tap to call and we\'ll get you live in 15 minutes:</p><a class="btn btn-primary btn-lg" style="display:flex;justify-content:center;width:100%" href="tel:+18557545015" data-call>📞 Call (855) 754-5015</a>';
-    }});})();
+  /* The form POSTs NATIVELY to the lead engine (see the action= attribute). We only fire the Ads
+     conversion and let the browser submit — do NOT preventDefault. The old code posted to an empty
+     endpoint and dead-ended every lead into a tel: link, capturing nothing. */
+  form.addEventListener('submit',function(){fireConversion('yB7eCNmiqNAcEOuj6edC');});})();
 /* sticky call-now bar: appear after the hero, hide near the footer so it never covers the form */
 (function(){var bar=document.getElementById('callbar');if(!bar)return;
   function upd(){var y=window.scrollY||window.pageYOffset;
@@ -555,5 +639,8 @@ document.querySelectorAll('[data-call]').forEach(function(a){a.addEventListener(
     if(y>560&&!nearBottom)bar.classList.add('show');else bar.classList.remove('show');}
   window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
 </script>
+
+<!-- Chat widget — last line before </body> -->
+<script defer src="/procure-chat-widget.js"></script>
 </body>
 </html>

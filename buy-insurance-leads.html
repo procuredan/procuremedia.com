@@ -16,6 +16,43 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) — GA4 + Google Ads (standard across all pages) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L6LTMCGR41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L6LTMCGR41');
+  gtag('config', 'AW-17934471659');
+</script>
+<!-- Procure click-source capture: stores gclid/UTM on landing, attaches to the form -->
+<script>
+(function(){
+  try{
+    var qs = new URLSearchParams(window.location.search);
+    var keys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+    var store = {};
+    try{ var c=(document.cookie.match(/(?:^|; )pm_attr=([^;]*)/)||[])[1]; if(c) store=JSON.parse(decodeURIComponent(c))||{}; }catch(e){ store={}; }
+    var got=false;
+    keys.forEach(function(k){ var v=qs.get(k); if(v){ store[k]=v; got=true; } });
+    if(got || !store.landing){
+      if(!store.landing) store.landing=window.location.pathname;
+      if(!store.referrer) store.referrer=document.referrer||'';
+      document.cookie='pm_attr='+encodeURIComponent(JSON.stringify(store))+'; path=/; max-age=7776000; SameSite=Lax';
+    }
+    function fill(){
+      var f=document.querySelector('form'); if(!f) return;
+      Object.keys(store).forEach(function(k){
+        if(store[k] && !f.querySelector('[name="'+k+'"]')){
+          var i=document.createElement('input'); i.type='hidden'; i.name=k; i.value=store[k]; f.appendChild(i);
+        }
+      });
+    }
+    if(document.readyState!=='loading') fill(); else document.addEventListener('DOMContentLoaded', fill);
+  }catch(e){}
+})();
+</script>
 <style>
 :root{
   --navy:#0B3558;
@@ -301,6 +338,4 @@ footer a{color:#A7BED1;display:block;margin-bottom:12px;}
 </div>
 <div class="footer-disclaimer">Procure Media operates owned-and-operated lead generation and customer acquisition websites. Lead availability, pricing, and vertical coverage vary. Brand sites carry their own disclosures and consent terms.</div>
 <div class="footer-bottom">&#169; 2026 Procure Media. All rights reserved.</div>
-</div></footer>
-<script defer src="/procure-chat-widget.js"></script>
-</body></html>
+</div></footer></body></html>
