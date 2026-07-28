@@ -774,6 +774,7 @@ footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 
     </a>
     <div class="nav-actions">
       <a class="nav-phone" href="tel:+18557545015">(855) 754-5015</a>
+      <button type="button" class="btn btn-ghost btn-sm" id="pmLoginOpen">Login</button>
       <a class="btn btn-amber btn-sm" href="https://signup.procuremedia.com">Start now</a>
     </div>
   </div>
@@ -1540,6 +1541,79 @@ footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 
     var done=document.getElementById('calcCapDone');
     if(wrap) wrap.hidden=true;
     if(done) done.hidden=false;
+  });
+})();
+</script>
+
+<!-- CLIENT LOGIN — modal + portal calls (app.procuremedia.com). No secrets in page; session cookie + CORS handled portal-side. -->
+<style>
+.pm-login-ov{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(4,9,18,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.pm-login-ov.open{display:flex}
+.pm-login-card{width:100%;max-width:400px;background:var(--raised);border:1px solid var(--bd-strong);border-radius:var(--r-lg);box-shadow:0 30px 80px rgba(0,0,0,.6);padding:28px 26px;position:relative}
+.pm-login-card h2{margin:0 0 4px;font-size:22px;color:var(--tx);font-weight:800;letter-spacing:-.3px}
+.pm-login-card .pm-login-sub{margin:0 0 18px;font-size:14px;color:var(--muted)}
+.pm-login-x{position:absolute;top:12px;right:14px;background:none;border:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer;padding:4px}
+.pm-login-x:hover{color:var(--tx)}
+.pm-login-card label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin:14px 0 6px;letter-spacing:.3px}
+.pm-login-card input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--bd-strong);background:var(--bg);color:var(--tx);font-size:15px;font-family:inherit;box-sizing:border-box}
+.pm-login-card input:focus{outline:none;border-color:var(--amber)}
+.pm-login-card .btn{width:100%;margin-top:20px;justify-content:center}
+.pm-login-msg{margin:14px 0 0;font-size:13px;line-height:1.5;display:none}
+.pm-login-msg.err{display:block;color:var(--danger)}
+.pm-login-msg.ok{display:block;color:var(--amber-hi)}
+.pm-login-forgot{display:block;width:100%;margin-top:16px;text-align:center;font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:inherit}
+.pm-login-forgot:hover{color:var(--amber-hi)}
+</style>
+<div class="pm-login-ov" id="pmLoginOv" role="dialog" aria-modal="true" aria-labelledby="pmLoginTitle">
+  <div class="pm-login-card">
+    <button type="button" class="pm-login-x" id="pmLoginClose" aria-label="Close">&times;</button>
+    <h2 id="pmLoginTitle">Client login</h2>
+    <p class="pm-login-sub">Sign in to your Procure Command Center.</p>
+    <form id="pmLoginForm" novalidate>
+      <label for="pmLoginEmail">Email</label>
+      <input id="pmLoginEmail" name="email" type="email" autocomplete="email" required>
+      <label for="pmLoginPass">Password</label>
+      <input id="pmLoginPass" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit" class="btn btn-amber" id="pmLoginSubmit">Log in →</button>
+      <p class="pm-login-msg" id="pmLoginMsg" role="status" aria-live="polite"></p>
+      <button type="button" class="pm-login-forgot" id="pmLoginForgot">First time or forgot password?</button>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+  var API='https://app.procuremedia.com';
+  var ov=document.getElementById('pmLoginOv'), form=document.getElementById('pmLoginForm'),
+      msg=document.getElementById('pmLoginMsg'), sub=document.getElementById('pmLoginSubmit'),
+      emailEl=document.getElementById('pmLoginEmail'), passEl=document.getElementById('pmLoginPass');
+  if(!ov||!form) return;
+  function setMsg(t,cls){ msg.textContent=t; msg.className='pm-login-msg'+(cls?(' '+cls):''); }
+  function open(){ ov.classList.add('open'); setMsg('',''); setTimeout(function(){ emailEl.focus(); },40); }
+  function close(){ ov.classList.remove('open'); }
+  var openBtn=document.getElementById('pmLoginOpen'); if(openBtn) openBtn.addEventListener('click',open);
+  document.getElementById('pmLoginClose').addEventListener('click',close);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=(emailEl.value||'').trim(), password=passEl.value||'';
+    if(!email||!password){ setMsg('Enter your email and password.','err'); return; }
+    sub.disabled=true; setMsg('Signing in…','');
+    fetch(API+'/api/login',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,password:password})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(d&&d.ok){ window.location=API+(d.redirect||'/command-center'); return; }
+        setMsg((d&&d.error)||'Sign-in failed. Check your details and try again.','err'); sub.disabled=false;
+      })
+      .catch(function(){ setMsg('Could not reach the server. Try again in a moment.','err'); sub.disabled=false; });
+  });
+  document.getElementById('pmLoginForgot').addEventListener('click',function(){
+    var email=(emailEl.value||'').trim();
+    if(!email){ setMsg('Enter your email above first, then tap this again.','err'); emailEl.focus(); return; }
+    setMsg('Sending…','');
+    fetch(API+'/api/password/request',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})})
+      .then(function(){ setMsg('Check your email for a link to set your password.','ok'); })
+      .catch(function(){ setMsg('Could not send right now. Try again in a moment.','err'); });
   });
 })();
 </script>
