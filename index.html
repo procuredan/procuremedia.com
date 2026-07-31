@@ -232,6 +232,19 @@ h1 .d-br{display:none} /* let it wrap naturally on small screens */
   padding:7px 12px; border-radius:999px;
 }
 .chips li::before{content:'✓'; color:var(--amber); font-weight:800; margin-right:7px}
+/* Hero proof stack — fills the space under the CTA with 3 sourced stats;
+   lighter than the big stat band lower down (small figures, quiet labels). */
+.hero-proof{margin-top:24px; padding-top:22px; border-top:1px solid var(--bd); display:flex; flex-direction:column; align-items:center; text-align:center; gap:22px}
+.hero-proof .hp{display:flex; flex-direction:column; align-items:center; gap:6px}
+.hero-proof .hpf{font-size:47px; font-weight:800; line-height:1; color:var(--amber); font-variant-numeric:tabular-nums; letter-spacing:-.015em}
+.hero-proof .hpl{font-size:15px; line-height:1.4; color:var(--muted); max-width:34ch}
+.hero-proof sup.src{font-size:.28em}
+/* Desktop: copy fills the calculator's height and the centered proof stats
+   spread down the leftover space so the column bottoms line up. */
+@media(min-width:1040px){
+  .hero-cap .hero-copy{align-self:stretch; display:flex; flex-direction:column}
+  .hero-proof{flex:1 1 auto; justify-content:space-around; gap:18px}
+}
 .scene-line{
   margin-top:34px; padding-top:22px; border-top:1px solid var(--bd);
   color:var(--dim); font-size:13.5px; max-width:56ch;
@@ -820,6 +833,22 @@ footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 
         <li>Cancel anytime</li>
         <li>You own your site, domain &amp; data</li>
       </ul>
+
+      <div class="hero-proof" aria-label="Why answering every call matters">
+        <div class="hp">
+          <span class="hpf">67%<sup class="src"><a href="#sources" aria-label="Source 2">2</a></sup></span>
+          <span class="hpl">of people call a competitor after just <b>one</b> unanswered call</span>
+        </div>
+        <div class="hp">
+          <span class="hpf">78%<sup class="src"><a href="#sources" aria-label="Source 4">4</a></sup></span>
+          <span class="hpl">hire whoever answers first</span>
+        </div>
+        <div class="hp">
+          <span class="hpf">21×<sup class="src"><a href="#sources" aria-label="Source 5">5</a></sup></span>
+          <span class="hpl">likelier to book the job when you answer within 5 minutes</span>
+        </div>
+      </div>
+
     </div>
 
     <!-- ---- missed-call cost calculator — shares the fold ---- -->
