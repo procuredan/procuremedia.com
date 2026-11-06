@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Procure Media — Stop losing jobs to missed calls</title>
-<meta name="description" content="62% of calls to small businesses go unanswered. Procure's AI answers every call — day, night, weekends — qualifies the job, and books it on your calendar. $99/month, founding member price, locked for life.">
+<title>Procure Media — Lead generation and AI integration</title>
+<meta name="description" content="Anyone can build with AI. We know what to build. Lead generation and AI integration from people who have run every part of a business. Give me an hour.">
 <link rel="canonical" href="https://procuremedia.com/">
-<meta property="og:title" content="Stop losing jobs to missed calls!">
-<meta property="og:description" content="62% of calls to small businesses go unanswered. Procure's AI answers every call, qualifies the job, and books it on your calendar.">
+<meta property="og:title" content="Procure Media — Anyone can build with AI. We know what to build.">
+<meta property="og:description" content="Lead generation and AI integration from people who have run every part of a business.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://procuremedia.com/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idCI+PHRpdGxlIGlkPSJ0Ij5Qcm9jdXJlIE1lZGlhIGZhdmljb248L3RpdGxlPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMEIxRjNBIi8+PGxpbmUgeDE9IjE0IiB5MT0iMzIiIHgyPSI1MCIgeTI9IjMyIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjE0IiBjeT0iMzIiIHI9IjUiIGZpbGw9IiMwQjFGM0EiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iNSIgZmlsbD0iI0ZGRkZGRiIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iMzIiIHI9IjYuNSIgZmlsbD0iI0ZGNkExQSIvPjwvc3ZnPg==">
 
 <!-- 6a. Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6LTMCGR41"></script>
@@ -51,1548 +52,489 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-/* =========================================================================
-   Concept C — "6:45 PM"
-   One story told twice, in parallel: the night you miss the call vs the
-   night Procure answers it. Cold blue-gray = loss. Warm amber = booked.
-   ========================================================================= */
-
-:root{
-  --bg:#0B1220;
-  --raised:#131C2E;
-  --deeper:#1A2438;
-  --bd:#22304A;
-  --bd-strong:#2E4062;
-  --tx:#FFFFFF;
-  --muted:#93A3BC;
-  --dim:#64748B;
-  --amber:#F5A524;
-  --amber-hi:#FFB84D;
-  --amber-soft:rgba(245,165,36,.12);
-  --cold-bg:rgba(255,255,255,.03);
-  --danger:#E5484D;
-  --r:14px;
-  --r-lg:20px;
-  --maxw:1180px;
-}
-
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--tx);
-  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-size:16px;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-h1,h2,h3,h4,.font-h{font-family:'Plus Jakarta Sans','Inter',sans-serif; font-weight:800; letter-spacing:-.02em; line-height:1.14; margin:0}
-p{margin:0}
-a{color:inherit}
-img,svg{display:block; max-width:100%}
-:focus-visible{outline:2px solid var(--amber); outline-offset:3px; border-radius:6px}
-
-.wrap{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 20px}
-.section{padding:72px 0; position:relative}
-.eyebrow{
-  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--amber); margin:0 0 14px
-}
-.eyebrow.cold-eb{color:var(--dim)}
-.lede{color:var(--muted); font-size:16px; max-width:62ch}
-sup.src{
-  font-size:.55em; font-weight:700; color:var(--amber);
-  vertical-align:super; margin-left:2px; line-height:0;
-}
-sup.src a{text-decoration:none; color:inherit}
-.cold sup.src{color:var(--dim)}
-
-/* ---------- buttons ---------- */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:9px;
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:15px;
-  letter-spacing:-.01em; text-decoration:none; cursor:pointer;
-  padding:15px 24px; border-radius:12px; border:1px solid transparent;
-  transition:transform .15s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease;
-  white-space:nowrap;
-}
-.btn-amber{
-  background:var(--amber); color:#1A1206; border-color:var(--amber);
-  box-shadow:0 8px 26px rgba(245,165,36,.26);
-}
-.btn-amber:hover{background:var(--amber-hi); border-color:var(--amber-hi); transform:translateY(-1px)}
-.btn-ghost{
-  background:transparent; color:var(--tx); border-color:var(--bd-strong);
-}
-.btn-ghost:hover{border-color:var(--amber); color:var(--amber-hi); background:var(--amber-soft)}
-.btn-sm{padding:10px 16px; font-size:13.5px; border-radius:10px}
-.btn-block{width:100%}
-
-/* Two ways to start: same signup, same price — pick who does the typing */
-.cta-lead{
-  margin:28px 0 11px; font-size:11.5px; font-weight:800;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
-}
-.cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:0; align-items:flex-start}
-.cta-opt{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:9px}
-.cta-opt .btn{width:100%}
-.cta-opt-note{font-size:12.5px; color:var(--dim); line-height:1.5; text-align:center; padding:0 4px}
-.cta-or{
-  flex:0 0 auto; align-self:center; padding-top:12px;
-  font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
-}
-@media(max-width:760px){
-  .cta-or{width:100%; text-align:center; padding:2px 0}
-  .cta-opt{flex:1 1 100%}
-}
-.cta-note{
-  display:flex; align-items:center; gap:9px;
-  margin:16px 0 0; font-size:13.5px; font-weight:600; color:var(--amber);
-}
-.cta-note::before{
-  content:''; flex:none; width:7px; height:7px; border-radius:50%;
-  background:var(--amber); box-shadow:0 0 0 3px var(--amber-soft);
-}
-
-/* ---------- nav ---------- */
-.nav{
-  position:sticky; top:0; z-index:60;
-  background:rgba(11,18,32,.82);
-  backdrop-filter:saturate(150%) blur(14px);
-  -webkit-backdrop-filter:saturate(150%) blur(14px);
-  border-bottom:1px solid var(--bd);
-}
-.nav-in{display:flex; align-items:center; justify-content:space-between; gap:14px; height:66px}
-.logo{display:flex; align-items:center; gap:10px; text-decoration:none; font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16.5px; letter-spacing:-.02em}
-.logo .dot{
-  width:11px; height:11px; border-radius:50%; background:var(--amber);
-  box-shadow:0 0 0 4px var(--amber-soft), 0 0 16px rgba(245,165,36,.7);
-  flex:none;
-}
-.nav-actions{display:flex; align-items:center; gap:10px}
-.nav-phone{
-  display:none; text-decoration:none; font-weight:700; font-size:14px; color:var(--muted);
-  padding:8px 12px; border-radius:10px; white-space:nowrap;
-}
-.nav-phone:hover{color:var(--amber-hi); background:var(--amber-soft)}
-
-/* ---------- hero ---------- */
-.hero{position:relative; padding:44px 0 56px; overflow:hidden}
-.hero::before{
-  content:''; position:absolute; z-index:0; pointer-events:none;
-  top:-260px; right:-180px; width:760px; height:760px; border-radius:50%;
-  background:radial-gradient(circle, rgba(245,165,36,.16) 0%, rgba(245,165,36,.05) 42%, transparent 70%);
-  filter:blur(8px);
-}
-.hero::after{
-  content:''; position:absolute; z-index:0; pointer-events:none;
-  bottom:-320px; left:-240px; width:700px; height:700px; border-radius:50%;
-  background:radial-gradient(circle, rgba(100,116,139,.16) 0%, transparent 68%);
-}
-/* Hero shares the fold: copy left, cost calculator right */
-.hero-in{
-  position:relative; z-index:1;
-  display:grid; grid-template-columns:1fr; gap:30px; align-items:center;
-}
-@media(min-width:1040px){
-  .hero-in{grid-template-columns:1.04fr .96fr; gap:46px}
-}
-.hero-copy{max-width:660px; min-width:0}
-.hero-calc{min-width:0}
-.clock-tag{
-  display:inline-flex; align-items:center; gap:10px;
-  border:1px solid var(--bd-strong); background:var(--raised);
-  border-radius:999px; padding:7px 15px 7px 11px; margin-bottom:22px;
-  font-size:12.5px; font-weight:600; color:var(--muted); letter-spacing:.01em;
-}
-.clock-tag b{color:var(--amber); font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; letter-spacing:-.01em}
-.ring{
-  width:9px; height:9px; border-radius:50%; background:var(--amber); flex:none;
-  animation:ringpulse 1.7s ease-out infinite;
-}
-@keyframes ringpulse{
-  0%{box-shadow:0 0 0 0 rgba(245,165,36,.6)}
-  70%{box-shadow:0 0 0 10px rgba(245,165,36,0)}
-  100%{box-shadow:0 0 0 0 rgba(245,165,36,0)}
-}
-h1{font-size:clamp(38px,6.5vw,70px); line-height:1.06; letter-spacing:-.02em; font-weight:800}
-h1 .glow{color:var(--amber); text-shadow:0 0 42px rgba(245,165,36,.34)}
-h1 .d-br{display:none} /* let it wrap naturally on small screens */
-.hero-sub{margin-top:22px; font-size:clamp(15.5px,2vw,18.5px); color:var(--muted); max-width:60ch; line-height:1.62}
-.hero-sub b{color:var(--tx); font-weight:600}
-.chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; list-style:none; padding:0}
-.chips li{
-  font-size:12.5px; font-weight:600; color:var(--muted);
-  border:1px solid var(--bd); background:var(--raised);
-  padding:7px 12px; border-radius:999px;
-}
-.chips li::before{content:'✓'; color:var(--amber); font-weight:800; margin-right:7px}
-/* Hero proof stack — fills the space under the CTA with 3 sourced stats;
-   lighter than the big stat band lower down (small figures, quiet labels). */
-.hero-proof{margin-top:24px; padding-top:22px; border-top:1px solid var(--bd); display:flex; flex-direction:column; align-items:center; text-align:center; gap:22px}
-.hero-proof .hp{display:flex; flex-direction:column; align-items:center; gap:6px}
-.hero-proof .hpf{font-size:47px; font-weight:800; line-height:1; color:var(--amber); font-variant-numeric:tabular-nums; letter-spacing:-.015em}
-.hero-proof .hpl{font-size:15px; line-height:1.4; color:var(--muted); max-width:34ch}
-.hero-proof sup.src{font-size:.28em}
-/* Desktop: copy fills the calculator's height and the centered proof stats
-   spread down the leftover space so the column bottoms line up. */
-@media(min-width:1040px){
-  .hero-cap .hero-copy{align-self:stretch; display:flex; flex-direction:column}
-  .hero-proof{flex:1 1 auto; justify-content:space-around; gap:18px}
-}
-.scene-line{
-  margin-top:34px; padding-top:22px; border-top:1px solid var(--bd);
-  color:var(--dim); font-size:13.5px; max-width:56ch;
-}
-.scene-line b{color:var(--muted); font-weight:600}
-
-/* ---------- section heads ---------- */
-.sec-head{max-width:760px; margin-bottom:40px}
-.sec-head h2{font-size:clamp(27px,3.9vw,42px); line-height:1.1}
-.sec-head p{margin-top:14px; color:var(--muted); font-size:15.5px}
-
-/* =========================================================================
-   THE 6:45 PM TIMELINE — the centerpiece
-   ========================================================================= */
-.timeline{
-  background:
-    linear-gradient(90deg, rgba(100,116,139,.05) 0%, transparent 46%),
-    linear-gradient(270deg, rgba(245,165,36,.06) 0%, transparent 46%);
-  border-top:1px solid var(--bd); border-bottom:1px solid var(--bd);
-}
-.tl-heads{display:none}
-.tl-head{
-  display:flex; align-items:center; gap:9px;
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:14px;
-  letter-spacing:.02em; text-transform:uppercase;
-  padding:11px 16px; border-radius:999px; border:1px solid var(--bd);
-}
-.tl-head.cold{color:var(--dim); background:var(--cold-bg)}
-.tl-head.warm{color:var(--amber); background:var(--amber-soft); border-color:rgba(245,165,36,.32)}
-.tl-head .bulb{width:8px; height:8px; border-radius:50%; flex:none}
-.tl-head.cold .bulb{background:var(--dim)}
-.tl-head.warm .bulb{background:var(--amber); box-shadow:0 0 12px rgba(245,165,36,.9)}
-
-/* beat = its own grid so the rail line is continuous through it */
-.beat{
-  display:grid;
-  grid-template-columns:52px minmax(0,1fr);
-  column-gap:14px; row-gap:12px;
-  position:relative;
-  padding-bottom:12px;
-}
-.beat > .rail{grid-column:1; grid-row:1 / span 2}
-.beat > .cold{grid-column:2; grid-row:1}
-.beat > .warm{grid-column:2; grid-row:2}
-
-.rail{position:relative; display:flex; justify-content:center}
-.rail::before{
-  content:''; position:absolute; left:50%; transform:translateX(-50%);
-  top:0; bottom:-24px; width:2px;
-  background:linear-gradient(180deg, var(--bd-strong), var(--bd));
-}
-/* the rail fades out under the final timestamp instead of stopping dead */
-.beat:last-child .rail::before{
-  bottom:auto; height:118px;
-  background:linear-gradient(180deg, var(--bd-strong) 0%, var(--bd) 55%, transparent 100%);
-}
-.time{
-  position:relative; z-index:2; margin-top:8px;
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;
-  font-size:10.5px; letter-spacing:.02em; text-align:center;
-  color:var(--tx); background:var(--deeper);
-  border:1px solid var(--bd-strong); border-radius:999px;
-  padding:8px 4px; width:52px; line-height:1.2;
-  align-self:flex-start;
-}
-.time span{display:block; font-size:9px; color:var(--dim); font-weight:700}
-
-/* ---------- the two sides ---------- */
-.card{border-radius:var(--r-lg); border:1px solid var(--bd); padding:18px}
-.side.cold .card{
-  background:var(--cold-bg);
-  border-color:var(--bd);
-  color:var(--dim);
-}
-.side.warm .card{
-  background:linear-gradient(180deg, rgba(245,165,36,.07), rgba(19,28,46,.9) 58%);
-  border-color:rgba(245,165,36,.3);
-  box-shadow:0 18px 46px rgba(0,0,0,.4), inset 0 1px 0 rgba(245,165,36,.14);
-}
-/* per-card labels carry the without/with read on mobile, where the two columns
-   stack and the column headers aren't shown */
-.side .lbl{
-  display:flex; align-items:center; gap:7px;
-  font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
-  margin-bottom:8px;
-}
-.side .lbl::before{content:''; width:7px; height:7px; border-radius:50%; flex:none}
-.side.cold .lbl::before{background:var(--dim)}
-.side.warm .lbl::before{background:var(--amber); box-shadow:0 0 10px rgba(245,165,36,.9)}
-.side.cold .lbl{color:var(--dim)}
-.side.warm .lbl{color:var(--amber)}
-
-.card-top{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
-.card-title{font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:14.5px; letter-spacing:-.01em}
-.side.cold .card-title{color:var(--muted)}
-.side.warm .card-title{color:var(--tx)}
-.card-sub{font-size:13px; margin-top:4px}
-.side.cold .card-sub{color:var(--dim)}
-.side.warm .card-sub{color:var(--amber-hi)}
-.card-note{font-size:13.5px; margin-top:12px; line-height:1.55}
-.side.cold .card-note{color:var(--dim)}
-.side.warm .card-note{color:var(--muted)}
-
-.pill{
-  display:inline-flex; align-items:center; gap:7px;
-  font-size:10.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
-  padding:5px 11px; border-radius:999px; border:1px solid transparent; white-space:nowrap;
-}
-.pill-missed{color:var(--danger); background:rgba(229,72,77,.1); border-color:rgba(229,72,77,.34)}
-.pill-live{color:var(--amber); background:var(--amber-soft); border-color:rgba(245,165,36,.34)}
-.pill-dead{color:var(--dim); background:var(--cold-bg); border-color:var(--bd)}
-.live-dot{
-  width:7px; height:7px; border-radius:50%; background:var(--amber); flex:none;
-  animation:ringpulse 1.7s ease-out infinite;
-}
-
-/* transcript */
-.ts{margin-top:14px; display:flex; flex-direction:column; gap:9px}
-.bub{max-width:88%; padding:10px 13px; border-radius:14px; font-size:13.5px; line-height:1.5; position:relative}
-.bub .who{
-  display:block; font-size:9.5px; font-weight:800; letter-spacing:.12em;
-  text-transform:uppercase; margin-bottom:4px;
-}
-.bub.ai{
-  align-self:flex-start; border-bottom-left-radius:5px;
-  background:var(--amber-soft); border:1px solid rgba(245,165,36,.28); color:#FFF3DE;
-}
-.bub.ai .who{color:var(--amber)}
-.bub.cl{
-  align-self:flex-end; border-bottom-right-radius:5px;
-  background:var(--deeper); border:1px solid var(--bd-strong); color:var(--muted);
-}
-.bub.cl .who{color:var(--dim)}
-
-/* booking confirmation */
-.booked{
-  margin-top:14px; border-radius:var(--r); padding:16px;
-  background:var(--amber); color:#1A1206;
-  box-shadow:0 14px 34px rgba(245,165,36,.24);
-}
-.booked .bk-top{display:flex; align-items:center; gap:9px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; letter-spacing:-.01em}
-.booked .bk-sub{margin-top:5px; font-size:12.5px; font-weight:600; opacity:.82}
-.check{
-  width:20px; height:20px; border-radius:50%; background:#1A1206; color:var(--amber);
-  display:grid; place-items:center; font-size:11px; font-weight:800; flex:none;
-}
-
-/* voicemail / dead-end visuals */
-.vm{
-  margin-top:14px; display:flex; align-items:center; gap:12px;
-  border:1px dashed var(--bd-strong); border-radius:var(--r);
-  padding:14px; background:rgba(255,255,255,.02);
-}
-.vm-ico{width:30px; height:30px; border-radius:9px; background:var(--deeper); display:grid; place-items:center; flex:none; color:var(--dim)}
-.vm-tx{font-size:12.5px; color:var(--dim); line-height:1.45}
-.vm-tx b{color:var(--muted); font-weight:700}
-.wave{display:flex; align-items:flex-end; gap:3px; height:18px; margin-left:auto}
-.wave i{width:3px; background:var(--bd-strong); border-radius:2px; display:block}
-
-.stat-inline{
-  margin-top:14px; padding-top:13px; border-top:1px solid var(--bd);
-  display:flex; align-items:baseline; gap:10px;
-}
-.stat-inline .fig{font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:28px; letter-spacing:-.03em; line-height:1}
-.side.cold .stat-inline .fig{color:var(--muted)}
-.side.warm .stat-inline .fig{color:var(--amber)}
-.stat-inline .txt{font-size:12.5px; line-height:1.4}
-.side.cold .stat-inline .txt{color:var(--dim)}
-.side.warm .stat-inline .txt{color:var(--muted)}
-
-/* next-morning scene */
-.scene{
-  margin-top:12px; border-radius:var(--r); padding:16px; font-size:13.5px; line-height:1.55;
-}
-.side.cold .scene{background:rgba(255,255,255,.02); border:1px solid var(--bd); color:var(--dim)}
-.side.warm .scene{background:var(--deeper); border:1px solid var(--bd-strong); color:var(--muted)}
-
-.sms{
-  margin-top:12px; border:1px solid var(--bd-strong); border-radius:var(--r);
-  background:var(--raised); padding:13px;
-}
-.sms-hd{font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--dim); margin-bottom:8px}
-.sms-bub{
-  background:var(--amber-soft); border:1px solid rgba(245,165,36,.24);
-  border-radius:12px; border-bottom-left-radius:5px;
-  padding:9px 12px; font-size:12.5px; color:#FFF3DE; line-height:1.45; max-width:90%;
-}
-.van{display:flex; align-items:center; gap:12px; margin-top:12px}
-.van-ico{width:34px; height:34px; border-radius:10px; background:var(--deeper); border:1px solid var(--bd); display:grid; place-items:center; flex:none; color:var(--dim)}
-
-/* =========================================================================
-   62% payoff
-   ========================================================================= */
-.payoff{text-align:center; padding:84px 0}
-.payoff-fig{
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;
-  font-size:clamp(96px,22vw,220px); line-height:.86; letter-spacing:-.055em;
-  color:var(--amber);
-  text-shadow:0 0 90px rgba(245,165,36,.36);
-}
-/* Reference markers on stats: quarter-size + dimmed. A footnote, not a headline. */
-.payoff-fig sup.src,
-.stat .fig sup.src{
-  font-size:10px; font-weight:700;
-  vertical-align:baseline;   /* sit on the bottom of the figure, not raised */
-  line-height:1;
-  margin-left:3px; opacity:.5; letter-spacing:0;
-}
-.payoff-fig sup.src a,
-.stat .fig sup.src a{padding:2px 3px}
-.payoff-fig sup.src:hover, .stat .fig sup.src:hover,
-.payoff-fig sup.src:focus-within, .stat .fig sup.src:focus-within{opacity:1}
-.payoff-line{
-  margin:20px auto 0; max-width:19ch;
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;
-  font-size:clamp(21px,3.4vw,34px); line-height:1.16; letter-spacing:-.02em;
-}
-.payoff-sub{margin:18px auto 0; max-width:52ch; color:var(--muted); font-size:15px}
-
-/* =========================================================================
-   Missed-call cost calculator (ported from Concept B, restyled for 6:45 PM)
-   ========================================================================= */
-.calc{
-  background:var(--raised); border:1px solid var(--bd-strong); border-radius:var(--r);
-  padding:24px 20px 22px; box-shadow:0 28px 70px -34px rgba(0,0,0,.85);
-}
-.calc-head{
-  display:flex; align-items:baseline; justify-content:space-between; gap:10px;
-  border-bottom:1px solid var(--bd); padding-bottom:14px; margin-bottom:20px;
-}
-.calc-title{font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; letter-spacing:-.02em}
-.calc-tag{font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dim); white-space:nowrap}
-.field{margin:0 0 22px}
-.field-top{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 12px}
-.field label{font-size:14px; font-weight:500; color:var(--muted)}
-.field-val{font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:24px; line-height:1; color:var(--tx); white-space:nowrap}
-input[type=range]{
-  -webkit-appearance:none; appearance:none;
-  width:100%; height:34px; background:transparent; cursor:pointer; display:block; margin:0;
-}
-input[type=range]:focus{outline:none}
-input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(--amber-soft), 0 0 0 1px var(--amber)}
-input[type=range]::-webkit-slider-runnable-track{height:4px; background:var(--bd-strong); border-radius:100px; border:0}
-input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none; appearance:none;
-  width:28px; height:28px; margin-top:-12px; border-radius:50%;
-  background:var(--amber); border:3px solid var(--bg); box-shadow:0 2px 10px rgba(0,0,0,.6);
-}
-input[type=range]::-moz-range-track{height:4px; background:var(--bd-strong); border-radius:100px; border:0}
-input[type=range]::-moz-range-thumb{
-  width:22px; height:22px; border-radius:50%;
-  background:var(--amber); border:3px solid var(--bg); box-shadow:0 2px 10px rgba(0,0,0,.6);
-}
-.field-scale{display:flex; justify-content:space-between; font-size:11px; color:var(--dim); margin-top:2px}
-.calc-out{border-top:1px solid var(--bd); margin-top:4px; padding-top:20px}
-.calc-out-label{font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dim); margin:0 0 8px}
-.calc-money{
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:var(--danger);
-  font-size:clamp(42px,11vw,62px); line-height:1; letter-spacing:-.03em; display:block;
-}
-.calc-per{font-size:12px; font-weight:700; color:var(--danger); letter-spacing:.08em; text-transform:uppercase; margin-top:9px}
-.formula{
-  margin:18px 0 0; padding:12px 13px;
-  background:var(--deeper); border:1px solid var(--bd); border-radius:10px;
-  font-size:12px; line-height:1.65; color:var(--muted); font-variant-numeric:tabular-nums;
-}
-.formula code{font-family:'Inter',sans-serif; font-size:12px; color:var(--tx); font-weight:600}
-.assume{display:block; margin-top:8px; color:var(--dim); font-size:11px; line-height:1.55}
-.calc-kicker{margin:18px 0 0; font-size:14px; line-height:1.55; color:var(--muted); padding-top:16px; border-top:1px solid var(--bd)}
-.calc-kicker b{color:var(--amber); font-weight:700}
-
-/* calculator lead-capture (centered) — reuses .calc-money, .btn, .fields, .field, .pm-consent */
-.hero-cap{align-items:start}
-.hero-cap .hero-copy{align-self:start}
-.calc-cap-kicker{margin:0 0 10px; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--danger)}
-.calc-cap-answer{margin:12px 0 0; font-size:16px; font-weight:700; color:var(--amber)}
-.calc-cap-prompt{margin:16px 0 0; font-size:14px; line-height:1.5; color:var(--muted)}
-.calc-cap-kicker,.calc-cap .calc-money,.calc-cap-answer,.calc-cap-prompt,.calc-cap-done-h,.calc-cap-done-b{text-align:center}
-.calc-cap .fields{margin-top:14px; grid-template-columns:1fr 1fr; gap:12px}
-.calc-cap .fields .field{margin:0}
-.calc-cap .btn{margin-top:16px}
-.calc-cap .pm-consent{margin-top:14px}
-.calc-cap-done-h{margin:14px 0 0; font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:19px; letter-spacing:-.01em; color:var(--amber)}
-.calc-cap-done-b{margin:10px 0 0; font-size:14px; line-height:1.55; color:var(--muted)}
-@media (max-width:560px){.calc-cap .fields{grid-template-columns:1fr}}
-
-/* =========================================================================
-   stat band
-   ========================================================================= */
-.statband{background:var(--raised); border-top:1px solid var(--bd); border-bottom:1px solid var(--bd)}
-.stat-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--bd); border:1px solid var(--bd); border-radius:var(--r-lg); overflow:hidden}
-.stat{background:var(--bg); padding:24px 18px}
-.stat .fig{
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;
-  font-size:clamp(32px,5.4vw,48px); line-height:1; letter-spacing:-.035em; color:var(--amber);
-}
-.stat .lab{margin-top:10px; font-size:13px; color:var(--muted); line-height:1.45}
-
-/* =========================================================================
-   AI flow + calendar
-   ========================================================================= */
-.flow-grid{display:grid; grid-template-columns:1fr; gap:32px; align-items:start}
-.steps{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px}
-.step{
-  display:grid; grid-template-columns:38px 1fr; gap:14px;
-  padding:16px 4px; border-bottom:1px solid var(--bd);
-}
-.step:last-child{border-bottom:0}
-.step .n{
-  width:32px; height:32px; border-radius:10px; display:grid; place-items:center;
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:13px;
-  background:var(--amber-soft); color:var(--amber); border:1px solid rgba(245,165,36,.28);
-}
-.step h3{font-size:15.5px; letter-spacing:-.01em}
-.step p{margin-top:5px; font-size:13.5px; color:var(--muted); line-height:1.5}
-
-.calmock{
-  background:var(--raised); border:1px solid var(--bd); border-radius:var(--r-lg);
-  padding:16px; box-shadow:0 24px 60px rgba(0,0,0,.4);
-}
-.cal-hd{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px}
-.cal-hd .t{font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:14px}
-.cal-hd .m{font-size:11px; color:var(--dim); font-weight:600}
-.cal-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
-.cal{display:grid; grid-template-columns:34px repeat(5,minmax(52px,1fr)); gap:5px; min-width:330px}
-.cal .dh{
-  font-size:9.5px; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
-  color:var(--dim); text-align:center; padding-bottom:5px;
-}
-.cal .th{font-size:9px; font-weight:700; color:var(--dim); text-align:right; padding-right:4px; padding-top:5px}
-.slot{
-  border:1px dashed var(--bd-strong); border-radius:8px; min-height:34px;
-  background:rgba(255,255,255,.015);
-}
-.slot.bk{
-  border:1px solid rgba(245,165,36,.4); border-style:solid;
-  background:var(--amber-soft); display:grid; place-items:center; padding:3px;
-}
-.slot.bk span{
-  font-size:8.5px; font-weight:800; color:var(--amber-hi); text-align:center;
-  line-height:1.2; letter-spacing:-.01em;
-}
-.slot.new{
-  background:var(--amber); border-color:var(--amber);
-  box-shadow:0 0 0 3px var(--amber-soft), 0 8px 20px rgba(245,165,36,.28);
-  animation:landin .9s ease-out;
-}
-.slot.new span{color:#1A1206}
-@keyframes landin{from{transform:scale(.86); opacity:.3} to{transform:scale(1); opacity:1}}
-.cal-foot{
-  margin-top:14px; padding-top:13px; border-top:1px solid var(--bd);
-  font-size:12px; color:var(--dim); line-height:1.5;
-}
-.cal-foot b{color:var(--amber)}
-.warm-note{
-  margin-top:18px; border:1px solid var(--bd); background:var(--deeper);
-  border-radius:var(--r); padding:14px 16px; font-size:13px; color:var(--muted); line-height:1.55;
-}
-.warm-note b{color:var(--tx); font-weight:700}
-
-/* =========================================================================
-   pricing
-   ========================================================================= */
-.price-card{
-  border:1px solid rgba(245,165,36,.3); border-radius:24px;
-  background:linear-gradient(180deg, rgba(245,165,36,.09), var(--raised) 44%);
-  padding:30px 22px; box-shadow:0 30px 80px rgba(0,0,0,.46);
-  max-width:640px; margin:0 auto;
-}
-.founder-tag{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
-  color:var(--amber); background:var(--amber-soft); border:1px solid rgba(245,165,36,.32);
-  padding:7px 13px; border-radius:999px;
-}
-.price-row{display:flex; align-items:flex-end; gap:14px; flex-wrap:wrap; margin-top:20px}
-.was{
-  font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;
-  font-size:26px; color:var(--dim); text-decoration:line-through; text-decoration-thickness:2px;
-  letter-spacing:-.02em; padding-bottom:8px;
-}
-.now{font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:clamp(46px,9vw,70px); line-height:.92; letter-spacing:-.04em; color:var(--amber)}
-.now small{font-size:.3em; color:var(--muted); font-weight:700; letter-spacing:0}
-.lock-line{margin-top:14px; font-size:14.5px; color:var(--tx); font-weight:600; line-height:1.5}
-.free-line{margin-top:8px; font-size:13px; color:var(--muted)}
-.fine{margin-top:16px; padding-top:16px; border-top:1px solid var(--bd); font-size:13px; color:var(--muted); line-height:1.6}
-.fine + .fine{border-top:0; padding-top:8px; margin-top:0}
-.own{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; list-style:none; padding:0}
-.own li{
-  font-size:12px; font-weight:700; color:var(--amber-hi);
-  border:1px solid rgba(245,165,36,.28); background:var(--amber-soft);
-  padding:7px 12px; border-radius:9px;
-}
-.own-sub{margin-top:12px; font-size:13px; color:var(--muted); line-height:1.55}
-
-/* =========================================================================
-   form
-   ========================================================================= */
-.form-wrap{
-  max-width:640px; margin:0 auto;
-  background:var(--raised); border:1px solid var(--bd); border-radius:24px;
-  padding:28px 22px; box-shadow:0 30px 80px rgba(0,0,0,.4);
-}
-.form-wrap h2{font-size:clamp(24px,3.6vw,34px)}
-.form-wrap > p.lede{margin-top:12px; font-size:14.5px}
-.fields{display:grid; grid-template-columns:1fr; gap:14px; margin-top:24px}
-.field label{display:block; font-size:12.5px; font-weight:700; color:var(--muted); margin-bottom:7px}
-.field label .req{color:var(--amber)}
-.field input{
-  width:100%; padding:14px 15px; font-size:16px; font-family:inherit;
-  color:var(--tx); background:var(--bg);
-  border:1px solid var(--bd-strong); border-radius:12px; transition:border-color .16s ease, box-shadow .16s ease;
-}
-.field input::placeholder{color:var(--dim)}
-.field input:focus{outline:none; border-color:var(--amber); box-shadow:0 0 0 3px var(--amber-soft)}
-.pm-consent{
-  display:flex; gap:11px; align-items:flex-start; margin-top:20px;
-  font-size:11.5px; color:var(--muted); line-height:1.55; cursor:pointer;
-}
-.pm-consent input{
-  width:19px; height:19px; flex:none; margin-top:2px; accent-color:var(--amber); cursor:pointer;
-}
-.pm-consent-submit{margin-top:16px; font-size:11px; color:var(--dim); line-height:1.55}
-.pm-consent-terms{margin-top:9px; font-size:11px; color:var(--dim); line-height:1.55}
-.pm-consent-terms a{color:var(--muted); text-decoration:underline; text-underline-offset:2px}
-.pm-consent-terms a:hover{color:var(--amber-hi)}
-.form-wrap .btn{margin-top:22px}
-.or-call{margin-top:16px; text-align:center; font-size:13.5px; color:var(--muted)}
-.or-call a{color:var(--amber); font-weight:700; text-decoration:none; white-space:nowrap}
-.or-call a:hover{color:var(--amber-hi); text-decoration:underline}
-
-/* secondary audience */
-.secondary{
-  margin:34px auto 0; max-width:640px; text-align:center;
-  font-size:13px; color:var(--dim); line-height:1.6;
-}
-.secondary a{color:var(--muted); font-weight:600; text-decoration:underline; text-underline-offset:3px}
-.secondary a:hover{color:var(--amber-hi)}
-
-/* =========================================================================
-   footer + sources
-   ========================================================================= */
-footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 40px}
-.f-top{display:flex; flex-direction:column; gap:20px}
-.f-links{display:flex; flex-wrap:wrap; gap:8px 20px; list-style:none; margin:0; padding:0}
-.f-links a{font-size:13.5px; color:var(--muted); text-decoration:none}
-.f-links a:hover{color:var(--amber-hi)}
-.f-copy{font-size:12.5px; color:var(--dim)}
-.sources{
-  margin-top:32px; padding-top:26px; border-top:1px solid var(--bd);
-  scroll-margin-top:82px; /* clear the sticky nav when a sup marker jumps here */
-}
-.sources h2{
-  font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--muted); font-family:'Plus Jakarta Sans',sans-serif;
-}
-.sources ol{margin:14px 0 0; padding:0 0 0 20px; display:grid; gap:7px}
-.sources li{font-size:12px; color:var(--dim); line-height:1.55}
-.sources li b{color:var(--muted); font-weight:700}
-.sources li::marker{color:var(--amber); font-weight:700}
-.sources .disc{margin-top:16px; font-size:11.5px; color:var(--dim); line-height:1.6; max-width:78ch}
-
-/* =========================================================================
-   sticky call bar
-   ========================================================================= */
-.callbar{
-  position:fixed; left:0; right:0; bottom:0; z-index:70;
-  background:rgba(19,28,46,.96);
-  backdrop-filter:saturate(150%) blur(14px);
-  -webkit-backdrop-filter:saturate(150%) blur(14px);
-  border-top:1px solid rgba(245,165,36,.28);
-  padding:11px 16px calc(11px + env(safe-area-inset-bottom));
-  transform:translateY(115%); opacity:0; visibility:hidden;
-  transition:transform .28s ease, opacity .28s ease, visibility .28s;
-  box-shadow:0 -12px 40px rgba(0,0,0,.5);
-}
-.callbar.on{transform:translateY(0); opacity:1; visibility:visible}
-.callbar-in{
-  max-width:var(--maxw); margin:0 auto;
-  display:flex; align-items:center; justify-content:space-between; gap:12px;
-}
-.callbar-tx{font-size:12px; color:var(--muted); line-height:1.35; min-width:0}
-.callbar-tx b{display:block; color:var(--tx); font-weight:700; font-size:12.5px}
-
-@media (prefers-reduced-motion:reduce){
-  *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
-}
-
-/* =========================================================================
-   ≥720px
-   ========================================================================= */
-@media (min-width:720px){
-  .wrap{padding:0 32px}
-  .section{padding:96px 0}
-  .nav-phone{display:inline-flex}
-  h1 .d-br{display:inline}
-  .cta-row .btn{flex:0 0 auto}
-  .stat-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .stat{padding:30px 22px}
-  .price-card,.form-wrap{padding:40px 36px}
-  .callbar-tx{font-size:13px}
-  .f-top{flex-direction:row; align-items:center; justify-content:space-between}
-}
-
-/* =========================================================================
-   ≥980px — the split screen opens up
-   ========================================================================= */
-@media (min-width:980px){
-  .tl-heads{
-    display:grid; grid-template-columns:1fr 112px 1fr; align-items:center;
-    column-gap:20px; margin-bottom:26px;
-  }
-  .tl-heads .sp{grid-column:2}
-  .tl-heads .tl-head.cold{grid-column:1; justify-self:end}
-  .tl-heads .tl-head.warm{grid-column:3; justify-self:start}
-
-  .beat{grid-template-columns:1fr 112px 1fr; column-gap:20px; row-gap:0; padding-bottom:28px}
-  .beat > .cold{grid-column:1; grid-row:1}
-  .beat > .rail{grid-column:2; grid-row:1}
-  .beat > .warm{grid-column:3; grid-row:1}
-  .beat > .side{display:flex; flex-direction:column; justify-content:flex-start}
-  .rail::before{bottom:-28px}
-  .time{width:112px; font-size:12px; padding:10px 6px; margin-top:14px}
-  .time span{font-size:9.5px}
-  .card{padding:22px}
-  .side .lbl{display:none} /* the column headers take over on the split screen */
-  .flow-grid{grid-template-columns:1.05fr 1fr; gap:52px; align-items:center}
-  .payoff{padding:112px 0}
-}
+body{margin:0}
+a{color:#1E6BFF;text-decoration:none}
+a:hover{color:#1557D6}
+.pair-label{display:none}
+@media (max-width: 760px){
+  .pg section, .pg header, .pg footer{padding-left:20px !important;padding-right:20px !important}
+  .col-heads{display:none !important}
+  .pair-label{display:block}
+  .pg nav{display:none !important}
+  .pg #top{padding-top:40px !important;padding-bottom:72px !important}
+}
+</style>
+<style>html{scroll-behavior:smooth}</style>
+<style>
+.pm-login-ov{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(11,31,58,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.pm-login-ov.open{display:flex}
+.pm-login-card{width:100%;max-width:400px;background:#FFFFFF;border:1px solid #E6E8EC;border-radius:16px;box-shadow:0 1px 2px rgba(11,31,58,.06),0 8px 24px rgba(11,31,58,.06);padding:28px 26px;position:relative;color:#0B1F3A}
+.pm-login-card h2{margin:0 0 4px;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.pm-login-card .pm-login-sub{margin:0 0 18px;font-size:14px;color:#5B6472}
+.pm-login-x{position:absolute;top:12px;right:14px;background:none;border:none;color:#5B6472;font-size:24px;line-height:1;cursor:pointer;padding:4px}
+.pm-login-card label{display:block;font-size:12px;font-weight:600;color:#5B6472;margin:14px 0 6px;letter-spacing:.18em;text-transform:uppercase}
+.pm-login-card input{width:100%;min-height:44px;padding:0 14px;border-radius:8px;border:1px solid #E6E8EC;background:#FFFFFF;color:#0B1F3A;font-size:16px;font-family:inherit;box-sizing:border-box}
+.pm-login-card input:focus{outline:2px solid #1E6BFF;outline-offset:1px}
+.pm-login-submit{width:100%;margin-top:20px;min-height:48px;border:0;border-radius:12px;background:#1E6BFF;color:#FFFFFF;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.pm-login-msg{margin:14px 0 0;font-size:13px;line-height:1.5;display:none}
+.pm-login-msg.err{display:block;color:#DC2626}
+.pm-login-msg.ok{display:block;color:#0E9F6E}
+.pm-login-forgot{display:block;width:100%;margin-top:16px;text-align:center;font-size:13px;color:#5B6472;background:none;border:none;cursor:pointer;font-family:inherit}
+@media (max-width: 760px){ .hdr-login{display:none !important} }
 </style>
 </head>
 <body>
+<div class="pg" style="font-family: Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #0B1F3A; background: #FFFFFF; font-weight: 500; -webkit-font-smoothing: antialiased">
 
-<!-- ============================ 1. NAV ============================ -->
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="Procure Media home">
-      <span class="dot" aria-hidden="true"></span>
-      Procure Media
-    </a>
-    <div class="nav-actions">
-      <a class="nav-phone" href="tel:+18557545015">(855) 754-5015</a>
-      <button type="button" class="btn btn-ghost btn-sm" id="pmLoginOpen">Login</button>
-      <a class="btn btn-amber btn-sm" href="https://signup.procuremedia.com">Start now</a>
-    </div>
-  </div>
-</header>
+  <div style="background: #0B1F3A; color: #FFFFFF">
+    <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px 32px; padding: 20px 80px; border-bottom: 1px solid #24395A">
+      <nav style="display: flex; flex-wrap: wrap; gap: 28px; flex-grow: 1; font-size: 15px; font-weight: 600">
+        <a href="#different" style="color: #FFFFFF">Why it works</a>
+        <a href="#hire" style="color: #FFFFFF">Hire us for</a>
+        <a href="#audit" style="color: #FFFFFF">Ownership audit</a>
+        <a href="#rescues" style="color: #FFFFFF">Rescues</a>
+        <a href="#credential" style="color: #FFFFFF">Who we are</a>
+      </nav>
+      <a href="tel:+18557545015" style="font-size: 15px; font-weight: 600; color: #FFFFFF; white-space: nowrap">(855) 754-5015</a>
+      <button type="button" class="pm-login-open hdr-login" style="background: none; border: 1px solid #24395A; color: #FFFFFF; min-height: 44px; padding: 0 16px; border-radius: 12px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Client login</button>
+      <a href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; background: #1E6BFF; color: #FFFFFF; border-radius: 12px; font-size: 15px; font-weight: 700; white-space: nowrap">Give me an hour</a>
+    </header>
 
-<main id="top">
-
-<!-- ============================ 2. HERO ============================ -->
-<section class="hero">
-  <div class="wrap hero-in hero-cap">
-    <div class="hero-copy">
-      <div class="clock-tag">
-        <span class="ring" aria-hidden="true"></span>
-        It's <b>6:45&nbsp;PM</b> on a Tuesday. Your phone is ringing — and nobody answers.
+    <section id="top" style="padding: 64px 80px 120px; max-width: 1180px; box-sizing: border-box">
+      <div style="width: 600px; max-width: 100%; margin-bottom: 56px">
+        <a href="#top" style="display: block"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjMgODAiIHdpZHRoPSI1MjMiIGhlaWdodD0iODAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbGxlZGJ5PSJ0Ij48dGl0bGUgaWQ9InQiPlByb2N1cmUgTWVkaWEsIHJldmVyc2VkPC90aXRsZT48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDgpIHNjYWxlKDAuNDYxNTM4NDYxNTM4NDYxNTYpIj48bGluZSB4MT0iNDAiIHkxPSI0MCIgeDI9IjIyMCIgeTI9IjQwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNyIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjMEIxRjNBIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNyIvPjxjaXJjbGUgY3g9IjEzMCIgY3k9IjQwIiByPSIyMCIgZmlsbD0iI0ZGRkZGRiIvPjxjaXJjbGUgY3g9IjIyMCIgY3k9IjQwIiByPSIyMiIgZmlsbD0iI0ZGNkExQSIvPjwvZz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTUzLjkyIDU4LjBWMTcuNjhIMTcwLjU4UTE3MS4xNjggMTcuNjggMTcyLjA5MTk5OTk5OTk5OTk4IDE3LjcyMTk5OTk5OTk5OTk5OFExNzMuMDE2IDE3Ljc2Mzk5OTk5OTk5OTk5NiAxNzMuOCAxNy45MDM5OTk5OTk5OTk5OTZRMTc3LjMgMTguNDM2IDE3OS41ODIgMjAuMjI3OTk5OTk5OTk5OTk4UTE4MS44NjQgMjIuMDE5OTk5OTk5OTk5OTk2IDE4Mi45NyAyNC43NVExODQuMDc2IDI3LjQ4IDE4NC4wNzYgMzAuODEyUTE4NC4wNzYgMzQuMTE2IDE4Mi45NTYwMDAwMDAwMDAwMiAzNi44NDYwMDAwMDAwMDAwMDRRMTgxLjgzNiAzOS41NzYgMTc5LjU1NCA0MS4zNjc5OTk5OTk5OTk5OTVRMTc3LjI3MiA0My4xNiAxNzMuOCA0My42OTJRMTczLjAxNiA0My44MDQgMTcyLjA3Nzk5OTk5OTk5OTk3IDQzLjg2UTE3MS4xNCA0My45MTYgMTcwLjU4IDQzLjkxNkgxNjAuNjY4VjU4LjBaTTE2MC42NjggMzcuNjE2SDE3MC4zUTE3MC44NiAzNy42MTYgMTcxLjU2IDM3LjU2UTE3Mi4yNiAzNy41MDQwMDAwMDAwMDAwMDUgMTcyLjg0OCAzNy4zMzZRMTc0LjUyOCAzNi45MTYgMTc1LjQ5NCAzNS44NTJRMTc2LjQ2IDM0Ljc4OCAxNzYuODY1OTk5OTk5OTk5OTkgMzMuNDQzOTk5OTk5OTk5OTk2UTE3Ny4yNzIgMzIuMDk5OTk5OTk5OTk5OTk0IDE3Ny4yNzIgMzAuODEyUTE3Ny4yNzIgMjkuNTI0IDE3Ni44NjU5OTk5OTk5OTk5OSAyOC4xNjZRMTc2LjQ2IDI2LjgwOCAxNzUuNDk0IDI1Ljc0NFExNzQuNTI4IDI0LjY4IDE3Mi44NDggMjQuMjU5OTk5OTk5OTk5OTk4UTE3Mi4yNiAyNC4wOTIgMTcxLjU2IDI0LjA1UTE3MC44NiAyNC4wMDgwMDAwMDAwMDAwMDMgMTcwLjMgMjQuMDA4MDAwMDAwMDAwMDAzSDE2MC42NjhaTTE4Ny45OTU5OTk5OTk5OTk5OCA1OC4wVjI3Ljc1OTk5OTk5OTk5OTk5OEgxOTMuOTU5OTk5OTk5OTk5OThWMzUuMTIzOTk5OTk5OTk5OTk1TDE5My4yMzIgMzQuMTcyUTE5My43OTIgMzIuNjYgMTk0LjczMDAwMDAwMDAwMDAyIDMxLjQxMzk5OTk5OTk5OTk5OFExOTUuNjY4IDMwLjE2OCAxOTYuOTgzOTk5OTk5OTk5OTggMjkuMzU1OTk5OTk5OTk5OTk4UTE5OC4xMDM5OTk5OTk5OTk5OCAyOC41OTk5OTk5OTk5OTk5OTggMTk5LjQ2MiAyOC4xNjU5OTk5OTk5OTk5OTdRMjAwLjgyIDI3LjczMiAyMDIuMjQ4IDI3LjYzNFEyMDMuNjc2IDI3LjUzNTk5OTk5OTk5OTk5OCAyMDUuMDE5OTk5OTk5OTk5OTggMjcuNzU5OTk5OTk5OTk5OTk4VjM0LjA2UTIwMy42NzYgMzMuNjY4IDIwMS45MjYgMzMuODA4UTIwMC4xNzYgMzMuOTQ4IDE5OC43NzU5OTk5OTk5OTk5OCAzNC43ODhRMTk3LjM3NiAzNS41NDQgMTk2LjQ5NCAzNi43MlExOTUuNjEyIDM3Ljg5NiAxOTUuMTkyIDM5LjM5NFExOTQuNzcyIDQwLjg5MTk5OTk5OTk5OTk5NiAxOTQuNzcyIDQyLjYyOFY1OC4wWk0yMjIuMDE2MDAwMDAwMDAwMDIgNTguODRRMjE3LjQ4MDAwMDAwMDAwMDAyIDU4Ljg0IDIxNC4wOTIgNTYuNzk2MDAwMDAwMDAwMDFRMjEwLjcwNCA1NC43NTIgMjA4Ljg0MiA1MS4xNTM5OTk5OTk5OTk5OTZRMjA2Ljk4MDAwMDAwMDAwMDAyIDQ3LjU1NiAyMDYuOTgwMDAwMDAwMDAwMDIgNDIuODc5OTk5OTk5OTk5OTk1UTIwNi45ODAwMDAwMDAwMDAwMiAzOC4xMjAwMDAwMDAwMDAwMDUgMjA4Ljg4NDAwMDAwMDAwMDAxIDM0LjUzNlEyMTAuNzg4IDMwLjk1MTk5OTk5OTk5OTk5OCAyMTQuMTc2MDAwMDAwMDAwMDIgMjguOTM2UTIxNy41NjQwMDAwMDAwMDAwMiAyNi45MTk5OTk5OTk5OTk5OTggMjIyLjAxNjAwMDAwMDAwMDAyIDI2LjkxOTk5OTk5OTk5OTk5OFEyMjYuNTggMjYuOTE5OTk5OTk5OTk5OTk4IDIyOS45NjgwMDAwMDAwMDAwMiAyOC45NjRRMjMzLjM1NiAzMS4wMDggMjM1LjIzMiAzNC42MDZRMjM3LjEwOCAzOC4yMDQgMjM3LjEwOCA0Mi44Nzk5OTk5OTk5OTk5OTVRMjM3LjEwOCA0Ny41ODQgMjM1LjIxODAwMDAwMDAwMDAyIDUxLjE4MlEyMzMuMzI4IDU0Ljc4IDIyOS45NCA1Ni44MVEyMjYuNTUyMDAwMDAwMDAwMDIgNTguODQgMjIyLjAxNjAwMDAwMDAwMDAyIDU4Ljg0Wk0yMjIuMDE2MDAwMDAwMDAwMDIgNTIuNTEyUTIyNi4wNDggNTIuNTEyIDIyOC4wMDggNDkuODI0UTIyOS45NjgwMDAwMDAwMDAwMiA0Ny4xMzU5OTk5OTk5OTk5OTYgMjI5Ljk2ODAwMDAwMDAwMDAyIDQyLjg3OTk5OTk5OTk5OTk5NVEyMjkuOTY4MDAwMDAwMDAwMDIgMzguNDgzOTk5OTk5OTk5OTk1IDIyNy45ODAwMDAwMDAwMDAwMiAzNS44NjZRMjI1Ljk5MjAwMDAwMDAwMDAyIDMzLjI0ODAwMDAwMDAwMDAwNSAyMjIuMDE2MDAwMDAwMDAwMDIgMzMuMjQ4MDAwMDAwMDAwMDA1UTIxOS4zIDMzLjI0ODAwMDAwMDAwMDAwNSAyMTcuNTUgMzQuNDY2UTIxNS44IDM1LjY4NCAyMTQuOTYgMzcuODU0UTIxNC4xMiA0MC4wMjQgMjE0LjEyIDQyLjg3OTk5OTk5OTk5OTk5NVEyMTQuMTIgNDcuMjc1OTk5OTk5OTk5OTk2IDIxNi4xMjIgNDkuODk0UTIxOC4xMjQwMDAwMDAwMDAwMiA1Mi41MTIgMjIyLjAxNjAwMDAwMDAwMDAyIDUyLjUxMlpNMjU0LjcyIDU4Ljg0UTI1MC4wNDQgNTguODQgMjQ2Ljc0IDU2Ljc1NDAwMDAwMDAwMDAwNVEyNDMuNDM2IDU0LjY2OCAyNDEuNjg2IDUxLjA1NlEyMzkuOTM2IDQ3LjQ0NCAyMzkuOTA4MDAwMDAwMDAwMDIgNDIuODc5OTk5OTk5OTk5OTk1UTIzOS45MzYgMzguMjMyIDI0MS43NDIwMDAwMDAwMDAwMiAzNC42MzRRMjQzLjU0OCAzMS4wMzU5OTk5OTk5OTk5OTggMjQ2Ljg4IDI4Ljk3Nzk5OTk5OTk5OTk5OFEyNTAuMjEyMDAwMDAwMDAwMDIgMjYuOTE5OTk5OTk5OTk5OTk4IDI1NC44MDQgMjYuOTE5OTk5OTk5OTk5OTk4UTI1OS45NTYgMjYuOTE5OTk5OTk5OTk5OTk4IDI2My41MjYgMjkuNTA5OTk5OTk5OTk5OTk4UTI2Ny4wOTYgMzIuMDk5OTk5OTk5OTk5OTk0IDI2OC4xODggMzYuNThMMjYxLjQ2OCAzOC40UTI2MC42ODQgMzUuOTY0IDI1OC44NjQwMDAwMDAwMDAwMyAzNC42MDZRMjU3LjA0NCAzMy4yNDgwMDAwMDAwMDAwMDUgMjU0LjcyIDMzLjI0ODAwMDAwMDAwMDAwNVEyNTIuMDg4IDMzLjI0ODAwMDAwMDAwMDAwNSAyNTAuMzggMzQuNDk0UTI0OC42NzIgMzUuNzM5OTk5OTk5OTk5OTk1IDI0Ny44NiAzNy45MjRRMjQ3LjA0OCA0MC4xMDgwMDAwMDAwMDAwMDQgMjQ3LjA0OCA0Mi44Nzk5OTk5OTk5OTk5OTVRMjQ3LjA0OCA0Ny4xOTIgMjQ4Ljk4MDAwMDAwMDAwMDAyIDQ5Ljg1MjAwMDAwMDAwMDAwNFEyNTAuOTEyIDUyLjUxMiAyNTQuNzIgNTIuNTEyUTI1Ny40MDggNTIuNTEyIDI1OC45NjIgNTEuMjhRMjYwLjUxNiA1MC4wNDggMjYxLjMgNDcuNzI0MDAwMDAwMDAwMDA0TDI2OC4xODggNDkuMjYzOTk5OTk5OTk5OTk2UTI2Ni43ODggNTMuODg0IDI2My4yODggNTYuMzYyUTI1OS43ODggNTguODQgMjU0LjcyIDU4Ljg0Wk0yODMuNDc2IDU4Ljg2OFEyODAuMTE2IDU4Ljg2OCAyNzcuOTMyIDU3Ljc0ODAwMDAwMDAwMDAwNVEyNzUuNzQ4IDU2LjYyOCAyNzQuNDYwMDAwMDAwMDAwMDQgNTQuODkxOTk5OTk5OTk5OTk2UTI3My4xNzIgNTMuMTU2IDI3Mi41NTYwMDAwMDAwMDAwNCA1MS4xOTZRMjcxLjk0IDQ5LjIzNjAwMDAwMDAwMDAwNCAyNzEuNzU4MDAwMDAwMDAwMDQgNDcuNDg2MDAwMDAwMDAwMDA0UTI3MS41NzYgNDUuNzM2IDI3MS41NzYgNDQuNjQ0VjI3Ljc1OTk5OTk5OTk5OTk5OEgyNzguNDA4VjQyLjMyUTI3OC40MDggNDMuNzIgMjc4LjYwNDAwMDAwMDAwMDA0IDQ1LjQ3UTI3OC44IDQ3LjIyIDI3OS41MTQgNDguODNRMjgwLjIyOCA1MC40NCAyODEuNjQyIDUxLjQ3NlEyODMuMDU2IDUyLjUxMiAyODUuNDY0IDUyLjUxMlEyODYuNzUyIDUyLjUxMiAyODguMDEyIDUyLjA5MlEyODkuMjcyIDUxLjY3MiAyOTAuMjk0IDUwLjY1UTI5MS4zMTYwMDAwMDAwMDAwMyA0OS42MjggMjkxLjkzMiA0Ny44MzZRMjkyLjU0OCA0Ni4wNDQgMjkyLjU0OCA0My4zTDI5Ni41NTIgNDUuMDA3OTk5OTk5OTk5OTk2UTI5Ni41NTIgNDguODcyIDI5NS4wNTQgNTIuMDA3OTk5OTk5OTk5OTk2UTI5My41NTYgNTUuMTQ0IDI5MC42NDQgNTcuMDA2UTI4Ny43MzIgNTguODY4IDI4My40NzYgNTguODY4Wk0yOTMuMzYgNTguMFY0OC42MkgyOTIuNTQ4VjI3Ljc1OTk5OTk5OTk5OTk5OEgyOTkuMzI0VjU4LjBaTTMwNS40ODQgNTguMFYyNy43NTk5OTk5OTk5OTk5OThIMzExLjQ0OFYzNS4xMjM5OTk5OTk5OTk5OTVMMzEwLjcxOTk5OTk5OTk5OTk3IDM0LjE3MlEzMTEuMjggMzIuNjYgMzEyLjIxNzk5OTk5OTk5OTk2IDMxLjQxMzk5OTk5OTk5OTk5OFEzMTMuMTU1OTk5OTk5OTk5OTUgMzAuMTY4IDMxNC40NzIgMjkuMzU1OTk5OTk5OTk5OTk4UTMxNS41OTIgMjguNTk5OTk5OTk5OTk5OTk4IDMxNi45NSAyOC4xNjU5OTk5OTk5OTk5OTdRMzE4LjMwOCAyNy43MzIgMzE5LjczNiAyNy42MzRRMzIxLjE2NCAyNy41MzU5OTk5OTk5OTk5OTggMzIyLjUwOCAyNy43NTk5OTk5OTk5OTk5OThWMzQuMDZRMzIxLjE2NCAzMy42NjggMzE5LjQxNCAzMy44MDhRMzE3LjY2NCAzMy45NDggMzE2LjI2Mzk5OTk5OTk5OTk1IDM0Ljc4OFEzMTQuODY0IDM1LjU0NCAzMTMuOTgxOTk5OTk5OTk5OTcgMzYuNzJRMzEzLjA5OTk5OTk5OTk5OTk3IDM3Ljg5NiAzMTIuNjc5OTk5OTk5OTk5OTUgMzkuMzk0UTMxMi4yNiA0MC44OTE5OTk5OTk5OTk5OTYgMzEyLjI2IDQyLjYyOFY1OC4wWk0zMzkuODk2IDU4Ljg0UTMzNS4zMDQwMDAwMDAwMDAwMyA1OC44NCAzMzEuODMyIDU2Ljg1MjAwMDAwMDAwMDAwNFEzMjguMzYgNTQuODY0IDMyNi40MTQgNTEuMzM2UTMyNC40NjggNDcuODA4IDMyNC40NjggNDMuMjE2UTMyNC40NjggMzguMjYgMzI2LjM3MiAzNC42MDU5OTk5OTk5OTk5OTVRMzI4LjI3NiAzMC45NTE5OTk5OTk5OTk5OTggMzMxLjY2NCAyOC45MzZRMzM1LjA1MiAyNi45MTk5OTk5OTk5OTk5OTggMzM5LjUwNCAyNi45MTk5OTk5OTk5OTk5OThRMzQ0LjIwOCAyNi45MTk5OTk5OTk5OTk5OTggMzQ3LjQ5ODAwMDAwMDAwMDA1IDI5LjExOFEzNTAuNzg4IDMxLjMxNiAzNTIuMzg0IDM1LjMyUTM1My45OCAzOS4zMjQgMzUzLjU4OCA0NC43NTZIMzQ2Ljg5NlY0Mi4yOTJRMzQ2Ljg2OCAzNy4zNjQwMDAwMDAwMDAwMDQgMzQ1LjE1OTk5OTk5OTk5OTk3IDM1LjA5NjAwMDAwMDAwMDAwNFEzNDMuNDUyIDMyLjgyOCAzMzkuNzg0IDMyLjgyOFEzMzUuNjQgMzIuODI4IDMzMy42MjQgMzUuMzlRMzMxLjYwOCAzNy45NTIgMzMxLjYwOCA0Mi44Nzk5OTk5OTk5OTk5OTVRMzMxLjYwOCA0Ny40NzIgMzMzLjYyNCA0OS45OTIwMDAwMDAwMDAwMDRRMzM1LjY0IDUyLjUxMiAzMzkuNTA0IDUyLjUxMlEzNDEuOTk2IDUyLjUxMiAzNDMuODAyIDUxLjQwNlEzNDUuNjA4IDUwLjMgMzQ2LjU4OCA0OC4yTDM1My4yNTIgNTAuMjE2UTM1MS41MTYgNTQuMzA0IDM0Ny44OSA1Ni41NzJRMzQ0LjI2NCA1OC44NCAzMzkuODk2IDU4Ljg0Wk0zMjkuNDggNDQuNzU2VjM5LjY2SDM1MC4yODRWNDQuNzU2Wk0zNjcuNyA1OC4wVjE3LjY4SDM3My43NzU5OTk5OTk5OTk5NUwzODcuNzE5OTk5OTk5OTk5OTcgNDYuMjRMNDAxLjY2NCAxNy42OEg0MDcuNzM5OTk5OTk5OTk5OTVWNTguMEg0MDEuNDRWMzIuMTU2TDM4OS4wNjM5OTk5OTk5OTk5NiA1OC4wSDM4Ni4zNzZMMzc0LjAyNzk5OTk5OTk5OTk2IDMyLjE1NlY1OC4wWk00MjcuNjQ4IDU4Ljg0UTQyMy4wNTYwMDAwMDAwMDAwNCA1OC44NCA0MTkuNTg0MDAwMDAwMDAwMDYgNTYuODUyMDAwMDAwMDAwMDA0UTQxNi4xMTIgNTQuODY0IDQxNC4xNjYwMDAwMDAwMDAwNSA1MS4zMzZRNDEyLjIyIDQ3LjgwOCA0MTIuMjIgNDMuMjE2UTQxMi4yMiAzOC4yNiA0MTQuMTI0IDM0LjYwNTk5OTk5OTk5OTk5NVE0MTYuMDI4IDMwLjk1MTk5OTk5OTk5OTk5OCA0MTkuNDE2MDAwMDAwMDAwMDUgMjguOTM2UTQyMi44MDQwMDAwMDAwMDAwMyAyNi45MTk5OTk5OTk5OTk5OTggNDI3LjI1NjAwMDAwMDAwMDAzIDI2LjkxOTk5OTk5OTk5OTk5OFE0MzEuOTYwMDAwMDAwMDAwMDQgMjYuOTE5OTk5OTk5OTk5OTk4IDQzNS4yNSAyOS4xMThRNDM4LjU0IDMxLjMxNiA0NDAuMTM2IDM1LjMyUTQ0MS43MzIgMzkuMzI0IDQ0MS4zNDAwMDAwMDAwMDAwMyA0NC43NTZINDM0LjY0OFY0Mi4yOTJRNDM0LjYyIDM3LjM2NDAwMDAwMDAwMDAwNCA0MzIuOTEyMDAwMDAwMDAwMDMgMzUuMDk2MDAwMDAwMDAwMDA0UTQzMS4yMDQgMzIuODI4IDQyNy41MzYgMzIuODI4UTQyMy4zOTIgMzIuODI4IDQyMS4zNzYgMzUuMzlRNDE5LjM2IDM3Ljk1MiA0MTkuMzYgNDIuODc5OTk5OTk5OTk5OTk1UTQxOS4zNiA0Ny40NzIgNDIxLjM3NiA0OS45OTIwMDAwMDAwMDAwMDRRNDIzLjM5MiA1Mi41MTIgNDI3LjI1NjAwMDAwMDAwMDAzIDUyLjUxMlE0MjkuNzQ4MDAwMDAwMDAwMDUgNTIuNTEyIDQzMS41NTQwMDAwMDAwMDAwMyA1MS40MDZRNDMzLjM2IDUwLjMgNDM0LjM0MDAwMDAwMDAwMDAzIDQ4LjJMNDQxLjAwNCA1MC4yMTZRNDM5LjI2ODAwMDAwMDAwMDAzIDU0LjMwNCA0MzUuNjQyMDAwMDAwMDAwMDUgNTYuNTcyUTQzMi4wMTYgNTguODQgNDI3LjY0OCA1OC44NFpNNDE3LjIzMiA0NC43NTZWMzkuNjZINDM4LjAzNlY0NC43NTZaTTQ1OC4wNTYgNTguODRRNDUzLjg4NCA1OC44NCA0NTAuNzc2IDU2Ljc0UTQ0Ny42NjggNTQuNjQgNDQ1Ljk2MDAwMDAwMDAwMDA0IDUxLjAyOFE0NDQuMjUyIDQ3LjQxNiA0NDQuMjUyIDQyLjg3OTk5OTk5OTk5OTk5NVE0NDQuMjUyIDM4LjI4OCA0NDUuOTc0MDAwMDAwMDAwMDUgMzQuNjlRNDQ3LjY5NiAzMS4wOTIgNDUwLjg2IDI5LjAwNlE0NTQuMDI0IDI2LjkxOTk5OTk5OTk5OTk5OCA0NTguMzA4IDI2LjkxOTk5OTk5OTk5OTk5OFE0NjIuNjIgMjYuOTE5OTk5OTk5OTk5OTk4IDQ2NS41NDYgMjkuMDA2UTQ2OC40NzIgMzEuMDkyIDQ2OS45ODQgMzQuNzA0UTQ3MS40OTYgMzguMzE2IDQ3MS40OTYgNDIuODc5OTk5OTk5OTk5OTk1UTQ3MS40OTYgNDcuMzg4IDQ2OS45ODQgNTEuMDEzOTk5OTk5OTk5OTk2UTQ2OC40NzIgNTQuNjQgNDY1LjQ3NiA1Ni43NFE0NjIuNDggNTguODQgNDU4LjA1NiA1OC44NFpNNDU5LjA5MiA1Mi43OTJRNDYxLjgwOCA1Mi43OTIgNDYzLjQ3NCA1MS41NDZRNDY1LjE0IDUwLjMgNDY1LjkwOTk5OTk5OTk5OTk3IDQ4LjA2UTQ2Ni42OCA0NS44MiA0NjYuNjggNDIuODc5OTk5OTk5OTk5OTk1UTQ2Ni42OCAzOS45MTIgNDY1LjkwOTk5OTk5OTk5OTk3IDM3LjY4NlE0NjUuMTQgMzUuNDYgNDYzLjUxNTk5OTk5OTk5OTk2IDM0LjIxNFE0NjEuODkyIDMyLjk2OCA0NTkuMzE2MDAwMDAwMDAwMDMgMzIuOTY4UTQ1Ni42IDMyLjk2OCA0NTQuODM2IDM0LjI5OFE0NTMuMDcyIDM1LjYyOCA0NTIuMjMxOTk5OTk5OTk5OTcgMzcuODgyUTQ1MS4zOTIgNDAuMTM1OTk5OTk5OTk5OTk2IDQ1MS4zOTIgNDIuODc5OTk5OTk5OTk5OTk1UTQ1MS4zOTIgNDUuNjUyIDQ1Mi4yMTc5OTk5OTk5OTk5NiA0Ny45MDZRNDUzLjA0NCA1MC4xNiA0NTQuNzUxOTk5OTk5OTk5OTUgNTEuNDc2UTQ1Ni40NiA1Mi43OTIgNDU5LjA5MiA1Mi43OTJaTTQ2Ni42OCA1OC4wVjM2Ljc3NTk5OTk5OTk5OTk5Nkg0NjUuODRWMTcuNjhINDcyLjY0NFY1OC4wWk00NzkuMzY0MDAwMDAwMDAwMDMgMjMuMTY4VjE2Ljk3OTk5OTk5OTk5OTk5N0g0ODYuMTEyVjIzLjE2OFpNNDc5LjM2NDAwMDAwMDAwMDAzIDU4LjBWMjcuNzU5OTk5OTk5OTk5OTk4SDQ4Ni4xMTJWNTguMFpNNTAxLjI4OCA1OC44NFE0OTguMDEyMDAwMDAwMDAwMDYgNTguODQgNDk1Ljc0NCA1Ny41OTRRNDkzLjQ3NjAwMDAwMDAwMDA2IDU2LjM0OCA0OTIuMzE0MDAwMDAwMDAwMSA1NC4yNzU5OTk5OTk5OTk5OTZRNDkxLjE1MjAwMDAwMDAwMDA0IDUyLjIwNCA0OTEuMTUyMDAwMDAwMDAwMDQgNDkuNzEyUTQ5MS4xNTIwMDAwMDAwMDAwNCA0Ny41MjggNDkxLjg4MDAwMDAwMDAwMDA1IDQ1Ljc3OFE0OTIuNjA4MDAwMDAwMDAwMDYgNDQuMDI4IDQ5NC4xMjAwMDAwMDAwMDAwNiA0Mi43NTQwMDAwMDAwMDAwMDVRNDk1LjYzMjAwMDAwMDAwMDA2IDQxLjQ4MDAwMDAwMDAwMDAwNCA0OTguMDQgNDAuNjY4UTQ5OS44NiA0MC4wOCA1MDIuMzEwMDAwMDAwMDAwMDYgMzkuNjA0UTUwNC43NjAwMDAwMDAwMDAwNSAzOS4xMjggNTA3LjYzMDAwMDAwMDAwMDA1IDM4LjcyMlE1MTAuNTAwMDAwMDAwMDAwMDYgMzguMzE2IDUxMy42MzYwMDAwMDAwMDAxIDM3Ljg0TDUxMS4yMjggMzkuMjEyUTUxMS4yNTYwMDAwMDAwMDAwMyAzNi4wNzYgNTA5LjgyODAwMDAwMDAwMDAzIDM0LjU5MlE1MDguNDAwMDAwMDAwMDAwMDMgMzMuMTA4MDAwMDAwMDAwMDA0IDUwNS4wMTIwMDAwMDAwMDAwNiAzMy4xMDgwMDAwMDAwMDAwMDRRNTAyLjk2OCAzMy4xMDgwMDAwMDAwMDAwMDQgNTAxLjA2NCAzNC4wNlE0OTkuMTYgMzUuMDEyIDQ5OC40MDQwMDAwMDAwMDAwNSAzNy4zMzZMNDkyLjI0NCAzNS40MDM5OTk5OTk5OTk5OTZRNDkzLjM2NDAwMDAwMDAwMDAzIDMxLjU2Nzk5OTk5OTk5OTk5OCA0OTYuNTE0IDI5LjI0NFE0OTkuNjY0MDAwMDAwMDAwMDQgMjYuOTE5OTk5OTk5OTk5OTk4IDUwNS4wMTIwMDAwMDAwMDAwNiAyNi45MTk5OTk5OTk5OTk5OThRNTA5LjA0NDAwMDAwMDAwMDA0IDI2LjkxOTk5OTk5OTk5OTk5OCA1MTIuMTEgMjguMjM1OTk5OTk5OTk5OTk3UTUxNS4xNzYgMjkuNTUyIDUxNi42NjAwMDAwMDAwMDAxIDMyLjU0OFE1MTcuNDcyIDM0LjE0NCA1MTcuNjQgMzUuODFRNTE3LjgwOCAzNy40NzYgNTE3LjgwOCAzOS40MzZWNTguMEg1MTEuOTAwMDAwMDAwMDAwMDNWNTEuNDQ4TDUxMi44OCA1Mi41MTJRNTEwLjgzNiA1NS43ODggNTA4LjEwNiA1Ny4zMTRRNTA1LjM3NjAwMDAwMDAwMDAzIDU4Ljg0IDUwMS4yODggNTguODRaTTUwMi42MzIwMDAwMDAwMDAwNiA1My40NjRRNTA0LjkyODAwMDAwMDAwMDA1IDUzLjQ2NCA1MDYuNTUyIDUyLjY1MlE1MDguMTc2MDAwMDAwMDAwMDQgNTEuODQgNTA5LjE0MjAwMDAwMDAwMDA1IDUwLjY2NFE1MTAuMTA4MDAwMDAwMDAwMDYgNDkuNDg4IDUxMC40NDQgNDguNDUyUTUxMC45NzYwMDAwMDAwMDAwNiA0Ny4xNjQgNTExLjA0NjAwMDAwMDAwMDA1IDQ1LjQ5ODAwMDAwMDAwMDAwNVE1MTEuMTE2MDAwMDAwMDAwMDQgNDMuODMyIDUxMS4xMTYwMDAwMDAwMDAwNCA0Mi43OTZMNTEzLjE4OCA0My40MTJRNTEwLjEzNiA0My44ODggNTA3Ljk1MiA0NC4yNTE5OTk5OTk5OTk5OTVRNTA1Ljc2ODAwMDAwMDAwMDAzIDQ0LjYxNiA1MDQuMjAwMDAwMDAwMDAwMDUgNDQuOTM4UTUwMi42MzIwMDAwMDAwMDAwNiA0NS4yNiA1MDEuNDI4MDAwMDAwMDAwMDUgNDUuNjUyUTUwMC4yNTIgNDYuMDcyIDQ5OS40NDAwMDAwMDAwMDAwNSA0Ni42MzIwMDAwMDAwMDAwMDVRNDk4LjYyODAwMDAwMDAwMDA0IDQ3LjE5MiA0OTguMTk0MDAwMDAwMDAwMSA0Ny45MlE0OTcuNzYwMDAwMDAwMDAwMDUgNDguNjQ3OTk5OTk5OTk5OTk2IDQ5Ny43NjAwMDAwMDAwMDAwNSA0OS42MjhRNDk3Ljc2MDAwMDAwMDAwMDA1IDUwLjc0OCA0OTguMzIwMDAwMDAwMDAwMDUgNTEuNjAyMDAwMDAwMDAwMDA0UTQ5OC44ODAwMDAwMDAwMDAwNSA1Mi40NTYgNDk5Ljk1ODAwMDAwMDAwMDEgNTIuOTZRNTAxLjAzNjAwMDAwMDAwMDA2IDUzLjQ2NCA1MDIuNjMyMDAwMDAwMDAwMDYgNTMuNDY0WiIvPjwvc3ZnPg==" alt="Procure Media" style="width: 100%; height: auto; display: block"></a>
+        <p style="margin: 0 0 0 29.4%; font-size: clamp(14px, 3.8vw, 20px); line-height: 1.5; font-weight: 600; color: #A9B6CC">Lead generation and AI integration</p>
       </div>
-
-      <h1>Stop losing jobs to <span class="glow">missed calls</span>!</h1>
-
-      <p class="hero-sub">
-        <b>62% of calls to small businesses go unanswered</b><sup class="src"><a href="#sources" aria-label="Source 1">1</a></sup>
-        — and that job goes straight to your competitor. Procure Media answers, qualifies, and books
-        every one of those calls onto your calendar, 24/7. All for only $99 per month. Stop losing jobs now.
-      </p>
-
-      <p class="cta-lead">Two ways to start</p>
-      <div class="cta-row">
-        <div class="cta-opt">
-          <a class="btn btn-amber" href="https://signup.procuremedia.com">Start now →</a>
-          <span class="cta-opt-note">Sign up online, yourself.</span>
-        </div>
-        <span class="cta-or">or</span>
-        <div class="cta-opt">
-          <a class="btn btn-ghost" href="tel:+18557545015">Call now — (855) 754-5015</a>
-          <span class="cta-opt-note">We'll sign you up on the phone.</span>
+      <h1 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; font-weight: 700; letter-spacing: -0.03em; max-width: 15ch">Anyone can build with AI. We know what to build.</h1>
+      <p style="margin: 32px 0 0; font-size: 20px; line-height: 30px; color: #A9B6CC; max-width: 58ch">The people who understand AI have never run a business. The people who run businesses don't have the time to learn what AI can do for them. We have done both — on our own companies, with our own money.</p>
+      <div style="margin-top: 48px; padding-top: 40px; border-top: 1px solid #24395A; max-width: 60ch">
+        <p style="margin: 0 0 20px; font-size: 32px; line-height: 38px; font-weight: 700; letter-spacing: -0.02em; color: #FFFFFF">Start with one of three questions</p>
+        <div style="display: flex; flex-direction: column">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; padding: 16px 0; border-top: 1px solid #24395A">
+            <span style="flex: 0 0 104px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #4D8BFF">Automate</span>
+            <span style="flex: 999 1 360px; min-width: 0; font-size: 20px; line-height: 30px; color: #FFFFFF">What are you still doing by hand that a system could be doing for you?</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; padding: 16px 0; border-top: 1px solid #24395A">
+            <span style="flex: 0 0 104px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #4D8BFF">Simplify</span>
+            <span style="flex: 999 1 360px; min-width: 0; font-size: 20px; line-height: 30px; color: #FFFFFF">Where does a job get stuck between the first call and the invoice?</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; padding: 16px 0; border-top: 1px solid #24395A; border-bottom: 1px solid #24395A">
+            <span style="flex: 0 0 104px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #4D8BFF">Control</span>
+            <span style="flex: 999 1 360px; min-width: 0; font-size: 20px; line-height: 30px; color: #FFFFFF">Do you own your leads, or are you sharing them with every competitor in town?</span>
+          </div>
         </div>
       </div>
-
-      <p class="cta-note">Either way: under 10 minutes — and you're live in 24 hours.</p>
-
-      <ul class="chips">
-        <li>No setup fees</li>
-        <li>No contract</li>
-        <li>Cancel anytime</li>
-        <li>You own your site, domain &amp; data</li>
-      </ul>
-
-      <div class="hero-proof" aria-label="Why answering every call matters">
-        <div class="hp">
-          <span class="hpf">67%<sup class="src"><a href="#sources" aria-label="Source 2">2</a></sup></span>
-          <span class="hpl">of people call a competitor after just <b>one</b> unanswered call</span>
-        </div>
-        <div class="hp">
-          <span class="hpf">78%<sup class="src"><a href="#sources" aria-label="Source 4">4</a></sup></span>
-          <span class="hpl">hire whoever answers first</span>
-        </div>
-        <div class="hp">
-          <span class="hpf">21×<sup class="src"><a href="#sources" aria-label="Source 5">5</a></sup></span>
-          <span class="hpl">likelier to book the job when you answer within 5 minutes</span>
-        </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px">
+        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; background: #FFFFFF; color: #0B1F3A; border-radius: 12px; font-size: 15px; font-weight: 700">Give me an hour</a>
+        <a href="#rescues" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; background: transparent; color: #FFFFFF; border: 1px solid #24395A; border-radius: 12px; font-size: 15px; font-weight: 700">See what we fixed</a>
       </div>
-
-    </div>
-
-    <!-- ---- missed-call cost calculator — shares the fold ---- -->
-    <div class="calc hero-calc" role="group" aria-labelledby="calc-title">
-      <div class="calc-head">
-        <div class="calc-title" id="calc-title">How much money do you lose to missed calls?</div>
-        <div class="calc-tag">Your numbers</div>
-      </div>
-
-      <div class="field">
-        <div class="field-top">
-          <label for="calls">How many calls do you get per week?</label>
-          <output class="field-val" id="calls-out" for="calls">25</output>
-        </div>
-        <input type="range" id="calls" min="5" max="100" step="1" value="25" aria-describedby="calls-out">
-        <div class="field-scale"><span>5</span><span>100</span></div>
-      </div>
-
-      <div class="field">
-        <div class="field-top">
-          <label for="job">How much is an average job worth to you?</label>
-          <output class="field-val" id="job-out" for="job">$450</output>
-        </div>
-        <input type="range" id="job" min="100" max="5000" step="50" value="450" aria-describedby="job-out">
-        <div class="field-scale"><span>$100</span><span>$5,000</span></div>
-      </div>
-
-      <div class="calc-out calc-cap" aria-live="polite">
-        <p class="calc-cap-kicker">You lost</p>
-        <span class="calc-money" id="loss">$108,810</span>
-        <p class="calc-cap-answer">We answer every call.</p>
-
-        <div class="calc-cap-form" id="calcCapWrap">
-          <p class="calc-cap-prompt">Give us your name and number — Walter will call you right now and show you exactly how it works.</p>
-          <form id="calcCaptureForm" action="https://procure-lead-engine.dan-fda.workers.dev/submit" method="POST">
-            <input type="hidden" name="site" value="procuremedia.com">
-            <input type="hidden" name="lead_source" value="procuremedia-home-calc">
-            <input type="hidden" name="segment" value="Agents">
-            <input type="hidden" name="vertical" value="home">
-            <input type="hidden" name="ad_group" id="cap-ad-group" value="">
-            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="fields calc-cap-fields">
-              <div class="field">
-                <input id="cap-name" type="text" name="name" placeholder="First name" required autocomplete="given-name">
-              </div>
-              <div class="field">
-                <input id="cap-phone" type="tel" name="phone" placeholder="(480) 555-0134" required autocomplete="tel" inputmode="tel">
-              </div>
-            </div>
-            <label class="pm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>Yes, text me about my request. By checking this box, I agree to receive SMS text messages about my inquiry, account setup, appointment scheduling, and related follow-ups from Procure Media, LLC at the phone number I provided, including messages sent using automated technology. Msg &amp; data rates may apply. Message frequency varies.</span></label>
-            <input type="hidden" name="consent_version" value="pm-sms-v1-2026-07-06">
-            <button class="btn btn-amber btn-block calc-cap-btn" type="submit">Have Walter call you now</button>
-            <p class="pm-consent-submit">By submitting, you agree to be contacted about your request by Procure Media, LLC by phone call and email, including via automated technology. Consent is not a condition of purchase.</p>
-            <p class="pm-consent-terms">SMS terms: If you check the box above, message frequency varies and Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not a condition of purchase. See our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</p>
-          </form>
-        </div>
-
-        <div class="calc-cap-done" id="calcCapDone" hidden>
-          <p class="calc-cap-done-h">Got it — Walter's calling you now.</p>
-          <p class="calc-cap-done-b">Answer when your phone rings (~30s). Bad time? Tell Walter and he'll set one that works.</p>
-        </div>
-
-        <p class="formula">
-          <code id="formula">25 calls/wk × 62% unanswered × 52 weeks × $450 per job × 30% close rate = $108,810/yr</code>
-          <span class="assume">The 30% close rate is an <b>assumption</b> — we assume you'd win roughly 3 of every
-          10 answered calls. Change the sliders to match your business. The 62% unanswered figure is
-          sourced;<sup class="src"><a href="#sources" aria-label="Source 1">1</a></sup> the close rate is not a promise of results.</span>
-        </p>
-      </div>
-    </div>
+      <p style="margin: 20px 0 0; font-size: 16px; line-height: 26px; color: #A9B6CC; max-width: 58ch">An hour, usually less. You tell me the problem; I show you how AI and I get you out the other side of it.</p>
+    </section>
   </div>
 
-  <div class="wrap">
-    <p class="scene-line">
-      Call the number above and our own AI picks up — that's the demo. Or watch the next
-      two minutes play out both ways: <b>the night you miss it</b>, and <b>the night we answer it</b>.
-    </p>
-  </div>
-</section>
+  <section id="different" style="background: #F4F6F9; padding: 96px 80px; border-bottom: 1px solid #E6E8EC">
+    <h2 style="margin: 0; font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em">Same AI. Different instructions.</h2>
+    <p style="margin: 24px 0 0; font-size: 20px; line-height: 30px; color: #0B1F3A; max-width: 62ch">Everybody has a friend or a family member who can build a shiny tool with AI.</p>
+    <p style="margin: 16px 0 0; font-size: 20px; line-height: 30px; color: #5B6472; max-width: 62ch">It looks great the day you get it, and a week later nobody opens it, because it doesn't talk to anything else in your business. A tool on its own is a toy. Now connect that toy to your phone, your calendar, your CRM and the other tools in your company, and it does a job — and that's where AI makes money for you.</p>
 
-<!-- ==================== 3. THE 6:45 PM TIMELINE ==================== -->
-<section class="section timeline" aria-labelledby="tl-title">
-  <div class="wrap">
-
-    <div class="sec-head">
-      <p class="eyebrow">The same call, twice</p>
-      <h2 id="tl-title">One call. 6:45 PM. Two nights.</h2>
-      <p>Same customer, same leaking water heater, same moment. The only difference is
-        whether anyone picks up. Follow it down the clock.</p>
+    <div class="col-heads" style="margin-top: 56px; display: flex; gap: 24px; padding-bottom: 14px">
+      <div style="flex: 1 1 0; min-width: 0; padding-left: 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">A shiny tool</div>
+      <div style="flex: 1 1 0; min-width: 0; padding-left: 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF">A tool inside a process</div>
     </div>
-
-    <div class="tl-heads" aria-hidden="true">
-      <div class="tl-head cold"><span class="bulb"></span> Without Procure</div>
-      <div class="sp"></div>
-      <div class="tl-head warm"><span class="bulb"></span> With Procure</div>
-    </div>
-
-    <!-- ---------------- BEAT 1 — 6:45 PM ---------------- -->
-    <div class="beat">
-      <div class="rail"><div class="time">6:45<span>PM</span></div></div>
-
-      <div class="side cold">
-        <p class="lbl">Without Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">Incoming call · 6:45 PM</p>
-              <p class="card-sub">Rings… no answer</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px">
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: stretch">
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #8A93A0; box-sizing: border-box; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472; margin-bottom: 4px">Shiny tool</div>
+              <span style="font-size: 16px; line-height: 26px; color: #5B6472">Built over a weekend</span>
             </div>
-            <span class="pill pill-missed">Missed</span>
           </div>
-          <p class="card-note">
-            You're on a job, at dinner, driving home. The phone rings out into an empty truck cab.
-            The caller hangs up and dials the next company.
-          </p>
-        </div>
-      </div>
-
-      <div class="side warm">
-        <p class="lbl">With Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">Incoming call · 6:45 PM</p>
-              <p class="card-sub">Answered by AI in 2 rings</p>
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px; background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 4px">Inside a process</div>
+              <span style="font-size: 16px; line-height: 26px; color: #0B1F3A; font-weight: 600">Built around how the work actually moves</span>
             </div>
-            <span class="pill pill-live"><span class="live-dot" aria-hidden="true"></span> Live</span>
           </div>
-          <p class="card-note">
-            You're on a job, at dinner, driving home — and it doesn't matter. Riley picks up
-            before the second ring finishes.
-          </p>
         </div>
-      </div>
-    </div>
-
-    <!-- ---------------- BEAT 2 — 6:46 PM ---------------- -->
-    <div class="beat">
-      <div class="rail"><div class="time">6:46<span>PM</span></div></div>
-
-      <div class="side cold">
-        <p class="lbl">Without Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">Voicemail</p>
-              <p class="card-sub">"Leave a message after the tone."</p>
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: stretch">
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #8A93A0; box-sizing: border-box; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472; margin-bottom: 4px">Shiny tool</div>
+              <span style="font-size: 16px; line-height: 26px; color: #5B6472">Impressive the first time you see it</span>
             </div>
-            <span class="pill pill-dead">No message</span>
           </div>
-
-          <div class="vm">
-            <div class="vm-ico" aria-hidden="true">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="14" r="4"/><circle cx="18" cy="14" r="4"/><line x1="6" y1="18" x2="18" y2="18"/></svg>
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px; background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 4px">Inside a process</div>
+              <span style="font-size: 16px; line-height: 26px; color: #0B1F3A; font-weight: 600">Wired into the phone, the calendar and the CRM</span>
             </div>
-            <p class="vm-tx"><b>0:00</b> — silence, then a click.</p>
-            <span class="wave" aria-hidden="true">
-              <i style="height:4px"></i><i style="height:3px"></i><i style="height:5px"></i><i style="height:3px"></i><i style="height:4px"></i><i style="height:3px"></i>
-            </span>
-          </div>
-
-          <div class="stat-inline">
-            <span class="fig">&lt;3%</span>
-            <span class="txt">of people who reach voicemail leave a message.<sup class="src"><a href="#sources" aria-label="Source 6">6</a></sup> Lisa isn't one of them.</span>
           </div>
         </div>
-      </div>
-
-      <div class="side warm">
-        <p class="lbl">With Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">Riley qualifies the job</p>
-              <p class="card-sub">Vance Plumbing · your questions, your criteria</p>
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: stretch">
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #8A93A0; box-sizing: border-box; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472; margin-bottom: 4px">Shiny tool</div>
+              <span style="font-size: 16px; line-height: 26px; color: #5B6472">Not connected to anything the business runs on</span>
             </div>
-            <span class="pill pill-live"><span class="live-dot" aria-hidden="true"></span> Live</span>
           </div>
-
-          <div class="ts">
-            <div class="bub ai"><span class="who">Riley · AI</span>Hi, you've reached Riley, the automated assistant for Vance Plumbing — are you calling about a home or a business?</div>
-            <div class="bub cl"><span class="who">Caller</span>A home.</div>
-            <div class="bub ai"><span class="who">Riley · AI</span>Got it — what's going on?</div>
-            <div class="bub cl"><span class="who">Caller</span>Water heater's leaking.</div>
-            <div class="bub ai"><span class="who">Riley · AI</span>That's no fun — but we can definitely help. Looking to get someone out as soon as possible?</div>
-            <div class="bub cl"><span class="who">Caller</span>Yes, sooner the better.</div>
-            <div class="bub ai"><span class="who">Riley · AI</span>Last thing — your name and what city you're calling from?</div>
-            <div class="bub cl"><span class="who">Caller</span>I'm Lisa, in Gilbert.</div>
-            <div class="bub ai"><span class="who">Riley · AI</span>Thanks Lisa — a leaking water heater at your home in Gilbert. I can have a tech out tomorrow at 11 AM or 3 PM. Which works?</div>
-            <div class="bub cl"><span class="who">Caller</span>Tomorrow at 11 works great.</div>
-            <div class="bub ai"><span class="who">Riley · AI</span>Perfect — you're booked. What's the best address?</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ---------------- BEAT 3 — 6:47 PM ---------------- -->
-    <div class="beat">
-      <div class="rail"><div class="time">6:47<span>PM</span></div></div>
-
-      <div class="side cold">
-        <p class="lbl">Without Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">She dials the next company</p>
-              <p class="card-sub">One unanswered call was enough</p>
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px; background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 4px">Inside a process</div>
+              <span style="font-size: 16px; line-height: 26px; color: #0B1F3A; font-weight: 600">Someone owns the result and checks it</span>
             </div>
-            <span class="pill pill-dead">Gone</span>
-          </div>
-          <p class="card-note">
-            Lisa scrolls back to the search results and taps the next name on the list.
-            Someone there answers on the third ring.
-          </p>
-          <div class="stat-inline">
-            <span class="fig">67%</span>
-            <span class="txt">call a competitor after ONE unanswered call.<sup class="src"><a href="#sources" aria-label="Source 2">2</a></sup></span>
           </div>
         </div>
-      </div>
-
-      <div class="side warm">
-        <p class="lbl">With Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">Confirmed</p>
-              <p class="card-sub">Straight onto your schedule</p>
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: stretch">
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #8A93A0; box-sizing: border-box; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472; margin-bottom: 4px">Shiny tool</div>
+              <span style="font-size: 16px; line-height: 26px; color: #5B6472">Nobody’s job depends on it, so nobody opens it after week one</span>
             </div>
-            <span class="pill pill-live">Booked</span>
           </div>
-
-          <div class="booked">
-            <p class="bk-top"><span class="check" aria-hidden="true">✓</span> Booked — Tomorrow, 11:00 AM</p>
-            <p class="bk-sub">Water heater repair · Gilbert · on your calendar</p>
-          </div>
-
-          <p class="card-note">
-            Two minutes of AI conversation, zero minutes of yours. The slot was pulled live
-            from your real calendar, so there's nothing to double-check.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ---------------- BEAT 4 — NEXT MORNING ---------------- -->
-    <div class="beat">
-      <div class="rail"><div class="time">NEXT<span>MORNING</span></div></div>
-
-      <div class="side cold">
-        <p class="lbl">Without Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">Someone else's van in the driveway</p>
-              <p class="card-sub">7 blocks from your shop</p>
+          <div style="flex: 1 1 300px; min-width: 0; display: flex; gap: 12px; align-items: baseline; padding: 18px 22px; background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px">
+            <span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <div style="min-width: 0">
+              <div class="pair-label" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 4px">Inside a process</div>
+              <span style="font-size: 16px; line-height: 26px; color: #0B1F3A; font-weight: 600">Still doing the job months later, because the business runs through it</span>
             </div>
-            <span class="pill pill-dead">Lost</span>
-          </div>
-
-          <div class="van">
-            <div class="van-ico" aria-hidden="true">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V8a1 1 0 0 1 1-1h11v9"/><path d="M14 10h4l3 3.5V16"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/><path d="M9 17.5h6"/></svg>
-            </div>
-            <p class="vm-tx">A competitor is replacing Lisa's water heater right now.</p>
-          </div>
-
-          <div class="scene">
-            The worst part isn't losing the job. It's that <b style="color:var(--muted)">you never knew
-            the call happened.</b> There's nothing in your CRM, nothing on your calendar, no
-            voicemail, no missed-call note. The job simply never existed to you.
           </div>
         </div>
+      
+    </div>
+
+    <p style="margin: 40px 0 0; font-size: 20px; line-height: 30px; color: #5B6472; max-width: 62ch">Same AI on both sides. The difference is knowing which part of the business to point it at — and that came from twenty-five years of running one.</p>
+  </section>
+
+  <section id="hire" style="padding: 96px 80px">
+    <h2 style="margin: 0 0 56px; font-size: 32px; line-height: 38px; font-weight: 700; letter-spacing: -0.02em">What people hire us for</h2>
+    
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 32px 0; border-top: 1px solid #E6E8EC; align-items: baseline">
+        <div style="flex: 0 0 60px; font-size: 22px; line-height: 28px; font-weight: 700; color: #1E6BFF">01</div>
+        <h3 style="margin: 0; flex: 0 0 300px; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em">Get customers</h3>
+        <p style="margin: 0; flex: 999 1 420px; min-width: 0; font-size: 16px; line-height: 26px; color: #5B6472">Paid search, Meta, SEO, landing pages, the call floor, speed-to-lead, outbound and live transfer. Buy exclusive leads from us — one buyer, never resold. Or own the landing page and we buy the traffic for it, and the leads go nowhere else, ever.</p>
       </div>
+    
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 32px 0; border-top: 1px solid #E6E8EC; align-items: baseline">
+        <div style="flex: 0 0 60px; font-size: 22px; line-height: 28px; font-weight: 700; color: #1E6BFF">02</div>
+        <h3 style="margin: 0; flex: 0 0 300px; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em">Answer everything, instantly</h3>
+        <p style="margin: 0; flex: 999 1 420px; min-width: 0; font-size: 16px; line-height: 26px; color: #5B6472">AI voice, SMS, email, chat and the CRM behind them. Every contact answered, qualified, booked and followed up, at any hour.</p>
+      </div>
+    
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 32px 0; border-top: 1px solid #E6E8EC; align-items: baseline">
+        <div style="flex: 0 0 60px; font-size: 22px; line-height: 28px; font-weight: 700; color: #1E6BFF">03</div>
+        <h3 style="margin: 0; flex: 0 0 300px; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em">Own your own presence</h3>
+        <p style="margin: 0; flex: 999 1 420px; min-width: 0; font-size: 16px; line-height: 26px; color: #5B6472">Custom sites, domains, email, and getting out from under a vendor who holds your assets. Begins with the ownership audit, below.</p>
+      </div>
+    
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; padding: 32px 0; border-top: 1px solid #E6E8EC; align-items: baseline">
+        <div style="flex: 0 0 60px; font-size: 22px; line-height: 28px; font-weight: 700; color: #1E6BFF">04</div>
+        <h3 style="margin: 0; flex: 0 0 300px; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em">Put AI through the back office</h3>
+        <p style="margin: 0; flex: 999 1 420px; min-width: 0; font-size: 16px; line-height: 26px; color: #5B6472">Less administrative work, simpler processes, better reporting, more productive people. I help you see what is possible, decide where to focus first, and turn it into a practical plan — then we build it and run it.</p>
+      </div>
+    
+  </section>
 
-      <div class="side warm">
-        <p class="lbl">With Procure</p>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <p class="card-title">The job is on your calendar</p>
-              <p class="card-sub">And Lisa got a reminder before you woke up</p>
-            </div>
-            <span class="pill pill-live">On schedule</span>
-          </div>
+  <section id="hour" style="background: #0B1F3A; color: #FFFFFF; padding: 88px 80px">
+    <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+      <div style="flex: 999 1 560px; min-width: 0">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #A9B6CC; margin-bottom: 16px">Whatever it is</div>
+        <h2 style="margin: 0 0 20px; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; font-weight: 700; letter-spacing: -0.03em">Give me an hour</h2>
+        <p style="margin: 0 0 16px; font-size: 20px; line-height: 30px; color: #A9B6CC; max-width: 58ch">Tell me what is eating your week, where the jobs are leaking, or what you are paying for and do not control. I have spent years getting businesses through exactly this. At the end of the hour I will show you how AI and I together get you out the other side.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 26px; color: #A9B6CC">Nothing to sign. If there is no path, you will hear it from me inside the hour.</p>
+      </div>
+      <div style="flex: 0 1 260px; min-width: 0">
+        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; background: #FFFFFF; color: #0B1F3A; border-radius: 12px; font-size: 16px; font-weight: 700">Book the hour</a>
+      </div>
+    </div>
+  </section>
 
-          <div class="sms">
-            <p class="sms-hd">Reminder text · 7:30 AM</p>
-            <p class="sms-bub">Hi Lisa — reminder that Vance Plumbing is scheduled for your water heater repair today at 11:00 AM in Gilbert. Reply C to confirm.</p>
+  <section id="audit" style="background: #F4F6F9; padding: 96px 80px; border-top: 1px solid #E6E8EC; border-bottom: 1px solid #E6E8EC">
+    <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
+      <div style="flex: 999 1 520px; min-width: 0">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 16px">Or start with a checklist</div>
+        <h2 style="margin: 0 0 20px; font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em; max-width: 18ch">The ownership audit</h2>
+        <p style="margin: 0 0 24px; font-size: 20px; line-height: 30px; color: #5B6472; max-width: 58ch">We find every digital property your business runs on, who actually controls each one, and what it would take to get it back. You get the register whether or not you buy anything else.</p>
+        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; background: #1E6BFF; color: #FFFFFF; border-radius: 12px; font-size: 15px; font-weight: 700">Start the audit</a>
+      </div>
+      <div style="flex: 1 1 360px; min-width: 0; background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 16px; padding: 36px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472; margin-bottom: 20px">What the register covers</div>
+        
+          <div style="padding: 14px 0; border-bottom: 1px solid #E6E8EC; display: flex; align-items: baseline; gap: 12px">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <span style="font-size: 16px; line-height: 26px; color: #0B1F3A">Your domain, and who the registrar answers to</span>
           </div>
+        
+          <div style="padding: 14px 0; border-bottom: 1px solid #E6E8EC; display: flex; align-items: baseline; gap: 12px">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <span style="font-size: 16px; line-height: 26px; color: #0B1F3A">Hosting, and who can take the site down</span>
+          </div>
+        
+          <div style="padding: 14px 0; border-bottom: 1px solid #E6E8EC; display: flex; align-items: baseline; gap: 12px">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <span style="font-size: 16px; line-height: 26px; color: #0B1F3A">Email and the admin accounts behind it</span>
+          </div>
+        
+          <div style="padding: 14px 0; border-bottom: 1px solid #E6E8EC; display: flex; align-items: baseline; gap: 12px">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <span style="font-size: 16px; line-height: 26px; color: #0B1F3A">The Google account holding your reviews</span>
+          </div>
+        
+          <div style="padding: 14px 0; border-bottom: 1px solid #E6E8EC; display: flex; align-items: baseline; gap: 12px">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <span style="font-size: 16px; line-height: 26px; color: #0B1F3A">Every service the business runs on, and its cost</span>
+          </div>
+        
+          <div style="padding: 14px 0; border-bottom: 1px solid #E6E8EC; display: flex; align-items: baseline; gap: 12px">
+            <span style="width: 8px; height: 8px; border-radius: 999px; background: #1E6BFF; flex-shrink: 0"></span>
+            <span style="font-size: 16px; line-height: 26px; color: #0B1F3A">Logins and two-factor method for all of it</span>
+          </div>
+        
+      </div>
+    </div>
+  </section>
 
-          <div class="scene">
-            You open your phone to a booked 11 AM, a confirmed customer, and the full call
-            transcript sitting in your CRM. <b style="color:var(--amber)">You didn't do anything.
-            That's the point.</b>
-          </div>
-        </div>
+  <section id="rescues" style="padding: 104px 80px 48px; max-width: 1120px; box-sizing: border-box">
+    <h2 style="margin: 0; font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em; max-width: 22ch">Two clients who took their business back</h2>
+    <p style="margin: 28px 0 0; font-size: 20px; line-height: 30px; color: #5B6472; max-width: 62ch">Proof that what we build stays yours. One was paying vendors who controlled their domain and their reviews. One had been locked out by the people who built everything. Both now hold every login themselves.</p>
+  </section>
+
+  <section style="padding: 0 80px 56px">
+    <div style="padding: 44px 0; border-top: 2px solid #0B1F3A; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+      <div style="flex: 0 0 240px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #FF6A1A; margin-bottom: 10px">Held by contract</div>
+        <h3 style="margin: 0; font-size: 32px; line-height: 38px; font-weight: 700; letter-spacing: -0.02em">A service company</h3>
+      </div>
+      <div style="flex: 999 1 520px; min-width: 0">
+        <p style="margin: 0 0 16px; font-size: 20px; line-height: 30px; color: #0B1F3A">Paying about $6,000 a month across three vendors — website, SEO, CRM — and not in control of any of it.</p>
+        <p style="margin: 0 0 16px; font-size: 16px; line-height: 26px; color: #5B6472">The website vendor held the hosting logins and controlled the domain. The company owned that domain on paper and could not touch it. That one contract was $2,500 a month on an annual term with no way out until November. The SEO vendor controlled their Google account — including their own customer reviews — and they had no access to that either.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 26px; color: #5B6472">We waited out the contracts, then moved every asset into accounts the company holds the usernames and passwords to. A one-time fee, then a small monthly, because once it is set up correctly it is not much work.</p>
+      </div>
+      <div style="flex: 0 1 280px; min-width: 0; background: #F4F6F9; border-radius: 12px; padding: 28px">
+        <p style="margin: 0; font-size: 20px; line-height: 30px; font-weight: 700; color: #0B1F3A">If they want to fire us tomorrow, they can.</p>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 26px; color: #5B6472">Everything is already in their name. That is the whole point.</p>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ============================ 4. THE 62% PAYOFF ============================ -->
-<section class="section payoff" aria-labelledby="payoff-title">
-  <div class="wrap">
-    <p class="payoff-fig">62%<sup class="src"><a href="#sources" aria-label="Source 1">1</a></sup></p>
-    <h2 class="payoff-line" id="payoff-title">of calls to small businesses go unanswered</h2>
-    <p class="payoff-sub">
-      That's not a story about one bad Tuesday. It's most of the phone ringing, most of the
-      time — every one of them a Lisa, deciding in the next ten seconds who gets the job.
-    </p>
-  </div>
-</section>
-
-<!-- ============================ 5. STAT BAND ============================ -->
-<section class="section statband" aria-labelledby="stats-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Why 6:45 PM decides it</p>
-      <h2 id="stats-title">Speed isn't a nice-to-have. It's the whole contest.</h2>
-      <p>Every figure below is sourced. Tap the marker to see where it came from.</p>
-    </div>
-
-    <div class="stat-grid">
-      <div class="stat">
-        <p class="fig">67%<sup class="src"><a href="#sources" aria-label="Source 2">2</a></sup></p>
-        <p class="lab">call a competitor after ONE unanswered call</p>
+    <div style="padding: 44px 0; border-top: 1px solid #E6E8EC; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+      <div style="flex: 0 0 240px">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 10px">Held by people</div>
+        <h3 style="margin: 0; font-size: 32px; line-height: 38px; font-weight: 700; letter-spacing: -0.02em">A manufacturer's rep company</h3>
       </div>
-      <div class="stat">
-        <p class="fig">47%<sup class="src"><a href="#sources" aria-label="Source 3">3</a></sup></p>
-        <p class="lab">of service calls come in after hours</p>
+      <div style="flex: 999 1 520px; min-width: 0">
+        <p style="margin: 0 0 16px; font-size: 20px; line-height: 30px; color: #0B1F3A">A falling-out with the employees who had built everything — and those employees kept it.</p>
+        <p style="margin: 0 0 16px; font-size: 16px; line-height: 26px; color: #5B6472">They had registered the domain, built the site, run the hosting, run the email server, held the entire back end. The company had access to none of it and the old team would not hand it over.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 26px; color: #5B6472">In about 30 days we recovered the domain, repointed DNS, moved to new hosting, built a new website and migrated email onto new admin accounts — every piece of it registered in the company's name. Billed as a monthly consulting fee over twelve months instead of one large sum, because the first three months carry the weight.</p>
       </div>
-      <div class="stat">
-        <p class="fig">78%<sup class="src"><a href="#sources" aria-label="Source 4">4</a></sup></p>
-        <p class="lab">hire whoever answers first</p>
-      </div>
-      <div class="stat">
-        <p class="fig">21×<sup class="src"><a href="#sources" aria-label="Source 5">5</a></sup></p>
-        <p class="lab">likelier to book if you answer in 5 min</p>
+      <div style="flex: 0 1 280px; min-width: 0; background: #F4F6F9; border-radius: 12px; padding: 28px">
+        <p style="margin: 0; font-size: 20px; line-height: 30px; font-weight: 700; color: #0B1F3A">They hold the register now.</p>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 26px; color: #5B6472">Every property, where it is hosted, the login, the two-factor method. One sheet.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============================ 6. AI FLOW + CALENDAR ============================ -->
-<section class="section" aria-labelledby="flow-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">What Riley actually does</p>
-      <h2 id="flow-title">Answer → qualify → book. Every time.</h2>
-      <p>Not a robot reading a menu. A conversation that ends with a job on your schedule.</p>
-    </div>
-
-    <div class="flow-grid">
-      <ol class="steps">
-        <li class="step">
-          <span class="n" aria-hidden="true">1</span>
-          <div>
-            <h3>Answers in 2 rings</h3>
-            <p>Day, night, weekends. Never a voicemail.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="n" aria-hidden="true">2</span>
-          <div>
-            <h3>Qualifies the job</h3>
-            <p>Your questions, your criteria.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="n" aria-hidden="true">3</span>
-          <div>
-            <h3>Offers real openings</h3>
-            <p>Pulled live from your calendar.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="n" aria-hidden="true">4</span>
-          <div>
-            <h3>Books it</h3>
-            <p>Straight onto your schedule.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="n" aria-hidden="true">5</span>
-          <div>
-            <h3>Confirms + reminds</h3>
-            <p>Text confirmation and a reminder to cut no-shows.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="n" aria-hidden="true">6</span>
-          <div>
-            <h3>Lands in your CRM</h3>
-            <p>Every call, transcript, and lead in one place.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="calmock" aria-label="Example week calendar showing jobs booked by the AI">
-        <div class="cal-hd">
-          <p class="t">Your week</p>
-          <p class="m">Vance Plumbing</p>
+  <section id="credential" style="padding: 96px 80px; border-top: 1px solid #E6E8EC">
+    <h2 style="margin: 0 0 20px; font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em; max-width: 24ch">I'm a business strategist who understands the practical applications of AI</h2>
+    <p style="margin: 0 0 20px; font-size: 20px; line-height: 30px; color: #0B1F3A; max-width: 62ch">My focus isn't on the technology itself — it's on helping businesses operate smarter, save time, and get better results.</p>
+    <p style="margin: 0 0 48px; font-size: 20px; line-height: 30px; color: #5B6472; max-width: 62ch">Every consultant claims something like that. The difference is the list underneath it — twenty-five years of jobs done rather than advised on, and a year spent putting AI through every one of them, on my own companies first.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px">
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Sales</span>
         </div>
-
-        <div class="cal-scroll">
-          <div class="cal">
-            <span></span>
-            <span class="dh">Mon</span><span class="dh">Tue</span><span class="dh">Wed</span><span class="dh">Thu</span><span class="dh">Fri</span>
-
-            <span class="th">8a</span>
-            <span class="slot bk"><span>Drain</span></span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Softener</span></span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Repipe</span></span>
-
-            <span class="th">11a</span>
-            <span class="slot"></span>
-            <span class="slot bk new"><span>Water<br>heater</span></span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Leak</span></span>
-            <span class="slot"></span>
-
-            <span class="th">1p</span>
-            <span class="slot bk"><span>Faucet</span></span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Disposal</span></span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Inspect</span></span>
-
-            <span class="th">3p</span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Toilet</span></span>
-            <span class="slot"></span>
-            <span class="slot bk"><span>Sewer</span></span>
-            <span class="slot"></span>
-          </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Customer service</span>
         </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Merchant processing</span>
+        </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Sourcing product</span>
+        </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Hiring and HR</span>
+        </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Payroll</span>
+        </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">The call floor</span>
+        </div>
+      
+        <div style="border-top: 2px solid #0B1F3A; padding: 16px 0 0">
+          <span style="font-size: 20px; line-height: 30px; font-weight: 600">Turnkey fulfilment</span>
+        </div>
+      
+    </div>
+  </section>
 
-        <p class="cal-foot">
-          <b>Tue 11:00 AM</b> — Lisa's water heater, booked at 6:47 PM last night while your
-          phone was face-down on the counter. Dashed slots are still open.
-        </p>
+  <section style="background: #F4F6F9; padding: 96px 80px; border-top: 1px solid #E6E8EC; border-bottom: 1px solid #E6E8EC">
+    <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start; margin-bottom: 48px">
+      <div style="flex: 999 1 520px; min-width: 0">
+        <h2 style="margin: 0 0 16px; font-size: 32px; line-height: 38px; font-weight: 700; letter-spacing: -0.02em">We own what we sell</h2>
+        <p style="margin: 0; font-size: 20px; line-height: 30px; color: #5B6472; max-width: 60ch">Procure runs its own lead-generation companies and its own consumer brands. Built because we needed them, run against our own revenue first, kept only if they worked.</p>
+      </div>
+      <div style="flex: 0 1 300px; min-width: 0; border-left: 1px solid #E6E8EC; padding-left: 40px">
+        <div style="font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em">62%</div>
+        <p style="margin: 12px 0 0; font-size: 16px; line-height: 26px; color: #5B6472">of calls to small businesses go unanswered.</p>
+        <p style="margin: 8px 0 0; font-size: 14px; line-height: 20px; color: #5B6472">Source: 411 Locals</p>
       </div>
     </div>
-
-    <p class="warm-note">
-      <b>It rings you first.</b> During your hours the call comes to you like it always has —
-      the AI only catches what you can't. Nights, weekends, second calls, and the ones that
-      come in while you're already under a sink.
-    </p>
-  </div>
-</section>
-
-<!-- ============================ 7. PRICING ============================ -->
-<section class="section statband" id="pricing" aria-labelledby="price-title">
-  <div class="wrap">
-    <div class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center">
-      <p class="eyebrow">Pricing</p>
-      <h2 id="price-title">One price. Locked for life.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px">
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Live</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">Walter</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">24/7 AI receptionist. From $99/mo.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Live</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">Lead Generation</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">Owned properties across a dozen verticals.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Live</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">Call Center</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">A human floor when it needs one.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Live</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">My Hometown Agent</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">Local insurance agent network.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Live</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">HOA Contracts</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">HOA insurance lead engine.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Launching</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">Snap ’n Done</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">On-demand local services.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Launching</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">Clinkpass</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">Venue membership and perks.</p>
+        </div>
+      
+        <div style="background: #FFFFFF; border: 1px solid #E6E8EC; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Launching</div>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; overflow-wrap: break-word">Ultimate Play Pass</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #5B6472">BOGO for ticketed venues.</p>
+        </div>
+      
     </div>
+  </section>
 
-    <div class="price-card">
-      <span class="founder-tag">★ Founding Member · first 100 customers</span>
-
-      <div class="price-row">
-        <span class="was" aria-label="Regular price $299 per month">$299/month</span>
-        <span class="now">$99<sup style="font-size:.42em;font-weight:800;vertical-align:top;margin-left:2px">+</sup><small>/month</small></span>
+  <section style="padding: 96px 80px 0">
+    <div style="display: flex; flex-wrap: wrap; gap: 56px">
+      <div style="flex: 1 1 260px; min-width: 0">
+        <h3 style="margin: 0 0 16px; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em">What we promise</h3>
+        <ul style="margin: 0; padding-left: 20px; font-size: 16px; line-height: 28px; color: #5B6472">
+          <li>Every call answered and qualified</li>
+          <li>A system you can watch working</li>
+          <li>We run it, not hand you a login</li>
+          <li>Everything in your name, not ours</li>
+          <li>Exclusive leads, never resold</li>
+        </ul>
       </div>
-
-      <p class="lock-line">Lock your rate for life — as long as you stay a customer, you never pay more.</p>
-      <p class="free-line">No setup fees · No contract · Cancel anytime</p>
-
-      <p class="fine"><b>+ usage</b> — AI talk 20¢/min · Live transfer 3¢/min · Text 3¢ each · Email $1/1,000 · Extra number $5/mo. Pay only for what you use.</p>
-      <p class="fine">Fully managed media buying available — planned, bought, and optimized by our performance team, at cost + 30%.</p>
-
-      <ul class="own">
-        <li>Your domain</li>
-        <li>Your website</li>
-        <li>Your data</li>
-        <li>No contract</li>
-      </ul>
-      <p class="own-sub">Leave anytime and take them with you. The only thing you can't take is the platform.</p>
-
-      <p class="cta-lead">Two ways to start</p>
-      <div class="cta-row">
-        <div class="cta-opt">
-          <a class="btn btn-amber btn-block" href="https://signup.procuremedia.com">Start now →</a>
-          <span class="cta-opt-note">Sign up online, yourself.</span>
-        </div>
-        <span class="cta-or">or</span>
-        <div class="cta-opt">
-          <a class="btn btn-ghost btn-block" href="tel:+18557545015">Call now — (855) 754-5015</a>
-          <span class="cta-opt-note">We'll sign you up on the phone.</span>
-        </div>
+      <div style="flex: 1 1 260px; min-width: 0">
+        <h3 style="margin: 0 0 16px; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em">What we do not promise</h3>
+        <ul style="margin: 0; padding-left: 20px; font-size: 16px; line-height: 28px; color: #5B6472">
+          <li>A number of leads</li>
+          <li>Results in week one</li>
+          <li>That AI replaces your people</li>
+          <li>Anything we have not run ourselves</li>
+        </ul>
       </div>
-
-      <p class="cta-note">Either way: under 10 minutes — and you're live in 24 hours.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============================ 8. SIGN-UP FORM ============================ -->
-<section class="section" id="start" aria-labelledby="start-title">
-  <div class="wrap">
-    <div class="form-wrap">
-      <p class="eyebrow">Start now</p>
-      <h2 id="start-title">Stop losing the 6:45 PM call.</h2>
-      <p class="lede">Tell us where to reach you and we'll get your AI answering — founders price,
-        $99/month, locked for life. No setup fees, no contract.</p>
-
-      <form action="https://procure-lead-engine.dan-fda.workers.dev/submit" method="POST">
-        <input type="hidden" name="lead_source" value="procuremedia.com" />
-        <input type="hidden" name="segment" value="Agents" />
-        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-        <div class="fields">
-          <div class="field">
-            <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
-            <input id="f-name" type="text" name="name" placeholder="Dave Vance" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
-            <input id="f-phone" type="tel" name="phone" placeholder="(480) 555-0134" required autocomplete="tel" inputmode="tel">
-          </div>
-          <div class="field">
-            <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
-            <input id="f-email" type="email" name="email" placeholder="dave@vanceplumbing.com" required autocomplete="email" inputmode="email">
-          </div>
-          <div class="field">
-            <label for="f-company">Business name <span style="color:var(--dim);font-weight:600">(optional)</span></label>
-            <input id="f-company" type="text" name="company" placeholder="Vance Plumbing" autocomplete="organization">
-          </div>
+  <section id="contact" style="padding: 88px 80px 112px">
+    <div style="border: 1px solid #E6E8EC; border-radius: 16px; padding: 48px; display: flex; flex-wrap: wrap; gap: 48px">
+      <div style="flex: 1 1 360px; min-width: 0">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1E6BFF; margin-bottom: 16px">The offer</div>
+        <h2 style="margin: 0 0 16px; font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em">One hour. Usually less.</h2>
+        <p style="margin: 0 0 16px; font-size: 20px; line-height: 30px; color: #5B6472">An hour, often less. You describe the problem — the task you do by hand every week, the leads nobody calls back fast enough, the vendor you cannot leave. I have spent years getting businesses through exactly these.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 26px; color: #5B6472">At the end I show you how AI and I together get you out the other side of it. Nothing to sign. And if there is no path, you will hear it from me inside the hour, not in a proposal three weeks later.</p>
+      </div>
+      <form id="hourForm" action="https://procure-lead-engine.dan-fda.workers.dev/submit" method="POST" style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <input type="hidden" name="site" value="procuremedia.com">
+        <input type="hidden" name="lead_source" value="procuremedia.com/hour">
+        <input type="hidden" name="segment" value="Agents">
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div id="sentMsg" role="status" aria-live="polite" style="display: none; background: #F4F6F9; border: 1px solid #E6E8EC; border-radius: 12px; padding: 16px 18px; font-size: 16px; line-height: 26px; color: #0B1F3A; font-weight: 600">Got it — your request is in. I'll be in touch soon.</div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <label for="f-name" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Name</label>
+          <input id="f-name" type="text" name="name" autocomplete="name" required style="min-height: 44px; padding: 0 14px; border: 1px solid #E6E8EC; border-radius: 8px; font-family: inherit; font-size: 16px; color: #0B1F3A; background: #FFFFFF">
         </div>
-
-        <label class="pm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>Yes, text me about my request. By checking this box, I agree to receive SMS text messages about my inquiry, account setup, appointment scheduling, and related follow-ups from Procure Media, LLC at the phone number I provided, including messages sent using automated technology. Msg &amp; data rates may apply. Message frequency varies.</span></label>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <label for="f-phone" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Phone</label>
+          <input id="f-phone" type="tel" name="phone" autocomplete="tel" required inputmode="tel" style="min-height: 44px; padding: 0 14px; border: 1px solid #E6E8EC; border-radius: 8px; font-family: inherit; font-size: 16px; color: #0B1F3A; background: #FFFFFF">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <label for="f-email" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">Email</label>
+          <input id="f-email" type="email" name="email" autocomplete="email" required inputmode="email" style="min-height: 44px; padding: 0 14px; border: 1px solid #E6E8EC; border-radius: 8px; font-family: inherit; font-size: 16px; color: #0B1F3A; background: #FFFFFF">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <label for="f-what" style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6472">What is happening now <span style="text-transform: none; letter-spacing: 0; font-weight: 500">(optional)</span></label>
+          <textarea id="f-what" name="message" rows="3" style="padding: 12px 14px; border: 1px solid #E6E8EC; border-radius: 8px; font-family: inherit; font-size: 16px; color: #0B1F3A; background: #FFFFFF; resize: vertical"></textarea>
+        </div>
+        <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 20px; color: #5B6472; cursor: pointer"><input type="checkbox" name="sms_consent" value="yes" style="margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0"><span>Yes, text me about my request. By checking this box, I agree to receive SMS text messages about my inquiry, account setup, appointment scheduling, and related follow-ups from Procure Media, LLC at the phone number I provided, including messages sent using automated technology. Msg &amp; data rates may apply. Message frequency varies.</span></label>
         <input type="hidden" name="consent_version" value="pm-sms-v1-2026-07-06">
-
-        <button class="btn btn-amber btn-block" type="submit">Start now →</button>
-
-        <p class="pm-consent-submit">By submitting, you agree to be contacted about your request by Procure Media, LLC by phone call and email, including via automated technology. Consent is not a condition of purchase.</p>
-        <p class="pm-consent-terms">SMS terms: If you check the box above, message frequency varies and Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not a condition of purchase. See our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</p>
+        <button type="submit" style="min-height: 48px; padding: 0 26px; background: #1E6BFF; color: #FFFFFF; border: 0; border-radius: 12px; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; align-self: flex-start">Book the hour</button>
+        <p style="margin: 0; font-size: 12px; line-height: 18px; color: #5B6472">By submitting, you agree to be contacted about your request by Procure Media, LLC by phone call and email, including via automated technology. Consent is not a condition of purchase.</p>
+        <p style="margin: 0; font-size: 12px; line-height: 18px; color: #5B6472">SMS terms: If you check the box above, message frequency varies and Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. SMS consent is not a condition of purchase. See our <a href="/privacy-policy.html" style="color: #5B6472; text-decoration: underline">Privacy Policy</a> and <a href="/terms.html" style="color: #5B6472; text-decoration: underline">Terms</a>.</p>
       </form>
-
-      <p class="or-call">Rather just hear it? Call <a href="tel:+18557545015">(855) 754-5015</a> — our own AI picks up.</p>
     </div>
+  </section>
 
-    <p class="secondary">
-      Enterprise licensing or buying leads? We do that too — <a href="#start">start here</a> and mention it.
-    </p>
-  </div>
-</section>
-
-</main>
-
-<!-- ============================ 9. FOOTER + 10. SOURCES ============================ -->
-<footer>
-  <div class="wrap">
-    <div class="f-top">
-      <a class="logo" href="#top" aria-label="Procure Media home">
-        <span class="dot" aria-hidden="true"></span>
-        Procure Media
-      </a>
-      <ul class="f-links">
-        <li><a href="tel:+18557545015">(855) 754-5015</a></li>
-        <li><a href="mailto:dan@procuremedia.com">dan@procuremedia.com</a></li>
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms</a></li>
-        <li><a href="/terms.html#refund">Refund Policy</a></li>
-      </ul>
+  <footer style="background: #0B1F3A; color: #A9B6CC; padding: 64px 80px">
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+      <div style="flex: 1 1 320px; min-width: 0">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjMgODAiIHdpZHRoPSI1MjMiIGhlaWdodD0iODAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbGxlZGJ5PSJ0Ij48dGl0bGUgaWQ9InQiPlByb2N1cmUgTWVkaWEsIHJldmVyc2VkPC90aXRsZT48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLDgpIHNjYWxlKDAuNDYxNTM4NDYxNTM4NDYxNTYpIj48bGluZSB4MT0iNDAiIHkxPSI0MCIgeDI9IjIyMCIgeTI9IjQwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNyIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjMEIxRjNBIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNyIvPjxjaXJjbGUgY3g9IjEzMCIgY3k9IjQwIiByPSIyMCIgZmlsbD0iI0ZGRkZGRiIvPjxjaXJjbGUgY3g9IjIyMCIgY3k9IjQwIiByPSIyMiIgZmlsbD0iI0ZGNkExQSIvPjwvZz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTUzLjkyIDU4LjBWMTcuNjhIMTcwLjU4UTE3MS4xNjggMTcuNjggMTcyLjA5MTk5OTk5OTk5OTk4IDE3LjcyMTk5OTk5OTk5OTk5OFExNzMuMDE2IDE3Ljc2Mzk5OTk5OTk5OTk5NiAxNzMuOCAxNy45MDM5OTk5OTk5OTk5OTZRMTc3LjMgMTguNDM2IDE3OS41ODIgMjAuMjI3OTk5OTk5OTk5OTk4UTE4MS44NjQgMjIuMDE5OTk5OTk5OTk5OTk2IDE4Mi45NyAyNC43NVExODQuMDc2IDI3LjQ4IDE4NC4wNzYgMzAuODEyUTE4NC4wNzYgMzQuMTE2IDE4Mi45NTYwMDAwMDAwMDAwMiAzNi44NDYwMDAwMDAwMDAwMDRRMTgxLjgzNiAzOS41NzYgMTc5LjU1NCA0MS4zNjc5OTk5OTk5OTk5OTVRMTc3LjI3MiA0My4xNiAxNzMuOCA0My42OTJRMTczLjAxNiA0My44MDQgMTcyLjA3Nzk5OTk5OTk5OTk3IDQzLjg2UTE3MS4xNCA0My45MTYgMTcwLjU4IDQzLjkxNkgxNjAuNjY4VjU4LjBaTTE2MC42NjggMzcuNjE2SDE3MC4zUTE3MC44NiAzNy42MTYgMTcxLjU2IDM3LjU2UTE3Mi4yNiAzNy41MDQwMDAwMDAwMDAwMDUgMTcyLjg0OCAzNy4zMzZRMTc0LjUyOCAzNi45MTYgMTc1LjQ5NCAzNS44NTJRMTc2LjQ2IDM0Ljc4OCAxNzYuODY1OTk5OTk5OTk5OTkgMzMuNDQzOTk5OTk5OTk5OTk2UTE3Ny4yNzIgMzIuMDk5OTk5OTk5OTk5OTk0IDE3Ny4yNzIgMzAuODEyUTE3Ny4yNzIgMjkuNTI0IDE3Ni44NjU5OTk5OTk5OTk5OSAyOC4xNjZRMTc2LjQ2IDI2LjgwOCAxNzUuNDk0IDI1Ljc0NFExNzQuNTI4IDI0LjY4IDE3Mi44NDggMjQuMjU5OTk5OTk5OTk5OTk4UTE3Mi4yNiAyNC4wOTIgMTcxLjU2IDI0LjA1UTE3MC44NiAyNC4wMDgwMDAwMDAwMDAwMDMgMTcwLjMgMjQuMDA4MDAwMDAwMDAwMDAzSDE2MC42NjhaTTE4Ny45OTU5OTk5OTk5OTk5OCA1OC4wVjI3Ljc1OTk5OTk5OTk5OTk5OEgxOTMuOTU5OTk5OTk5OTk5OThWMzUuMTIzOTk5OTk5OTk5OTk1TDE5My4yMzIgMzQuMTcyUTE5My43OTIgMzIuNjYgMTk0LjczMDAwMDAwMDAwMDAyIDMxLjQxMzk5OTk5OTk5OTk5OFExOTUuNjY4IDMwLjE2OCAxOTYuOTgzOTk5OTk5OTk5OTggMjkuMzU1OTk5OTk5OTk5OTk4UTE5OC4xMDM5OTk5OTk5OTk5OCAyOC41OTk5OTk5OTk5OTk5OTggMTk5LjQ2MiAyOC4xNjU5OTk5OTk5OTk5OTdRMjAwLjgyIDI3LjczMiAyMDIuMjQ4IDI3LjYzNFEyMDMuNjc2IDI3LjUzNTk5OTk5OTk5OTk5OCAyMDUuMDE5OTk5OTk5OTk5OTggMjcuNzU5OTk5OTk5OTk5OTk4VjM0LjA2UTIwMy42NzYgMzMuNjY4IDIwMS45MjYgMzMuODA4UTIwMC4xNzYgMzMuOTQ4IDE5OC43NzU5OTk5OTk5OTk5OCAzNC43ODhRMTk3LjM3NiAzNS41NDQgMTk2LjQ5NCAzNi43MlExOTUuNjEyIDM3Ljg5NiAxOTUuMTkyIDM5LjM5NFExOTQuNzcyIDQwLjg5MTk5OTk5OTk5OTk5NiAxOTQuNzcyIDQyLjYyOFY1OC4wWk0yMjIuMDE2MDAwMDAwMDAwMDIgNTguODRRMjE3LjQ4MDAwMDAwMDAwMDAyIDU4Ljg0IDIxNC4wOTIgNTYuNzk2MDAwMDAwMDAwMDFRMjEwLjcwNCA1NC43NTIgMjA4Ljg0MiA1MS4xNTM5OTk5OTk5OTk5OTZRMjA2Ljk4MDAwMDAwMDAwMDAyIDQ3LjU1NiAyMDYuOTgwMDAwMDAwMDAwMDIgNDIuODc5OTk5OTk5OTk5OTk1UTIwNi45ODAwMDAwMDAwMDAwMiAzOC4xMjAwMDAwMDAwMDAwMDUgMjA4Ljg4NDAwMDAwMDAwMDAxIDM0LjUzNlEyMTAuNzg4IDMwLjk1MTk5OTk5OTk5OTk5OCAyMTQuMTc2MDAwMDAwMDAwMDIgMjguOTM2UTIxNy41NjQwMDAwMDAwMDAwMiAyNi45MTk5OTk5OTk5OTk5OTggMjIyLjAxNjAwMDAwMDAwMDAyIDI2LjkxOTk5OTk5OTk5OTk5OFEyMjYuNTggMjYuOTE5OTk5OTk5OTk5OTk4IDIyOS45NjgwMDAwMDAwMDAwMiAyOC45NjRRMjMzLjM1NiAzMS4wMDggMjM1LjIzMiAzNC42MDZRMjM3LjEwOCAzOC4yMDQgMjM3LjEwOCA0Mi44Nzk5OTk5OTk5OTk5OTVRMjM3LjEwOCA0Ny41ODQgMjM1LjIxODAwMDAwMDAwMDAyIDUxLjE4MlEyMzMuMzI4IDU0Ljc4IDIyOS45NCA1Ni44MVEyMjYuNTUyMDAwMDAwMDAwMDIgNTguODQgMjIyLjAxNjAwMDAwMDAwMDAyIDU4Ljg0Wk0yMjIuMDE2MDAwMDAwMDAwMDIgNTIuNTEyUTIyNi4wNDggNTIuNTEyIDIyOC4wMDggNDkuODI0UTIyOS45NjgwMDAwMDAwMDAwMiA0Ny4xMzU5OTk5OTk5OTk5OTYgMjI5Ljk2ODAwMDAwMDAwMDAyIDQyLjg3OTk5OTk5OTk5OTk5NVEyMjkuOTY4MDAwMDAwMDAwMDIgMzguNDgzOTk5OTk5OTk5OTk1IDIyNy45ODAwMDAwMDAwMDAwMiAzNS44NjZRMjI1Ljk5MjAwMDAwMDAwMDAyIDMzLjI0ODAwMDAwMDAwMDAwNSAyMjIuMDE2MDAwMDAwMDAwMDIgMzMuMjQ4MDAwMDAwMDAwMDA1UTIxOS4zIDMzLjI0ODAwMDAwMDAwMDAwNSAyMTcuNTUgMzQuNDY2UTIxNS44IDM1LjY4NCAyMTQuOTYgMzcuODU0UTIxNC4xMiA0MC4wMjQgMjE0LjEyIDQyLjg3OTk5OTk5OTk5OTk5NVEyMTQuMTIgNDcuMjc1OTk5OTk5OTk5OTk2IDIxNi4xMjIgNDkuODk0UTIxOC4xMjQwMDAwMDAwMDAwMiA1Mi41MTIgMjIyLjAxNjAwMDAwMDAwMDAyIDUyLjUxMlpNMjU0LjcyIDU4Ljg0UTI1MC4wNDQgNTguODQgMjQ2Ljc0IDU2Ljc1NDAwMDAwMDAwMDAwNVEyNDMuNDM2IDU0LjY2OCAyNDEuNjg2IDUxLjA1NlEyMzkuOTM2IDQ3LjQ0NCAyMzkuOTA4MDAwMDAwMDAwMDIgNDIuODc5OTk5OTk5OTk5OTk1UTIzOS45MzYgMzguMjMyIDI0MS43NDIwMDAwMDAwMDAwMiAzNC42MzRRMjQzLjU0OCAzMS4wMzU5OTk5OTk5OTk5OTggMjQ2Ljg4IDI4Ljk3Nzk5OTk5OTk5OTk5OFEyNTAuMjEyMDAwMDAwMDAwMDIgMjYuOTE5OTk5OTk5OTk5OTk4IDI1NC44MDQgMjYuOTE5OTk5OTk5OTk5OTk4UTI1OS45NTYgMjYuOTE5OTk5OTk5OTk5OTk4IDI2My41MjYgMjkuNTA5OTk5OTk5OTk5OTk4UTI2Ny4wOTYgMzIuMDk5OTk5OTk5OTk5OTk0IDI2OC4xODggMzYuNThMMjYxLjQ2OCAzOC40UTI2MC42ODQgMzUuOTY0IDI1OC44NjQwMDAwMDAwMDAwMyAzNC42MDZRMjU3LjA0NCAzMy4yNDgwMDAwMDAwMDAwMDUgMjU0LjcyIDMzLjI0ODAwMDAwMDAwMDAwNVEyNTIuMDg4IDMzLjI0ODAwMDAwMDAwMDAwNSAyNTAuMzggMzQuNDk0UTI0OC42NzIgMzUuNzM5OTk5OTk5OTk5OTk1IDI0Ny44NiAzNy45MjRRMjQ3LjA0OCA0MC4xMDgwMDAwMDAwMDAwMDQgMjQ3LjA0OCA0Mi44Nzk5OTk5OTk5OTk5OTVRMjQ3LjA0OCA0Ny4xOTIgMjQ4Ljk4MDAwMDAwMDAwMDAyIDQ5Ljg1MjAwMDAwMDAwMDAwNFEyNTAuOTEyIDUyLjUxMiAyNTQuNzIgNTIuNTEyUTI1Ny40MDggNTIuNTEyIDI1OC45NjIgNTEuMjhRMjYwLjUxNiA1MC4wNDggMjYxLjMgNDcuNzI0MDAwMDAwMDAwMDA0TDI2OC4xODggNDkuMjYzOTk5OTk5OTk5OTk2UTI2Ni43ODggNTMuODg0IDI2My4yODggNTYuMzYyUTI1OS43ODggNTguODQgMjU0LjcyIDU4Ljg0Wk0yODMuNDc2IDU4Ljg2OFEyODAuMTE2IDU4Ljg2OCAyNzcuOTMyIDU3Ljc0ODAwMDAwMDAwMDAwNVEyNzUuNzQ4IDU2LjYyOCAyNzQuNDYwMDAwMDAwMDAwMDQgNTQuODkxOTk5OTk5OTk5OTk2UTI3My4xNzIgNTMuMTU2IDI3Mi41NTYwMDAwMDAwMDAwNCA1MS4xOTZRMjcxLjk0IDQ5LjIzNjAwMDAwMDAwMDAwNCAyNzEuNzU4MDAwMDAwMDAwMDQgNDcuNDg2MDAwMDAwMDAwMDA0UTI3MS41NzYgNDUuNzM2IDI3MS41NzYgNDQuNjQ0VjI3Ljc1OTk5OTk5OTk5OTk5OEgyNzguNDA4VjQyLjMyUTI3OC40MDggNDMuNzIgMjc4LjYwNDAwMDAwMDAwMDA0IDQ1LjQ3UTI3OC44IDQ3LjIyIDI3OS41MTQgNDguODNRMjgwLjIyOCA1MC40NCAyODEuNjQyIDUxLjQ3NlEyODMuMDU2IDUyLjUxMiAyODUuNDY0IDUyLjUxMlEyODYuNzUyIDUyLjUxMiAyODguMDEyIDUyLjA5MlEyODkuMjcyIDUxLjY3MiAyOTAuMjk0IDUwLjY1UTI5MS4zMTYwMDAwMDAwMDAwMyA0OS42MjggMjkxLjkzMiA0Ny44MzZRMjkyLjU0OCA0Ni4wNDQgMjkyLjU0OCA0My4zTDI5Ni41NTIgNDUuMDA3OTk5OTk5OTk5OTk2UTI5Ni41NTIgNDguODcyIDI5NS4wNTQgNTIuMDA3OTk5OTk5OTk5OTk2UTI5My41NTYgNTUuMTQ0IDI5MC42NDQgNTcuMDA2UTI4Ny43MzIgNTguODY4IDI4My40NzYgNTguODY4Wk0yOTMuMzYgNTguMFY0OC42MkgyOTIuNTQ4VjI3Ljc1OTk5OTk5OTk5OTk5OEgyOTkuMzI0VjU4LjBaTTMwNS40ODQgNTguMFYyNy43NTk5OTk5OTk5OTk5OThIMzExLjQ0OFYzNS4xMjM5OTk5OTk5OTk5OTVMMzEwLjcxOTk5OTk5OTk5OTk3IDM0LjE3MlEzMTEuMjggMzIuNjYgMzEyLjIxNzk5OTk5OTk5OTk2IDMxLjQxMzk5OTk5OTk5OTk5OFEzMTMuMTU1OTk5OTk5OTk5OTUgMzAuMTY4IDMxNC40NzIgMjkuMzU1OTk5OTk5OTk5OTk4UTMxNS41OTIgMjguNTk5OTk5OTk5OTk5OTk4IDMxNi45NSAyOC4xNjU5OTk5OTk5OTk5OTdRMzE4LjMwOCAyNy43MzIgMzE5LjczNiAyNy42MzRRMzIxLjE2NCAyNy41MzU5OTk5OTk5OTk5OTggMzIyLjUwOCAyNy43NTk5OTk5OTk5OTk5OThWMzQuMDZRMzIxLjE2NCAzMy42NjggMzE5LjQxNCAzMy44MDhRMzE3LjY2NCAzMy45NDggMzE2LjI2Mzk5OTk5OTk5OTk1IDM0Ljc4OFEzMTQuODY0IDM1LjU0NCAzMTMuOTgxOTk5OTk5OTk5OTcgMzYuNzJRMzEzLjA5OTk5OTk5OTk5OTk3IDM3Ljg5NiAzMTIuNjc5OTk5OTk5OTk5OTUgMzkuMzk0UTMxMi4yNiA0MC44OTE5OTk5OTk5OTk5OTYgMzEyLjI2IDQyLjYyOFY1OC4wWk0zMzkuODk2IDU4Ljg0UTMzNS4zMDQwMDAwMDAwMDAwMyA1OC44NCAzMzEuODMyIDU2Ljg1MjAwMDAwMDAwMDAwNFEzMjguMzYgNTQuODY0IDMyNi40MTQgNTEuMzM2UTMyNC40NjggNDcuODA4IDMyNC40NjggNDMuMjE2UTMyNC40NjggMzguMjYgMzI2LjM3MiAzNC42MDU5OTk5OTk5OTk5OTVRMzI4LjI3NiAzMC45NTE5OTk5OTk5OTk5OTggMzMxLjY2NCAyOC45MzZRMzM1LjA1MiAyNi45MTk5OTk5OTk5OTk5OTggMzM5LjUwNCAyNi45MTk5OTk5OTk5OTk5OThRMzQ0LjIwOCAyNi45MTk5OTk5OTk5OTk5OTggMzQ3LjQ5ODAwMDAwMDAwMDA1IDI5LjExOFEzNTAuNzg4IDMxLjMxNiAzNTIuMzg0IDM1LjMyUTM1My45OCAzOS4zMjQgMzUzLjU4OCA0NC43NTZIMzQ2Ljg5NlY0Mi4yOTJRMzQ2Ljg2OCAzNy4zNjQwMDAwMDAwMDAwMDQgMzQ1LjE1OTk5OTk5OTk5OTk3IDM1LjA5NjAwMDAwMDAwMDAwNFEzNDMuNDUyIDMyLjgyOCAzMzkuNzg0IDMyLjgyOFEzMzUuNjQgMzIuODI4IDMzMy42MjQgMzUuMzlRMzMxLjYwOCAzNy45NTIgMzMxLjYwOCA0Mi44Nzk5OTk5OTk5OTk5OTVRMzMxLjYwOCA0Ny40NzIgMzMzLjYyNCA0OS45OTIwMDAwMDAwMDAwMDRRMzM1LjY0IDUyLjUxMiAzMzkuNTA0IDUyLjUxMlEzNDEuOTk2IDUyLjUxMiAzNDMuODAyIDUxLjQwNlEzNDUuNjA4IDUwLjMgMzQ2LjU4OCA0OC4yTDM1My4yNTIgNTAuMjE2UTM1MS41MTYgNTQuMzA0IDM0Ny44OSA1Ni41NzJRMzQ0LjI2NCA1OC44NCAzMzkuODk2IDU4Ljg0Wk0zMjkuNDggNDQuNzU2VjM5LjY2SDM1MC4yODRWNDQuNzU2Wk0zNjcuNyA1OC4wVjE3LjY4SDM3My43NzU5OTk5OTk5OTk5NUwzODcuNzE5OTk5OTk5OTk5OTcgNDYuMjRMNDAxLjY2NCAxNy42OEg0MDcuNzM5OTk5OTk5OTk5OTVWNTguMEg0MDEuNDRWMzIuMTU2TDM4OS4wNjM5OTk5OTk5OTk5NiA1OC4wSDM4Ni4zNzZMMzc0LjAyNzk5OTk5OTk5OTk2IDMyLjE1NlY1OC4wWk00MjcuNjQ4IDU4Ljg0UTQyMy4wNTYwMDAwMDAwMDAwNCA1OC44NCA0MTkuNTg0MDAwMDAwMDAwMDYgNTYuODUyMDAwMDAwMDAwMDA0UTQxNi4xMTIgNTQuODY0IDQxNC4xNjYwMDAwMDAwMDAwNSA1MS4zMzZRNDEyLjIyIDQ3LjgwOCA0MTIuMjIgNDMuMjE2UTQxMi4yMiAzOC4yNiA0MTQuMTI0IDM0LjYwNTk5OTk5OTk5OTk5NVE0MTYuMDI4IDMwLjk1MTk5OTk5OTk5OTk5OCA0MTkuNDE2MDAwMDAwMDAwMDUgMjguOTM2UTQyMi44MDQwMDAwMDAwMDAwMyAyNi45MTk5OTk5OTk5OTk5OTggNDI3LjI1NjAwMDAwMDAwMDAzIDI2LjkxOTk5OTk5OTk5OTk5OFE0MzEuOTYwMDAwMDAwMDAwMDQgMjYuOTE5OTk5OTk5OTk5OTk4IDQzNS4yNSAyOS4xMThRNDM4LjU0IDMxLjMxNiA0NDAuMTM2IDM1LjMyUTQ0MS43MzIgMzkuMzI0IDQ0MS4zNDAwMDAwMDAwMDAwMyA0NC43NTZINDM0LjY0OFY0Mi4yOTJRNDM0LjYyIDM3LjM2NDAwMDAwMDAwMDAwNCA0MzIuOTEyMDAwMDAwMDAwMDMgMzUuMDk2MDAwMDAwMDAwMDA0UTQzMS4yMDQgMzIuODI4IDQyNy41MzYgMzIuODI4UTQyMy4zOTIgMzIuODI4IDQyMS4zNzYgMzUuMzlRNDE5LjM2IDM3Ljk1MiA0MTkuMzYgNDIuODc5OTk5OTk5OTk5OTk1UTQxOS4zNiA0Ny40NzIgNDIxLjM3NiA0OS45OTIwMDAwMDAwMDAwMDRRNDIzLjM5MiA1Mi41MTIgNDI3LjI1NjAwMDAwMDAwMDAzIDUyLjUxMlE0MjkuNzQ4MDAwMDAwMDAwMDUgNTIuNTEyIDQzMS41NTQwMDAwMDAwMDAwMyA1MS40MDZRNDMzLjM2IDUwLjMgNDM0LjM0MDAwMDAwMDAwMDAzIDQ4LjJMNDQxLjAwNCA1MC4yMTZRNDM5LjI2ODAwMDAwMDAwMDAzIDU0LjMwNCA0MzUuNjQyMDAwMDAwMDAwMDUgNTYuNTcyUTQzMi4wMTYgNTguODQgNDI3LjY0OCA1OC44NFpNNDE3LjIzMiA0NC43NTZWMzkuNjZINDM4LjAzNlY0NC43NTZaTTQ1OC4wNTYgNTguODRRNDUzLjg4NCA1OC44NCA0NTAuNzc2IDU2Ljc0UTQ0Ny42NjggNTQuNjQgNDQ1Ljk2MDAwMDAwMDAwMDA0IDUxLjAyOFE0NDQuMjUyIDQ3LjQxNiA0NDQuMjUyIDQyLjg3OTk5OTk5OTk5OTk5NVE0NDQuMjUyIDM4LjI4OCA0NDUuOTc0MDAwMDAwMDAwMDUgMzQuNjlRNDQ3LjY5NiAzMS4wOTIgNDUwLjg2IDI5LjAwNlE0NTQuMDI0IDI2LjkxOTk5OTk5OTk5OTk5OCA0NTguMzA4IDI2LjkxOTk5OTk5OTk5OTk5OFE0NjIuNjIgMjYuOTE5OTk5OTk5OTk5OTk4IDQ2NS41NDYgMjkuMDA2UTQ2OC40NzIgMzEuMDkyIDQ2OS45ODQgMzQuNzA0UTQ3MS40OTYgMzguMzE2IDQ3MS40OTYgNDIuODc5OTk5OTk5OTk5OTk1UTQ3MS40OTYgNDcuMzg4IDQ2OS45ODQgNTEuMDEzOTk5OTk5OTk5OTk2UTQ2OC40NzIgNTQuNjQgNDY1LjQ3NiA1Ni43NFE0NjIuNDggNTguODQgNDU4LjA1NiA1OC44NFpNNDU5LjA5MiA1Mi43OTJRNDYxLjgwOCA1Mi43OTIgNDYzLjQ3NCA1MS41NDZRNDY1LjE0IDUwLjMgNDY1LjkwOTk5OTk5OTk5OTk3IDQ4LjA2UTQ2Ni42OCA0NS44MiA0NjYuNjggNDIuODc5OTk5OTk5OTk5OTk1UTQ2Ni42OCAzOS45MTIgNDY1LjkwOTk5OTk5OTk5OTk3IDM3LjY4NlE0NjUuMTQgMzUuNDYgNDYzLjUxNTk5OTk5OTk5OTk2IDM0LjIxNFE0NjEuODkyIDMyLjk2OCA0NTkuMzE2MDAwMDAwMDAwMDMgMzIuOTY4UTQ1Ni42IDMyLjk2OCA0NTQuODM2IDM0LjI5OFE0NTMuMDcyIDM1LjYyOCA0NTIuMjMxOTk5OTk5OTk5OTcgMzcuODgyUTQ1MS4zOTIgNDAuMTM1OTk5OTk5OTk5OTk2IDQ1MS4zOTIgNDIuODc5OTk5OTk5OTk5OTk1UTQ1MS4zOTIgNDUuNjUyIDQ1Mi4yMTc5OTk5OTk5OTk5NiA0Ny45MDZRNDUzLjA0NCA1MC4xNiA0NTQuNzUxOTk5OTk5OTk5OTUgNTEuNDc2UTQ1Ni40NiA1Mi43OTIgNDU5LjA5MiA1Mi43OTJaTTQ2Ni42OCA1OC4wVjM2Ljc3NTk5OTk5OTk5OTk5Nkg0NjUuODRWMTcuNjhINDcyLjY0NFY1OC4wWk00NzkuMzY0MDAwMDAwMDAwMDMgMjMuMTY4VjE2Ljk3OTk5OTk5OTk5OTk5N0g0ODYuMTEyVjIzLjE2OFpNNDc5LjM2NDAwMDAwMDAwMDAzIDU4LjBWMjcuNzU5OTk5OTk5OTk5OTk4SDQ4Ni4xMTJWNTguMFpNNTAxLjI4OCA1OC44NFE0OTguMDEyMDAwMDAwMDAwMDYgNTguODQgNDk1Ljc0NCA1Ny41OTRRNDkzLjQ3NjAwMDAwMDAwMDA2IDU2LjM0OCA0OTIuMzE0MDAwMDAwMDAwMSA1NC4yNzU5OTk5OTk5OTk5OTZRNDkxLjE1MjAwMDAwMDAwMDA0IDUyLjIwNCA0OTEuMTUyMDAwMDAwMDAwMDQgNDkuNzEyUTQ5MS4xNTIwMDAwMDAwMDAwNCA0Ny41MjggNDkxLjg4MDAwMDAwMDAwMDA1IDQ1Ljc3OFE0OTIuNjA4MDAwMDAwMDAwMDYgNDQuMDI4IDQ5NC4xMjAwMDAwMDAwMDAwNiA0Mi43NTQwMDAwMDAwMDAwMDVRNDk1LjYzMjAwMDAwMDAwMDA2IDQxLjQ4MDAwMDAwMDAwMDAwNCA0OTguMDQgNDAuNjY4UTQ5OS44NiA0MC4wOCA1MDIuMzEwMDAwMDAwMDAwMDYgMzkuNjA0UTUwNC43NjAwMDAwMDAwMDAwNSAzOS4xMjggNTA3LjYzMDAwMDAwMDAwMDA1IDM4LjcyMlE1MTAuNTAwMDAwMDAwMDAwMDYgMzguMzE2IDUxMy42MzYwMDAwMDAwMDAxIDM3Ljg0TDUxMS4yMjggMzkuMjEyUTUxMS4yNTYwMDAwMDAwMDAwMyAzNi4wNzYgNTA5LjgyODAwMDAwMDAwMDAzIDM0LjU5MlE1MDguNDAwMDAwMDAwMDAwMDMgMzMuMTA4MDAwMDAwMDAwMDA0IDUwNS4wMTIwMDAwMDAwMDAwNiAzMy4xMDgwMDAwMDAwMDAwMDRRNTAyLjk2OCAzMy4xMDgwMDAwMDAwMDAwMDQgNTAxLjA2NCAzNC4wNlE0OTkuMTYgMzUuMDEyIDQ5OC40MDQwMDAwMDAwMDAwNSAzNy4zMzZMNDkyLjI0NCAzNS40MDM5OTk5OTk5OTk5OTZRNDkzLjM2NDAwMDAwMDAwMDAzIDMxLjU2Nzk5OTk5OTk5OTk5OCA0OTYuNTE0IDI5LjI0NFE0OTkuNjY0MDAwMDAwMDAwMDQgMjYuOTE5OTk5OTk5OTk5OTk4IDUwNS4wMTIwMDAwMDAwMDAwNiAyNi45MTk5OTk5OTk5OTk5OThRNTA5LjA0NDAwMDAwMDAwMDA0IDI2LjkxOTk5OTk5OTk5OTk5OCA1MTIuMTEgMjguMjM1OTk5OTk5OTk5OTk3UTUxNS4xNzYgMjkuNTUyIDUxNi42NjAwMDAwMDAwMDAxIDMyLjU0OFE1MTcuNDcyIDM0LjE0NCA1MTcuNjQgMzUuODFRNTE3LjgwOCAzNy40NzYgNTE3LjgwOCAzOS40MzZWNTguMEg1MTEuOTAwMDAwMDAwMDAwMDNWNTEuNDQ4TDUxMi44OCA1Mi41MTJRNTEwLjgzNiA1NS43ODggNTA4LjEwNiA1Ny4zMTRRNTA1LjM3NjAwMDAwMDAwMDAzIDU4Ljg0IDUwMS4yODggNTguODRaTTUwMi42MzIwMDAwMDAwMDAwNiA1My40NjRRNTA0LjkyODAwMDAwMDAwMDA1IDUzLjQ2NCA1MDYuNTUyIDUyLjY1MlE1MDguMTc2MDAwMDAwMDAwMDQgNTEuODQgNTA5LjE0MjAwMDAwMDAwMDA1IDUwLjY2NFE1MTAuMTA4MDAwMDAwMDAwMDYgNDkuNDg4IDUxMC40NDQgNDguNDUyUTUxMC45NzYwMDAwMDAwMDAwNiA0Ny4xNjQgNTExLjA0NjAwMDAwMDAwMDA1IDQ1LjQ5ODAwMDAwMDAwMDAwNVE1MTEuMTE2MDAwMDAwMDAwMDQgNDMuODMyIDUxMS4xMTYwMDAwMDAwMDAwNCA0Mi43OTZMNTEzLjE4OCA0My40MTJRNTEwLjEzNiA0My44ODggNTA3Ljk1MiA0NC4yNTE5OTk5OTk5OTk5OTVRNTA1Ljc2ODAwMDAwMDAwMDAzIDQ0LjYxNiA1MDQuMjAwMDAwMDAwMDAwMDUgNDQuOTM4UTUwMi42MzIwMDAwMDAwMDAwNiA0NS4yNiA1MDEuNDI4MDAwMDAwMDAwMDUgNDUuNjUyUTUwMC4yNTIgNDYuMDcyIDQ5OS40NDAwMDAwMDAwMDAwNSA0Ni42MzIwMDAwMDAwMDAwMDVRNDk4LjYyODAwMDAwMDAwMDA0IDQ3LjE5MiA0OTguMTk0MDAwMDAwMDAwMSA0Ny45MlE0OTcuNzYwMDAwMDAwMDAwMDUgNDguNjQ3OTk5OTk5OTk5OTk2IDQ5Ny43NjAwMDAwMDAwMDAwNSA0OS42MjhRNDk3Ljc2MDAwMDAwMDAwMDA1IDUwLjc0OCA0OTguMzIwMDAwMDAwMDAwMDUgNTEuNjAyMDAwMDAwMDAwMDA0UTQ5OC44ODAwMDAwMDAwMDAwNSA1Mi40NTYgNDk5Ljk1ODAwMDAwMDAwMDEgNTIuOTZRNTAxLjAzNjAwMDAwMDAwMDA2IDUzLjQ2NCA1MDIuNjMyMDAwMDAwMDAwMDYgNTMuNDY0WiIvPjwvc3ZnPg==" alt="Procure Media" style="width: 180px; height: auto; display: block">
+        <p style="margin: 20px 0 0; font-size: 16px; line-height: 26px">Lead generation and AI integration</p>
+      </div>
+      <div style="flex: 1 1 200px; min-width: 0; font-size: 16px; line-height: 30px">
+        <a href="tel:+18557545015" style="color: #FFFFFF; display: block">(855) 754-5015</a>
+        <a href="mailto:dan@procuremedia.com" style="color: #FFFFFF; display: block">dan@procuremedia.com</a>
+      </div>
+      <div style="flex: 1 1 200px; min-width: 0; font-size: 16px; line-height: 30px">
+        <a href="/legal/" style="color: #A9B6CC; display: block">Legal</a>
+        <a href="/privacy-policy.html" style="color: #A9B6CC; display: block">Privacy</a>
+        <a href="/terms.html" style="color: #A9B6CC; display: block">Terms</a>
+        <button type="button" class="pm-login-open" style="background: none; border: 0; padding: 0; color: #A9B6CC; font: inherit; line-height: 30px; cursor: pointer; text-decoration: underline">Client login</button>
+      </div>
     </div>
-    <p class="f-addr" style="margin-top:16px;font-size:12.5px;color:var(--dim)">Procure Media, LLC · 9169 W State St #1371, Garden City, ID 83714 · United States</p>
-    <p class="f-copy" style="margin-top:8px">© 2026 Procure Media, LLC. All rights reserved.</p>
+  </footer>
 
-    <div class="sources" id="sources">
-      <h2>Sources</h2>
-      <ol>
-        <li><b>62% of calls to small businesses go unanswered</b> — 411 Locals, 2024 (study of 85 businesses across 58 industries).</li>
-        <li><b>67% call a competitor after one unanswered call</b> — Angi.</li>
-        <li><b>47% of service calls come in after hours</b> — HomeAdvisor.</li>
-        <li><b>78% hire whoever answers first</b> — HomeAdvisor.</li>
-        <li><b>21× likelier to book if you answer in 5 minutes</b> — MIT / InsideSales.</li>
-        <li><b>Fewer than 3% of people who reach voicemail leave a message</b> — Invoca.</li>
-      </ol>
-      <p class="disc">
-        The 6:45 PM call above is an illustrative example of how the AI agent handles an
-        inbound call. "Vance Plumbing," "Lisa," and the calendar shown are examples, not
-        customers. Riley is Procure Media's AI voice agent.
-      </p>
-    </div>
-  </div>
-</footer>
-
-<!-- ============================ STICKY CALL BAR ============================ -->
-<div class="callbar" id="callbar">
-  <div class="callbar-in">
-    <p class="callbar-tx">
-      <b>Call now to lock in $99/month</b>
-      founders price, locked for life
-    </p>
-    <a class="btn btn-amber btn-sm" href="tel:+18557545015">(855) 754-5015</a>
-  </div>
 </div>
 
-<script>
-/* Sticky call bar: appears after the hero, hides near the footer/form so it
-   never covers the sign-up form. No storage, no libraries. */
-(function(){
-  var bar = document.getElementById('callbar');
-  var start = document.getElementById('start');
-  if(!bar) return;
-  var ticking = false;
-  function update(){
-    ticking = false;
-    var y = window.pageYOffset || document.documentElement.scrollTop;
-    var past = y > 620;
-    var nearForm = false;
-    if(start){
-      var r = start.getBoundingClientRect();
-      nearForm = r.top < (window.innerHeight - 90);
-    }
-    if(past && !nearForm) bar.classList.add('on');
-    else bar.classList.remove('on');
-  }
-  function onScroll(){
-    if(!ticking){ ticking = true; window.requestAnimationFrame(update); }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', onScroll, {passive:true});
-  update();
-})();
-</script>
-
-<script>
-/* ------------------------------------------------------------------
-   Missed-call cost calculator (ported from Concept B).
-   Live math + plain-text formula. No libraries, no storage.
-   ------------------------------------------------------------------ */
-(function(){
-  var UNANSWERED = 0.62;   // sourced: 411 Locals, 2024
-  var WEEKS      = 52;
-  var CLOSE      = 0.30;   // STATED ASSUMPTION — not a claim
-
-  var calls  = document.getElementById('calls');
-  var job    = document.getElementById('job');
-  var callsO = document.getElementById('calls-out');
-  var jobO   = document.getElementById('job-out');
-  var lossO  = document.getElementById('loss');
-  var formO  = document.getElementById('formula');
-  if(!calls || !job) return;
-
-  function money(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
-
-  function render(){
-    var c = parseInt(calls.value, 10);
-    var v = parseInt(job.value, 10);
-    var loss = Math.round(c * UNANSWERED * WEEKS * v * CLOSE);
-
-    callsO.textContent = c;
-    jobO.textContent   = money(v);
-    lossO.textContent  = money(loss);
-    formO.textContent =
-      c + ' calls/wk × 62% unanswered × 52 weeks × ' + money(v) +
-      ' per job × 30% close rate = ' + money(loss) + '/yr';
-  }
-
-  calls.addEventListener('input', render);
-  job.addEventListener('input', render);
-
-  // one GA4 ping the first time someone actually touches the math
-  var fired = false;
-  function once(){
-    if(fired) return; fired = true;
-    if(typeof gtag === 'function'){ gtag('event','calculator_use',{event_category:'engagement'}); }
-  }
-  calls.addEventListener('change', once);
-  job.addEventListener('change', once);
-
-  render();
-})();
-</script>
-
-<script>
-/* Calculator lead-capture. Mirrors the #start form plumbing: posts to the lead engine, fires the
-   same Google Ads lead-form conversion, adds GA4 form_start / generate_lead. Submits via fetch so
-   the confirmation renders in place. pm_attr (gclid/utm) is injected into EVERY form on the page. */
-(function(){
-  var form = document.getElementById('calcCaptureForm');
-  if(!form) return;
-  function fillAttr(){
-    var store={};
-    try{ var c=(document.cookie.match(/(?:^|; )pm_attr=([^;]*)/)||[])[1]; if(c) store=JSON.parse(decodeURIComponent(c))||{}; }catch(e){ store={}; }
-    document.querySelectorAll('form').forEach(function(f){
-      Object.keys(store).forEach(function(k){
-        if(store[k] && !f.querySelector('[name="'+k+'"]')){
-          var i=document.createElement('input'); i.type='hidden'; i.name=k; i.value=store[k]; f.appendChild(i);
-        }
-      });
-    });
-  }
-  if(document.readyState!=='loading') fillAttr(); else document.addEventListener('DOMContentLoaded', fillAttr);
-  try{
-    var ag=(new URLSearchParams(window.location.search).get('ag')||'').trim().toLowerCase();
-    var agf=document.getElementById('cap-ad-group'); if(agf) agf.value=ag;
-  }catch(e){}
-  var started=false;
-  form.addEventListener('focusin', function(){
-    if(started) return; started=true;
-    try{ if(typeof gtag==='function'){ gtag('event','form_start',{event_category:'engagement',vertical:'home',form:'calculator_capture'}); } }catch(e){}
-  });
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    try{ if(typeof gtag==='function'){ gtag('event','conversion',{send_to:'AW-17934471659/yB7eCNmiqNAcEOuj6edC'}); } }catch(e){}
-    try{ if(typeof gtag==='function'){ gtag('event','generate_lead',{event_category:'engagement',vertical:'home',form:'calculator_capture'}); } }catch(e){}
-    try{ fetch(form.action,{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams(new FormData(form))}); }catch(e){}
-    var wrap=document.getElementById('calcCapWrap');
-    var done=document.getElementById('calcCapDone');
-    if(wrap) wrap.hidden=true;
-    if(done) done.hidden=false;
-  });
-})();
-</script>
-
-<!-- CLIENT LOGIN — modal + portal calls (app.procuremedia.com). No secrets in page; session cookie + CORS handled portal-side. -->
-<style>
-.pm-login-ov{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(4,9,18,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-.pm-login-ov.open{display:flex}
-.pm-login-card{width:100%;max-width:400px;background:var(--raised);border:1px solid var(--bd-strong);border-radius:var(--r-lg);box-shadow:0 30px 80px rgba(0,0,0,.6);padding:28px 26px;position:relative}
-.pm-login-card h2{margin:0 0 4px;font-size:22px;color:var(--tx);font-weight:800;letter-spacing:-.3px}
-.pm-login-card .pm-login-sub{margin:0 0 18px;font-size:14px;color:var(--muted)}
-.pm-login-x{position:absolute;top:12px;right:14px;background:none;border:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer;padding:4px}
-.pm-login-x:hover{color:var(--tx)}
-.pm-login-card label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin:14px 0 6px;letter-spacing:.3px}
-.pm-login-card input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--bd-strong);background:var(--bg);color:var(--tx);font-size:15px;font-family:inherit;box-sizing:border-box}
-.pm-login-card input:focus{outline:none;border-color:var(--amber)}
-.pm-login-card .btn{width:100%;margin-top:20px;justify-content:center}
-.pm-login-msg{margin:14px 0 0;font-size:13px;line-height:1.5;display:none}
-.pm-login-msg.err{display:block;color:var(--danger)}
-.pm-login-msg.ok{display:block;color:var(--amber-hi)}
-.pm-login-forgot{display:block;width:100%;margin-top:16px;text-align:center;font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:inherit}
-.pm-login-forgot:hover{color:var(--amber-hi)}
-</style>
 <div class="pm-login-ov" id="pmLoginOv" role="dialog" aria-modal="true" aria-labelledby="pmLoginTitle">
   <div class="pm-login-card">
     <button type="button" class="pm-login-x" id="pmLoginClose" aria-label="Close">&times;</button>
@@ -1603,7 +545,7 @@ footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 
       <input id="pmLoginEmail" name="email" type="email" autocomplete="email" required>
       <label for="pmLoginPass">Password</label>
       <input id="pmLoginPass" name="password" type="password" autocomplete="current-password" required>
-      <button type="submit" class="btn btn-amber" id="pmLoginSubmit">Log in →</button>
+      <button type="submit" class="pm-login-submit" id="pmLoginSubmit">Log in</button>
       <p class="pm-login-msg" id="pmLoginMsg" role="status" aria-live="polite"></p>
       <button type="button" class="pm-login-forgot" id="pmLoginForgot">First time or forgot password?</button>
     </form>
@@ -1619,7 +561,7 @@ footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 
   function setMsg(t,cls){ msg.textContent=t; msg.className='pm-login-msg'+(cls?(' '+cls):''); }
   function open(){ ov.classList.add('open'); setMsg('',''); setTimeout(function(){ emailEl.focus(); },40); }
   function close(){ ov.classList.remove('open'); }
-  var openBtn=document.getElementById('pmLoginOpen'); if(openBtn) openBtn.addEventListener('click',open);
+  Array.prototype.forEach.call(document.querySelectorAll('.pm-login-open'),function(b){ b.addEventListener('click',open); });
   document.getElementById('pmLoginClose').addEventListener('click',close);
   ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
@@ -1646,8 +588,25 @@ footer{border-top:1px solid var(--bd); background:var(--raised); padding:44px 0 
   });
 })();
 </script>
+<script>
+/* Book-the-hour form: fire the same Ads form conversion + GA4 generate_lead the live
+   calculator form uses, then let the native POST continue to the lead engine. */
+(function(){
+  var f=document.getElementById('hourForm'); if(!f) return;
+  f.addEventListener('submit',function(){
+    try{ if(typeof gtag==='function'){ gtag('event','conversion',{send_to:'AW-17934471659/yB7eCNmiqNAcEOuj6edC',transport_type:'beacon'}); } }catch(e){}
+    try{ if(typeof gtag==='function'){ gtag('event','generate_lead',{event_category:'engagement',form:'book_the_hour',transport_type:'beacon'}); } }catch(e){}
+  });
+  /* The lead engine returns visitors to /?sent=1#contact — confirm it worked. */
+  try{
+    if(new URLSearchParams(window.location.search).get('sent')==='1'){
+      var m=document.getElementById('sentMsg'); if(m) m.style.display='block';
+    }
+  }catch(e){}
+})();
+</script>
 
-<!-- 6d. Chat widget — last line before </body> -->
+<!-- Chat widget — last line before </body> -->
 <script defer src="/procure-chat-widget.js"></script>
 </body>
 </html>
